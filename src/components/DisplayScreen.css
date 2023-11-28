@@ -1,0 +1,147 @@
+
+
+/* video {
+    object-fit: cover;
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    z-index: -1;
+    filter: blur(1px);
+} */
+
+.dispaly-container {
+    height: 100vh;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    box-shadow: inset 0 0 0 1000px rgba(0, 0, 0, 0.329);
+    object-fit: contain;
+    position: relative;
+    transition: all 0.25s ease-out;
+}
+
+@keyframes rotate {
+    0% {
+        transform: rotate(0deg);
+    }
+
+    100% {
+        transform: rotate(360deg);
+    }
+}
+.gradient-background{
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    background-color: #222;
+    z-index: -1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.gradient {
+    --size: 450px;
+    --speed: 20s;
+    --easing: cubic-bezier(0.8, 0.2, 0.2, 0.8);
+
+    transform: translate(-50%, -50%);
+    z-index: -1; 
+    width: var(--size);
+    height: var(--size);
+    filter: blur(calc(var(--size) / 5));
+    background-image: linear-gradient(hsl(343, 100%, 37%), hsl(270, 50%, 40%));
+    animation: rotate var(--speed) var(--easing) alternate infinite;
+    border-radius: 30% 70% 70% 30% / 30% 30% 70% 70%;
+}
+
+
+
+.dispaly-container>h1 {
+    color: #fefffe;
+    font-size: 100px;
+    margin-top: -100px;
+    text-shadow: 0 0 10px rgba(255, 255, 255, 0.7);
+    filter: blur(1px);
+    font-weight: 600;
+}
+
+.dispaly-container h4 {
+    color: #fefffe;
+    font-size: 16px;
+    margin-top: 20px;
+    text-shadow: 0 0 10px rgba(255, 255, 255, 0.7);
+    filter: blur(1px);
+    font-weight: 600;
+}
+
+.dispaly-container>p {
+    color: #fefffe;
+    font-size: 32px;
+    margin-top: 8px;
+    font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
+        "Lucida Sans", Arial, sans-serif;
+}
+
+.display-btns {
+    margin-top: 32px;
+}
+
+.display-btns .btn {
+    margin: 6px;
+}
+
+.fa-arrow-alt-circle-right {
+    margin-left: 4px;
+}
+
+@media screen and (max-width: 960px) {
+    .dispaly-container>h1 {
+        font-size: 70px;
+        margin-top: -150px;
+    }
+
+    .dispaly-container>h4 {
+        font-size: 14px;
+        margin-top: 16px;
+        width: 333px;
+        text-align: center;
+    }
+    .gradient {
+        --size: 350px;
+    }
+
+}
+
+@media screen and (max-width: 768px) {
+    .dispaly-container>h1 {
+        font-size: 50px;
+        margin-top: -100px;
+    }
+
+    .dispaly-container>h4 {
+        font-size: 12px;
+        margin-top: 14px;
+        width: 280px;
+        text-align: center;
+    }
+    .gradient {
+        --size: 300px;
+    }
+
+
+    .dispaly-container>p {
+        font-size: 30px;
+    }
+
+    .btn-mobile {
+        display: block;
+        text-decoration: none;
+    }
+
+    .btn {
+        width: 100%;
+    }
+}

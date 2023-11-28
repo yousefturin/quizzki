@@ -1,0 +1,231 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: "Montserrat", Montserrat;
+  transition: all 0.5s ease;
+  /* outline: solid 1px red; */
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  overflow-y: scroll;
+}
+
+body::-webkit-scrollbar {
+  width: 0em;
+}
+
+body::-webkit-scrollbar-thumb {
+  background-color: #cfcdcd;
+}
+
+body::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+.home,
+.cryptography,
+.sign-up {
+  display: flex;
+  height: 92vh;
+  align-items: center;
+  justify-content: center;
+  font-size: 3rem;
+}
+
+.cryptography {
+  /* background-image: url("/public/images/image-12.jpg"); */
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  color: #fefffe;
+  font-size: 100px;
+}
+
+
+.sign-up {
+  /* background-image: url("/public/images/image-4.jpg"); */
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  color: #fefffe;
+  font-size: 100px;
+}
+
+
+
+
+@media screen and (max-width: 960px) {
+
+  .sign-up,
+  .cryptography {
+    font-size: 70px !important;
+    margin-top: -150px;
+  }
+}
+
+@media screen and (max-width: 768px) {
+
+
+  .sign-up,
+  .cryptography{
+    font-size: 50px !important;
+    margin-top: -150px;
+  }
+}
+
+
+.contaner-signup-wrapper{
+  background-color: #242424;
+
+}
+
+.card{
+  background: linear-gradient( hsla(0, 0%, 100%, 0.902), hsla(0, 0%, 100%, 0.919)) !important;
+  border-radius: 5px;
+  margin: 1rem auto;
+  padding: 2rem;
+  padding-inline: 3rem;
+}
+
+.form-control:focus {
+  border-color: #663399 !important;
+  box-shadow: 0 0 0 0.2rem rgba(102, 51, 153, 0.25) !important;
+}
+
+
+.contaner-signup-display{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+}
+.card-signup-wrapper{
+  width: 100%;
+  border-radius: 50px;
+}
+.text-header-signup{
+  text-align: center;
+  margin-bottom: 4rem;
+  padding-top: 1rem;
+}
+.Form-lable-text{
+  width: 100%;
+  margin-bottom: 3rem;
+}
+.form-control {
+  border: none;
+  box-shadow: 0 0 0 0.1rem rgba(194, 194, 194, 0.25) !important;
+  outline: none;
+  border-radius: 5px;
+  height:40px;
+  width: 100%;
+  margin-top: 0.5rem;
+  padding: 1rem;
+  transition: all 0.5s ease;
+}
+.alert-error-signup {
+  width: 100%;
+  background-color: #f5d7da;
+  outline: solid 1px #c2aaac8b;
+  min-height: 70px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 5px;
+  box-shadow: 0 0 0 0.1rem rgba(194, 170, 172, 0.25) !important;
+  overflow: hidden; /* Ensures that any content overflowing the box is hidden */
+  padding: 1rem;
+}
+
+.alert-error-signup p {
+  white-space: wrap; /* Prevents text from wrapping to the next line */
+  overflow: hidden; /* Hides any content that overflows the box */
+  text-overflow: ellipsis; /* Displays an ellipsis (...) to indicate that the text is truncated */
+}
+.form-group{
+  margin-top: 2rem;
+}
+.btn-form-submit{
+  width: 100%;
+  margin-top: 2rem;
+  height: 3rem;
+  color: #fff;
+  background-color: #663399;
+  transition: all 0.5s ease;
+  font-size: 15px;
+}
+.btn-form-submit:hover, .btn-form-submit:focus{
+  background-color: #522a7a;
+}
+.link-text-dispaly-signup{
+  text-decoration: none;
+  color: #663399;
+  transition: all 0.5s ease;
+}
+.link-text-dispaly-signup:hover, .link-text-dispaly-signup:focus {
+  text-decoration: none;
+  color: #522a7a;
+}
+.bottom-text-signup{
+  width: 100%;
+  text-align: center;
+  margin-top: 2rem;
+}
+
+.under-card-text-signup{
+  width: 100%;
+  text-align: center;
+  margin-top: 1.5rem;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* quiz Screen */
+
+.questions-grid{
+    display: grid;
+    justify-items: stretch;
+    justify-content: center;
+    align-content: center;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    gap: 10px;
+    height: 114px;
+    margin-top: 3rem;
+    margin-bottom:3rem !important ;
+    list-style: none !important;
+}
+
+.timer {
+  position: relative;
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  background-color: #f0f0f0;
+}
+
+.timer span {
+  display: block;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 1.5em;
+}

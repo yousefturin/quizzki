@@ -1,0 +1,105 @@
+{
+    "questions": [
+      {
+        "question": "What does CPU stand for?",
+        "options": ["Central Processing Unit", "Computer Processing Unit", "Central Processor Unit", "Central Peripheral Unit"],
+        "answer": "Central Processing Unit"
+      },
+      {
+        "question": "Which programming language is commonly used for web development?",
+        "options": ["Java", "C++", "HTML", "Python"],
+        "answer": "HTML"
+      },
+      {
+        "question": "What is the purpose of a compiler?",
+        "options": ["To execute code", "To debug code", "To translate code to machine language", "To store code"],
+        "answer": "To translate code to machine language"
+      },
+      {
+        "question": "What is the binary equivalent of the decimal number 25?",
+        "options": ["11001", "11101", "10101", "10011"],
+        "answer": "11001"
+      },
+      {
+        "question": "Which data structure follows the Last In, First Out (LIFO) principle?",
+        "options": ["Queue", "Stack", "Linked List", "Tree"],
+        "answer": "Stack"
+      },
+      {
+        "question": "What is the purpose of the 'if' statement in programming?",
+        "options": ["To repeat a block of code", "To declare a variable", "To make decisions in code", "To define a function"],
+        "answer": "To make decisions in code"
+      },
+      {
+        "question": "Which protocol is used for secure communication over a computer network?",
+        "options": ["FTP", "HTTP", "SSH", "UDP"],
+        "answer": "SSH"
+      },
+      {
+        "question": "What is the primary function of RAM in a computer?",
+        "options": ["Permanent storage of data", "Temporary storage of data", "Data processing", "Input/Output operations"],
+        "answer": "Temporary storage of data"
+      },
+      {
+        "question": "In object-oriented programming, what is encapsulation?",
+        "options": ["Hiding the implementation details of an object", "Inheriting from multiple classes", "Creating multiple instances of a class", "Accessing data directly"],
+        "answer": "Hiding the implementation details of an object"
+      },
+      {
+        "question": "Which of the following is an example of a high-level programming language?",
+        "options": ["Assembly language", "Machine language", "Python", "Binary code"],
+        "answer": "Python"
+      },
+      {
+        "question": "What does HTML stand for?",
+        "options": ["Hypertext Markup Language", "High-Level Text Language", "Hyperlink and Text Markup Language", "Hypertext and Textual Markup Language"],
+        "answer": "Hypertext Markup Language"
+      },
+      {
+        "question": "Which data type is used to store whole numbers in programming?",
+        "options": ["Float", "Double", "Integer", "Char"],
+        "answer": "Integer"
+      },
+      {
+        "question": "What is the purpose of an IDE in software development?",
+        "options": ["To create databases", "To write code", "To design user interfaces", "To browse the internet"],
+        "answer": "To write code"
+      },
+      {
+        "question": "Which sorting algorithm has a time complexity of O(n log n) in the average and worst cases?",
+        "options": ["Bubble Sort", "Insertion Sort", "Quick Sort", "Selection Sort"],
+        "answer": "Quick Sort"
+      },
+      {
+        "question": "What is the role of a constructor in object-oriented programming?",
+        "options": ["To create objects", "To destroy objects", "To update objects", "To hide objects"],
+        "answer": "To create objects"
+      },
+      {
+        "question": "What is the purpose of the 'break' statement in a loop?",
+        "options": ["To exit the loop immediately", "To skip the current iteration", "To restart the loop", "To continue to the next iteration"],
+        "answer": "To exit the loop immediately"
+      },
+      {
+        "question": "Which of the following is a key characteristic of a linked list?",
+        "options": ["Random access", "Fixed size", "Sequential access", "Dynamic size"],
+        "answer": "Dynamic size"
+      },
+      {
+        "question": "In networking, what does the acronym LAN stand for?",
+        "options": ["Local Area Network", "Large Area Network", "Longhorn Access Network", "Low-latency Area Network"],
+        "answer": "Local Area Network"
+      },
+      {
+        "question": "What is the purpose of the 'return' statement in a function?",
+        "options": ["To print a value", "To terminate the program", "To exit the function and return a value", "To skip the function"],
+        "answer": "To exit the function and return a value"
+      },
+      {
+        "question": "Which of the following is a commonly used relational database management system?",
+        "options": ["MongoDB", "MySQL", "Redis", "Elasticsearch"],
+        "answer": "MySQL"
+      }
+    ]
+  }
+  
