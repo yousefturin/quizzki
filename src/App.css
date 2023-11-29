@@ -27,56 +27,15 @@ body::-webkit-scrollbar-track {
   background: transparent;
 }
 
-.home,
-.cryptography,
-.sign-up {
-  display: flex;
-  height: 92vh;
-  align-items: center;
-  justify-content: center;
-  font-size: 3rem;
-}
-
-.cryptography {
-  /* background-image: url("/public/images/image-12.jpg"); */
-  background-position: center;
-  background-size: cover;
-  background-repeat: no-repeat;
-  color: #fefffe;
-  font-size: 100px;
-}
-
-
-.sign-up {
-  /* background-image: url("/public/images/image-4.jpg"); */
-  background-position: center;
-  background-size: cover;
-  background-repeat: no-repeat;
-  color: #fefffe;
-  font-size: 100px;
-}
 
 
 
 
-@media screen and (max-width: 960px) {
-
-  .sign-up,
-  .cryptography {
-    font-size: 70px !important;
-    margin-top: -150px;
-  }
-}
-
-@media screen and (max-width: 768px) {
 
 
-  .sign-up,
-  .cryptography{
-    font-size: 50px !important;
-    margin-top: -150px;
-  }
-}
+
+
+ /* signin && login && forgot password screens */
 
 
 .contaner-signup-wrapper{
@@ -85,7 +44,7 @@ body::-webkit-scrollbar-track {
 }
 
 .card{
-  background: linear-gradient( hsla(0, 0%, 100%, 0.902), hsla(0, 0%, 100%, 0.919)) !important;
+  background: linear-gradient(90deg, rgb(238, 238, 238) 0%, rgb(240, 240, 240) 100%) !important;
   border-radius: 5px;
   margin: 1rem auto;
   padding: 2rem;
@@ -154,7 +113,7 @@ body::-webkit-scrollbar-track {
   width: 100%;
   margin-top: 2rem;
   height: 3rem;
-  color: #fff;
+  color: #fefffe;
   background-color: #663399;
   transition: all 0.5s ease;
   font-size: 15px;
@@ -198,27 +157,22 @@ body::-webkit-scrollbar-track {
 
 /* quiz Screen */
 
-.questions-grid{
-    display: grid;
-    justify-items: stretch;
-    justify-content: center;
-    align-content: center;
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    grid-template-rows: 1fr 1fr;
-    gap: 10px;
-    height: 114px;
-    margin-top: 3rem;
-    margin-bottom:3rem !important ;
-    list-style: none !important;
+
+.timer-wrapper{
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 2rem auto;
 }
 
 .timer {
+  display: flex;
   position: relative;
-  width: 100px;
-  height: 100px;
+  width: 50px;
+  height: 50px;
   border-radius: 50%;
-  background-color: #f0f0f0;
+  background-color: #fefffe;
 }
 
 .timer span {
@@ -227,5 +181,144 @@ body::-webkit-scrollbar-track {
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  font-size: 1.5em;
+  font-size: 1em;
+}
+
+
+
+.contaner-question-wrapper{
+  background-image: url("/public/images/image-1.jpg");
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  display: flex;
+  height: 92vh;
+  align-items: center;
+  justify-content: center;
+
+}
+.contaner-question-display{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.card-question-wrapper{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  max-width: 800px;
+}
+.question-wrapper{
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 2rem auto;
+  background-color: #fefffe66;
+  padding: 2rem;
+  border-radius: 5px;
+}
+
+
+.card-body-question{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  height: 50vh;
+}
+.questions-grid{
+  justify-items: stretch;
+  justify-content: center;
+  align-content: center;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr 1fr ;
+  gap: 10px;
+  height: 114px;
+  margin-top: 3rem;
+  margin-bottom:3rem !important ;
+  list-style: none !important;
+}
+
+.btn-question-submit{
+  width: 100%;
+  margin-top: 2rem;
+  height: 3rem;
+  color: #fefffe;
+  background-color: #663399;
+  transition: all 0.5s ease;
+  /* font-size: 15px; */
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+}
+
+.btn-question-submit:hover, .btn-question-submit:focus{
+  background-color: #522a7a;
+}
+
+
+
+
+@media screen and (max-width: 960px) {
+  .user-table {
+    width: 50% !important;
+  }
+  .card-question-wrapper{
+    max-width: 600px;
+  }
+}
+@media screen and (max-width: 768px) {
+  .user-table {
+    width: 70% !important;
+  }
+  .questions-grid{
+    justify-items: stretch;
+    justify-content: center;
+    align-content: center;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    height: 120px;
+    margin-top: 3rem;
+    margin-bottom:3rem !important ;
+    list-style: none !important;
+    padding-top:3rem ;
+}
+
+.card-body-question{
+  justify-content: flex-start;
+  height: 60vh;
+}
+.card-question-wrapper{
+  max-width: 400px;
+}
+  
+}
+
+.user-table-wrapper{
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.user-table {
+  width: 25%;
+  border-collapse: collapse;
+  margin-top: 10px;
+  border-radius: 2px;
+  overflow: hidden; /* Ensures the border-radius is applied to the table */
+}
+
+
+.user-table th, .user-table td {
+  border: 1px solid #ddd;
+  padding: 8px;
+  text-align: left;
+  background-color: #f2f2f258; /* Set the background color for both header and rows */
+}
+
+.user-table tbody tr:hover {
+  background-color: #e5e5e5;
 }
