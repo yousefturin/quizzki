@@ -8,16 +8,18 @@ import { Button } from "react-bootstrap";
 import { useAuth } from "../contexts/AuthContext";
 import { useNavigate } from "react-router-dom";
 
+
 function Navbar() {
   const [click, setClick] = useState(false);
   const [button, setButton] = useState(true);
-  const { logout, currentUser, avatarURL} = useAuth();
+  const { logout, currentUser } = useAuth();
+  const [avatarSVG, setAvatarSVG] = useState(''); // State to store the user's image URL
   const [error, setError] = useState("");
   const handleClick = () => setClick(!click);
   const closeMobileMenu = () => setClick(false);
   const navigate = useNavigate();
   // This shit was pain in the ass giving me that a users is already a null so had to do that
-  const { displayName, email } = currentUser || {};
+  const { displayName, email, displayAvatar } = currentUser || {};
   const showButton = () => {
     if (window.innerWidth <= 960) {
       setButton(false);
@@ -30,6 +32,35 @@ function Navbar() {
   useEffect(() => {
     showButton();
   }, []);
+
+
+  useEffect(() => {
+    const fetchAvatar = async () => {
+      try {
+        // Fetch the SVG content from the API
+        const response = await fetch(`https://api.dicebear.com/7.x/avataaars/svg?seed=${displayAvatar}`);
+
+        if (!response.ok) {
+          throw new Error('Failed to fetch avatar');
+        }
+
+        // Get the SVG content as text
+        const svgContent = await response.text();
+
+        // Add width and height attributes to the SVG content
+      
+
+        // Set the SVG content in the state
+        setAvatarSVG(svgContent);
+      } catch (error) {
+        console.error('Error fetching avatar:', error);
+      }
+    };
+
+    // Call the fetchAvatar function when the component mounts
+    fetchAvatar();
+  }, [displayAvatar]);
+
 
   window.addEventListener("resize", showButton);
 
@@ -64,9 +95,14 @@ function Navbar() {
             {currentUser && (
               <li className="nav-user-info-item-container-wrapper">
                 <Link className="nav-user-info-item-container">
-                  <div className="nav-user-image-display-contaier">
-                  {/* {avatarURL && <img src={avatarURL} alt="User Avatar" />} */}
-                    <div className="nav-user-image-holder"></div>
+                  <div className="nav-user-image-display-container">
+                    <div className="nav-user-image-holder">
+                    <img 
+                    src={`data:image/svg+xml;utf8,${encodeURIComponent(avatarSVG)}`} 
+                    alt="User Avatar" 
+                    className="image-size-controller" />
+
+                    </div>
                   </div>
                   <div className="nav-user-name-email-display-container-wrapper">
                     <div className="nav-user-name-display-contaier">
@@ -108,7 +144,7 @@ function Navbar() {
               <li>
                 <div className="menu-active-line-spliter">
                   <hr style={{ width: "40%", height: "2px" }} />
-                  <h3 style={{ color: "#fff" }}>Or</h3>
+                  <h3 style={{ color: "#fefffe" }}>Or</h3>
                   <hr style={{ width: "40%", height: "2px" }} />
                 </div>
               </li>
@@ -138,9 +174,7 @@ function Navbar() {
               <REButton buttonStyle="btn--outline">SIGN UP</REButton>
             </Link>
           )}
-          {button && !currentUser && (
-          <hr className="nav-menu-line-spliter" />
-          )}
+          {button && !currentUser && <hr className="nav-menu-line-spliter" />}
           {button && !currentUser && (
             <Link to="/log-in">
               {" "}
