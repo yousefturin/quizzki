@@ -68,20 +68,25 @@
   gap: 1rem;
 }
 
-.nav-user-image-display-contaier{
+.nav-user-image-display-container {
   width: 20%;
   height: 100%;
   display: flex;
   justify-content: center;
   align-items: center;
 }
-.nav-user-image-holder{
-  width: 60%;
-  height: 60%;
+
+.nav-user-image-holder {
+  width: 30%;
+  height: 30%;
   padding: 2rem;
   border-radius: 50%;
-  background: linear-gradient(90deg, rgb(107, 106, 106) 0%, rgb(111, 106, 106) 100%) !important;
+  object-fit: contain;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
+
 
 .nav-user-name-email-display-container-wrapper{
   width: 80%;
@@ -105,7 +110,11 @@
   font-weight: 400;
   color: #a8a8a8;
 }
-
+.image-size-controller{
+  border-radius: 50%;
+  width: 50px !important;
+  height: 50px !important; /* Add height if needed */
+}
 
 
 
@@ -164,7 +173,7 @@ ul {
     left: -100% !important;
     opacity: 1 !important;
     transition: all 0.5s ease !important;
-    justify-content: start !important;
+    justify-content: flex-start !important;
     padding-top: 5rem;
   }
 
@@ -260,6 +269,10 @@ ul {
   padding: 3rem;
   border-radius: 50%;
   background: linear-gradient(90deg, rgb(107, 106, 106) 0%, rgb(111, 106, 106) 100%) !important;
+  object-fit: contain;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .nav-user-name-email-display-container-wrapper{
@@ -293,4 +306,8 @@ ul {
   justify-content: space-around;
   align-items: center;
  }
+ .image-size-controller{
+  width: 95px !important;
+  height: 95px !important; /* Add height if needed */
+}
 }
