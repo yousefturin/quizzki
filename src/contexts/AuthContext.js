@@ -1,5 +1,5 @@
 import React, { useContext, useEffect, useState } from "react";
-import { auth, firestore} from "../firebase";
+import { auth} from "../firebase";
 
 
 
@@ -16,27 +16,17 @@ export function AuthProvider({ children }) {
     // State to store the current user and loading status
     const [currentUser, setCurrentUser] = useState();
     const [loading, setLoading] = useState(true);
-    const [avatarURL, setAvatarURL] = useState(null);
 
     // Function to sign up a user with email and password
-    // Function to sign up a user with email, password, and display name
-    async function signup(email, password, displayName) {
+    async function signup(email, password, displayName, displayAvatar) {
         // Create user with email and password
         const userCredential = await auth.createUserWithEmailAndPassword(email, password);
 
         // Update user profile with display name
         await userCredential.user.updateProfile({
         displayName: displayName,
+        displayAvatar: displayAvatar
         });
-
-
-         const randomSeed = Math.random().toString(36).substring(7);
-         const avatarURL = `https://api.dicebear.com/${randomSeed}.x/notionists/svg?backgroundType=gradientLinear`;
-    
-
-    
-        setAvatarURL(avatarURL);
-
 
         // Set the current user state
         setCurrentUser(auth.currentUser);
@@ -73,7 +63,6 @@ export function AuthProvider({ children }) {
     // Create an object with values and functions to be provided by the context
     const value = {
         currentUser,
-        avatarURL,
         signup,
         login,
         logout,
