@@ -14,6 +14,13 @@ export default function SignUp() {
     const [error, setError] = useState("");
     const [loading, setLoading] = useState(false);
     const navigate = useNavigate();
+    const [avatartRef, setAvatartRef] = useState(null);
+
+    function fetchAvatarImage(){
+        const randomSeed = Math.random().toString(36).substring(7);
+        setAvatartRef(randomSeed);
+    }
+
 
     async function handleSubmit(e) {
         e.preventDefault();
@@ -24,10 +31,12 @@ export default function SignUp() {
         try {
             setError("");
             setLoading(true);
+            fetchAvatarImage()
             await signup(
                 emailRef.current.value,
                 passwordRef.current.value,
-                NameRef.current.value
+                NameRef.current.value,
+                avatartRef
             );
             navigate("/");
         } catch (error) {
