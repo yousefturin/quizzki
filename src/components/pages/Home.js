@@ -1,5 +1,5 @@
 import React from 'react'
-import '../../App.css'
+import '../App.css'
 import DisplayScreen from '../DisplayScreen'
 import Footer from '../Footer';
 function Home(){

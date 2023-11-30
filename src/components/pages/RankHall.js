@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import axios from 'axios';
-import "../../App.css";
+import "../App.css";
 import Footer from "../Footer";
 
 export default function RankHall() {
@@ -23,11 +23,11 @@ export default function RankHall() {
   }, []);
   return (
     <>
-      <div className="dispaly-container">
+      <div className="display-container">
       <div class="gradient-background">
                 <div class="gradient"></div>
             </div>
-        <h1 className="info-display-exeption">Rank Hall</h1>
+        <h1 className="info-display-exception">Rank Hall</h1>
         <div className='user-table-wrapper'>
       <table className="user-table">
             <thead>

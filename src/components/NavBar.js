@@ -19,7 +19,8 @@ function Navbar() {
   const closeMobileMenu = () => setClick(false);
   const navigate = useNavigate();
   // This shit was pain in the ass giving me that a users is already a null so had to do that
-  const { displayName, email, displayAvatar } = currentUser || {};
+  const { displayName, email, photoURL } = currentUser || {};
+  
   const showButton = () => {
     if (window.innerWidth <= 960) {
       setButton(false);
@@ -27,8 +28,8 @@ function Navbar() {
       setButton(true);
     }
   };
-  //   fix the logic of the buttn that on every refresh it shows back
-  //   no matter what is the size of thescreen
+  //   fix the logic of the button that on every refresh it shows back
+  //   no matter what is the size of the screen
   useEffect(() => {
     showButton();
   }, []);
@@ -38,7 +39,7 @@ function Navbar() {
     const fetchAvatar = async () => {
       try {
         // Fetch the SVG content from the API
-        const response = await fetch(`https://api.dicebear.com/7.x/avataaars/svg?seed=${displayAvatar}`);
+        const response = await fetch(`https://api.dicebear.com/7.x/avataaars/svg?seed=${photoURL}`);
 
         if (!response.ok) {
           throw new Error('Failed to fetch avatar');
@@ -59,7 +60,7 @@ function Navbar() {
 
     // Call the fetchAvatar function when the component mounts
     fetchAvatar();
-  }, [displayAvatar]);
+  }, [photoURL]);
 
 
   window.addEventListener("resize", showButton);
@@ -105,10 +106,10 @@ function Navbar() {
                     </div>
                   </div>
                   <div className="nav-user-name-email-display-container-wrapper">
-                    <div className="nav-user-name-display-contaier">
+                    <div className="nav-user-name-display-container">
                       {displayName}
                     </div>
-                    <div className="nav-user-email-display-contaier">
+                    <div className="nav-user-email-display-container">
                       {email}
                     </div>
                   </div>
@@ -142,7 +143,7 @@ function Navbar() {
             )}
             {currentUser ? null : (
               <li>
-                <div className="menu-active-line-spliter">
+                <div className="menu-active-line-splitter">
                   <hr style={{ width: "40%", height: "2px" }} />
                   <h3 style={{ color: "#fefffe" }}>Or</h3>
                   <hr style={{ width: "40%", height: "2px" }} />
@@ -174,7 +175,7 @@ function Navbar() {
               <REButton buttonStyle="btn--outline">SIGN UP</REButton>
             </Link>
           )}
-          {button && !currentUser && <hr className="nav-menu-line-spliter" />}
+          {button && !currentUser && <hr className="nav-menu-line-splitter" />}
           {button && !currentUser && (
             <Link to="/log-in">
               {" "}

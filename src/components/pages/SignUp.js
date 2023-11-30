@@ -1,5 +1,5 @@
 import React, { useRef, useState } from "react";
-import "../../App.css";
+import "../App.css";
 import { Card, Form, Container, Button, Alert } from "react-bootstrap";
 // import "bootstrap/dist/css/bootstrap.min.css";
 import { useAuth } from "../../contexts/AuthContext";
@@ -9,34 +9,30 @@ export default function SignUp() {
     const NameRef = useRef();
     const emailRef = useRef();
     const passwordRef = useRef();
-    const passwordConfirmlRef = useRef();
+    const passwordConfirmRef = useRef();
     const { signup } = useAuth();
     const [error, setError] = useState("");
     const [loading, setLoading] = useState(false);
     const navigate = useNavigate();
-    const [avatartRef, setAvatartRef] = useState(null);
-
-    function fetchAvatarImage(){
-        const randomSeed = Math.random().toString(36).substring(7);
-        setAvatartRef(randomSeed);
-    }
-
+    // const [avatarRef, setAvatarRef] = useState(null);
 
     async function handleSubmit(e) {
         e.preventDefault();
-
-        if (passwordRef.current.value !== passwordConfirmlRef.current.value) {
+        if (passwordRef.current.value !== passwordConfirmRef.current.value) {
             return setError("Passwords do not match");
         }
         try {
+            // Generate a random text to get a seed for the api to place an image
+            const randomSeed = Math.random().toString(36).substring(7);
+
+
             setError("");
             setLoading(true);
-            fetchAvatarImage()
             await signup(
                 emailRef.current.value,
                 passwordRef.current.value,
                 NameRef.current.value,
-                avatartRef
+                randomSeed
             );
             navigate("/");
         } catch (error) {
@@ -55,20 +51,27 @@ export default function SignUp() {
 
     return (
         <>
-            <div className="contaner-signup-wrapper">
+            <div className="container-signup-wrapper">
                 <Container
-                    className="contaner-signup-display"
+                    className="container-signup-display"
                     style={{ minHeight: "100vh" }}
                 >
                     <div className="card-signup-wrapper" style={{ maxWidth: "400px" }}>
                         <Card>
                             <Card.Body>
-                                <h2
-                                    className="text-header-signup"
-                                    style={{ fontWeight: "bold" }}
-                                >
-                                    Sign Up
-                                </h2>
+                            <div className="wrapper-start-container">
+                                    <h2
+                                        className="text-header-signup"
+                                        style={{ fontWeight: "bold" }}
+                                    >
+                                        Sign Up
+                                    </h2>
+                                    <img
+                                        src="/images/image-signup-1.svg"
+                                        alt="Rules illustration"
+                                        className="image-login-controller"
+                                    />
+                                </div>
                                 {error && (
                                     <Alert className="alert-error-signup">
                                         <p>{error}</p>
@@ -76,19 +79,19 @@ export default function SignUp() {
                                 )}
                                 <Form onSubmit={handleSubmit}>
                                     <Form.Group id="name" className="form-group">
-                                        <Form.Label className="Form-lable-text">
+                                        <Form.Label className="Form-label-text">
                                             Name
                                             <Form.Control type="text" ref={NameRef} required />
                                         </Form.Label>
                                     </Form.Group>
                                     <Form.Group id="email" className="form-group">
-                                        <Form.Label className="Form-lable-text">
+                                        <Form.Label className="Form-label-text">
                                             Email
                                             <Form.Control type="email" ref={emailRef} required />
                                         </Form.Label>
                                     </Form.Group>
                                     <Form.Group id="password" className="form-group">
-                                        <Form.Label className="Form-lable-text">
+                                        <Form.Label className="Form-label-text">
                                             Password
                                             <Form.Control
                                                 type="password"
@@ -98,11 +101,11 @@ export default function SignUp() {
                                         </Form.Label>
                                     </Form.Group>
                                     <Form.Group id="password-confirm" className="form-group">
-                                        <Form.Label className="Form-lable-text">
+                                        <Form.Label className="Form-label-text">
                                             Password Confirmation
                                             <Form.Control
                                                 type="password"
-                                                ref={passwordConfirmlRef}
+                                                ref={passwordConfirmRef}
                                                 required
                                             />
                                         </Form.Label>
@@ -123,7 +126,7 @@ export default function SignUp() {
                             className="under-card-text-signup"
                         >
                             Already have an account?{" "}
-                            <Link className="link-text-dispaly-signup" to="/log-in">
+                            <Link className="link-text-display-signup" to="/log-in">
                                 Log In
                             </Link>
                         </div>

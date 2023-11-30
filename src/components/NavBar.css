@@ -1,7 +1,9 @@
 .navbarCST {
-  background: linear-gradient(90deg,
-      rgb(28, 27, 27) 0%,
-      rgb(26, 23, 23) 100%) !important;
+  background: linear-gradient(
+    90deg,
+    rgb(28, 27, 27) 0%,
+    rgb(26, 23, 23) 100%
+  ) !important;
   height: 80px !important;
   display: flex !important;
   justify-content: center !important;
@@ -48,10 +50,10 @@
   margin-right: 2rem !important;
 }
 
-.nav-menu-line-spliter{
- width: 5px;
- margin-right: 10px;
- height: 65%;
+.nav-menu-line-splitter {
+  width: 5px;
+  margin-right: 10px;
+  height: 65%;
 }
 
 .nav-user-info-item-container-wrapper {
@@ -77,18 +79,22 @@
 }
 
 .nav-user-image-holder {
-  width: 30%;
-  height: 30%;
-  padding: 2rem;
+  width: 10%;
+  height: 10%;
+  padding: 25px;
   border-radius: 50%;
   object-fit: contain;
   display: flex;
   justify-content: center;
   align-items: center;
+  background: linear-gradient(
+    90deg,
+    rgb(107, 106, 106) 0%,
+    rgb(111, 106, 106) 100%
+  ) !important;
 }
 
-
-.nav-user-name-email-display-container-wrapper{
+.nav-user-name-email-display-container-wrapper {
   width: 80%;
   height: 100%;
   display: flex;
@@ -98,25 +104,30 @@
   padding: 1rem;
   gap: 0.5rem;
   border-radius: 2px;
-  background: linear-gradient(90deg, rgb(107, 106, 106) 0%, rgb(111, 106, 106) 100%) !important;
+  background: linear-gradient(
+    90deg,
+    rgb(107, 106, 106) 0%,
+    rgb(111, 106, 106) 100%
+  ) !important;
 }
 
-.nav-user-name-display-contaier{
+.nav-user-name-display-container {
   font-size: 21px;
   font-weight: 700;
 }
-.nav-user-email-display-contaier{
+
+.nav-user-email-display-container {
   font-size: 11px;
   font-weight: 400;
   color: #a8a8a8;
 }
-.image-size-controller{
+
+.image-size-controller {
   border-radius: 50%;
   width: 50px !important;
-  height: 50px !important; /* Add height if needed */
+  height: 50px !important;
+  /* Add height if needed */
 }
-
-
 
 dl,
 ol,
@@ -129,7 +140,6 @@ ul {
   height: 80px !important;
 }
 
-
 .nav-links {
   color: #fefffe !important;
   display: flex !important;
@@ -138,9 +148,11 @@ ul {
   padding: 0.5rem 1rem !important;
   height: 100% !important;
 }
-.menu-active-line-spliter{
+
+.menu-active-line-splitter {
   display: none;
- }
+}
+
 .nav-links:hover {
   border-bottom: 4px solid rebeccapurple !important;
   transition: all 0.2s ease-out !important;
@@ -241,73 +253,87 @@ ul {
     color: #242424 !important;
     transition: 250ms !important;
   }
-  
-.nav-user-info-item-container-wrapper {
-  height: 120px !important;
-}
 
-.nav-user-info-item-container {
-  color: #fefffe !important;
-  display: flex !important;
-  align-items: center !important;
-  text-decoration: none !important;
-  padding: 0.5rem 1rem !important;
-  height: 100% !important;
-  gap: 1rem;
-}
+  .nav-user-info-item-container-wrapper {
+    height: 120px !important;
+  }
 
-.nav-user-image-display-contaier{
-  width: 20%;
-  height: 100%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-.nav-user-image-holder{
-  width: 60%;
-  height: 60%;
-  padding: 3rem;
-  border-radius: 50%;
-  background: linear-gradient(90deg, rgb(107, 106, 106) 0%, rgb(111, 106, 106) 100%) !important;
-  object-fit: contain;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
+  .nav-user-info-item-container {
+    color: #fefffe !important;
+    display: flex !important;
+    align-items: center !important;
+    text-decoration: none !important;
+    padding: 0.5rem 1rem !important;
+    height: 100% !important;
+    gap: 1rem;
+  }
 
-.nav-user-name-email-display-container-wrapper{
-  width: 80%;
-  height: 100%;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: flex-start;
-  padding: 1rem;
-  gap: 0.5rem;
-  border-radius: 2px;
-  background: linear-gradient(90deg, rgb(107, 106, 106) 0%, rgb(111, 106, 106) 100%) !important;
-}
+  .nav-user-image-display-container {
+    width: 20%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
 
-.nav-user-name-display-contaier{
-  font-size: 28px;
-  font-weight: 700;
-}
-.nav-user-email-display-contaier{
-  font-size: 14px;
-  font-weight: 400;
-  color: #a8a8a8;
-}
-.nav-menu-line-spliter{
-  display: none;
- }
- .menu-active-line-spliter{
-  width: 100%;
-  display: flex;
-  justify-content: space-around;
-  align-items: center;
- }
- .image-size-controller{
-  width: 95px !important;
-  height: 95px !important; /* Add height if needed */
-}
+  .nav-user-image-holder {
+    width: 60%;
+    height: 60%;
+    padding: 3rem;
+    border-radius: 50%;
+    background: linear-gradient(
+      90deg,
+      rgb(107, 106, 106) 0%,
+      rgb(111, 106, 106) 100%
+    ) !important;
+    object-fit: contain;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .nav-user-name-email-display-container-wrapper {
+    width: 80%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    padding: 1rem;
+    gap: 0.5rem;
+    border-radius: 2px;
+    background: linear-gradient(
+      90deg,
+      rgb(107, 106, 106) 0%,
+      rgb(111, 106, 106) 100%
+    ) !important;
+  }
+
+  .nav-user-name-display-container {
+    font-size: 28px;
+    font-weight: 700;
+  }
+
+  .nav-user-email-display-container {
+    font-size: 14px;
+    font-weight: 400;
+    color: #a8a8a8;
+  }
+
+  .nav-menu-line-splitter {
+    display: none;
+  }
+
+  .menu-active-line-splitter {
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+  }
+
+  .image-size-controller {
+    width: 95px !important;
+    height: 95px !important;
+    /* Add height if needed */
+  }
 }

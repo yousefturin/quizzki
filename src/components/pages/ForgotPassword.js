@@ -1,5 +1,5 @@
 import React, { useRef, useState } from "react";
-import "../../App.css";
+import "../App.css";
 import { Card, Form, Container, Button, Alert } from "react-bootstrap";
 // import "bootstrap/dist/css/bootstrap.min.css";
 import { useAuth } from "../../contexts/AuthContext";
@@ -19,7 +19,7 @@ export default function ForgotPassword() {
             setError("");
             setLoading(true);
             await resetPassword(emailRef.current.value);
-            setMessage("Check your MailBox for the reset passowrd Link");
+            setMessage("Check your MailBox for the reset password Link");
         } catch {
             setError("Failed to reset password");
         }
@@ -29,9 +29,9 @@ export default function ForgotPassword() {
 
     return (
         <>
-            <div className="contaner-signup-wrapper">
+            <div className="container-signup-wrapper">
                 <Container
-                    className="contaner-signup-display"
+                    className="container-signup-display"
                     style={{ minHeight: "100vh" }}
                 >
                     <div className="card-signup-wrapper" style={{ maxWidth: "400px" }}>
@@ -51,7 +51,7 @@ export default function ForgotPassword() {
                                 )}
                                 <Form onSubmit={handleSubmit}>
                                     <Form.Group id="email" className="form-group">
-                                        <Form.Label className="Form-lable-text">
+                                        <Form.Label className="Form-label-text">
                                             Email
                                             <Form.Control type="email" ref={emailRef} required />
                                         </Form.Label>
@@ -67,7 +67,7 @@ export default function ForgotPassword() {
                                 </Form>
                                 <div className="bottom-text-signup">
                                     <Link
-                                        className="link-text-dispaly-signup"
+                                        className="link-text-display-signup"
                                         style={{ fontSize: "12px" }}
                                         to="/log-in"
                                     >
@@ -81,7 +81,7 @@ export default function ForgotPassword() {
                             className="under-card-text-signup"
                         >
                             Need an account?{" "}
-                            <Link className="link-text-dispaly-signup" to="/sign-up">
+                            <Link className="link-text-display-signup" to="/sign-up">
                                 Sign Up
                             </Link>
                         </div>

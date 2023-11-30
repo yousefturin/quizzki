@@ -12,7 +12,7 @@ function Footer() {
         <div className="footer-container">
             <section className="footer-subscription">
                 <p className="footer-subscription-heading">
-                    Join the Communite newsletter to receive our best methods of
+                    Join the Community newsletter to receive our best methods of
                     encryption.
                 </p>
                 <p className="footer-subscription-text">
@@ -34,8 +34,8 @@ function Footer() {
                 <div className="footer-link-wrapper">
                     <div class="footer-link-items">
                         <h2>Company</h2>
-                        <Link to="/">About Us</Link>
-                        <Link to="/">Legal</Link>
+                        <Link to="/company/about-us">About Us</Link>
+                        <Link to="/company/legal">Legal</Link>
                         <Link to="/">Careers</Link>
                         <Link to="/">Terms & Conditions</Link>
                         <Link to="/">Terms of Service</Link>

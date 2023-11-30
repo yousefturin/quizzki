@@ -1,11 +1,15 @@
 /* eslint-disable react-hooks/exhaustive-deps */
 import React, { useState, useEffect } from "react";
 import questionsData from "../../db/db_easy_level.json";
-import "../../App.css";
+import "../App.css";
 import { Card, Container, Button } from "react-bootstrap";
 import { useAuth } from "../../contexts/AuthContext";
 import axios from "axios";
 import Footer from "../Footer";
+import { usePageVisibility } from "react-page-visibility";
+
+
+
 
 export default function QuizTest() {
   // State variables to manage game state and user progress
@@ -13,74 +17,78 @@ export default function QuizTest() {
   const [usedQuestionIds, setUsedQuestionIds] = useState([]);
   const [userAnswer, setUserAnswer] = useState(null);
 
-  // eslint-disable-next-line no-unused-vars
+
+
   const [isCorrect, setIsCorrect] = useState(null); // State to track if user's answer is correct
   const [gameOver, setGameOver] = useState(false); // State to track if the game is over
+  const [gameStarted, setGameStarted] = useState(false); // State to track if the game has started
 
   // Time-related state variables
   const [remainingTime, setRemainingTime] = useState(20); // Remaining time for each question
   const [score, setScore] = useState(0); // User's score
-  const [gameStarted, setGameStarted] = useState(false); // State to track if the game has started
   const [timeUp, setTimeUp] = useState(false); // State variable to track the cause of game over
-  
+  const [tabOpened, setTabOpened] = useState(false); // State variable to track if the user onend a tab in teh browser
+ 
   // Accessing current user information using the useAuth hook
   const { currentUser } = useAuth();
   const { displayName } = currentUser || {};
 
+
+
   // Variable to store the question timer
   let questionTimer;
 
+  const isPageVisible = usePageVisibility();
+
+  // Effect to check if the user playing the view port on the background
+  useEffect(() => {
+    const handleVisibilityChange = () => {
+      if (!isPageVisible) {
+        setTabOpened(true); // Set the state variable to True so it indicate a tab onend
+        setGameOver(true); // Set the state variable to True so it triggers teh game over
+        clearInterval(questionTimer);
+      }
+    };
+
+    document.addEventListener("visibilitychange", handleVisibilityChange);
+
+    return () => {
+      document.removeEventListener("visibilitychange", handleVisibilityChange);
+    };
+  }, [isPageVisible]);
 
 
   //#region getRandomQuestion
-
   // Function to get a random question and reset relevant states
   const getRandomQuestion = () => {
     // Check if all questions have been used
     let availableQuestions = questionsData.questions.filter(
       (question) => !usedQuestionIds.includes(question.id)
     );
-  
+
     // If all questions have been used, reset the used question IDs
     if (availableQuestions.length === 0) {
       setUsedQuestionIds([]);
       availableQuestions = questionsData.questions; // Reset available questions
     }
-  
+
     // Select a random question from the available ones
     const randomIndex = Math.floor(Math.random() * availableQuestions.length);
     const randomQuestion = availableQuestions[randomIndex];
-  
+
     // Update state variables
     setCurrentQuestion(randomQuestion);
     setUserAnswer(null);
     setIsCorrect(null);
     setRemainingTime(20);
-  
-    // Add the used question ID to the list
+
+    // Add the used question ID to the list    ***The number of added id is getting to more 6 zeros which may have effect on performance 
     setUsedQuestionIds((prevIds) => [...prevIds, randomQuestion.id]);
   };
   //#endregion
-  
 
-  // //#region asynchronous set remainingTime to 0
-  // // Effect to display the "Time's up!" message when the game is over
-  // useEffect(() => {
-  //   if (gameOver) {
-  //     const timeoutId = setTimeout(() => {
-  //       setRemainingTime(0); // Ensure remainingTime is set to 0
-  //     }, 2000);
 
-  //     // Clear the timeout when the component unmounts or when the game starts again
-  //     return () => {
-  //       clearTimeout(timeoutId);
-  //     };
-  //   }
-  // }, [gameOver]);
-  // //#endregion
-
-  //#region asynchronous start timer instent
-
+  //#region asynchronous start timer instant
   // Effect to start the question timer when the game has started or restarted
   useEffect(() => {
     if (gameStarted && !gameOver) {
@@ -89,7 +97,7 @@ export default function QuizTest() {
           const updatedTime = prevTime - 1;
 
           if (updatedTime === 0) {
-            setTimeUp(true); // If the game timer zero set state timer to true for dispalying times up.
+            setTimeUp(true); // If the game timer zero set state timer to true for displaying times up.
             setGameOver(true);
             clearInterval(questionTimer); // Clear the timer when time is up
           }
@@ -107,7 +115,6 @@ export default function QuizTest() {
   //#endregion
 
   //#region handleUserSelection
-
   // Function to handle user's selection of an answer option
   const handleUserSelection = (selectedOption) => {
     const isAnswerCorrect = selectedOption === currentQuestion.answer;
@@ -118,7 +125,7 @@ export default function QuizTest() {
     // Update score and get a new question based on correctness of the answer
     if (isAnswerCorrect) {
       setScore((prevScore) => prevScore + 1);
-      setTimeUp(false); // On each question set teh timeUp to false if teh answer is correct
+      setTimeUp(false); // On each question set the timeUp to false if the answer is correct
       getRandomQuestion();
     } else {
       // End the game if the answer is incorrect
@@ -128,8 +135,8 @@ export default function QuizTest() {
   };
   //#endregion
 
-  //#region startGame
 
+  //#region startGame
   // Function to handle the start button click, initiating the game
   const handleStartButton = () => {
     setGameStarted(true);
@@ -137,35 +144,34 @@ export default function QuizTest() {
   };
   //#endregion
 
-  //#region restartGame
 
+  //#region restartGame
   // Function to restart the game, resetting relevant states
   const restartGame = () => {
     clearInterval(questionTimer);
-    // Store user data after wach restart of teh game
-    storeUserData();
+    setTabOpened(false); // Resetting open tabs state to false
+    storeUserData(); // Store user data after restart of the game
 
     // Resetting relevant states
     getRandomQuestion();
     setGameOver(false);
     setScore(0);
 
-    // Reset TimeUp to false after each restart click so it does not show up even if you click wrong answer.
-    setTimeUp(false);
+    setTimeUp(false); // Reset TimeUp to false after each restart click so it does not show up even if you click wrong answer.
 
-    // Set gameStarted to true to restart the timer
-    setGameStarted(true);
+    setGameStarted(true); // Set gameStarted to true to restart the timer
   };
   //#endregion
 
-  //#region asynchronous get new Quesetion after component mounts
 
+  //#region asynchronous get new Question after component mounts
   // Effect to get a random question when the rendered and inserted into the DOM for first time.
   useEffect(() => {
     console.log("Component mounted");
     getRandomQuestion();
   }, []);
   //#endregion
+
 
   //#region send http Post to store teh data
   const storeUserData = async () => {
@@ -184,34 +190,47 @@ export default function QuizTest() {
   };
   //#endregion
 
+
   if (gameOver) {
     return (
       <>
-      <div className="contaner-question-wrapper">
-        <Container
-          className="contaner-question-display"
-          style={{ minHeight: "100vh" }}
-        >
-          <div className="card-question-wrapper">
-            <Card>
-              <Card.Body>
-                <p>
-                  {timeUp
-                    ? "Time's up!"
-                    : isCorrect === false
-                      ? "You answered incorrectly."
-                      : ""}{" "}
-                  Your final score is <strong>{score}</strong>.
-                </p>
-                <Button onClick={restartGame} className="btn-form-submit">
-                  Restart Game
-                </Button>
-              </Card.Body>
-            </Card>
-          </div>
-        </Container>
-      </div>
-      <Footer/>
+        <div className="container-question-wrapper">
+          <Container
+            className="container-question-display"
+            style={{ minHeight: "100vh" }}
+          >
+            <div className="card-question-wrapper">
+              <Card>
+                <Card.Body>
+                  <div className="wrapper-start-container">
+                    <h1 style={{ alignSelf: "flex-start" }}>
+                      {timeUp
+                        ? "Time's up!"
+                        : isCorrect === false
+                          ? "You answered incorrectly."
+                          : tabOpened
+                            ? "Ops You are cheating!"
+                            : ""}{" "}
+                    </h1>
+
+                    <img
+                      src="/images/image-restart-1.svg"
+                      alt="Rules illustration"
+                      className="image-Rules-controller"
+                    />
+                    <p>
+                      Your final score is <strong>{score}</strong>.
+                    </p>
+                  </div>
+                  <Button onClick={restartGame} className="btn-form-submit">
+                    Restart Game
+                  </Button>
+                </Card.Body>
+              </Card>
+            </div>
+          </Container>
+        </div>
+        <Footer />
       </>
     );
   }
@@ -219,18 +238,29 @@ export default function QuizTest() {
   return (
     <>
       {!gameStarted && (
-        <div className="contaner-question-wrapper">
+        <div className="container-question-wrapper">
           <Container
-            className="contaner-question-display"
+            className="container-question-display"
             style={{ minHeight: "100vh" }}
           >
             <div className="card-question-wrapper">
               <Card>
                 <Card.Body>
-                  <h2>
-                    Welcome! {displayName}{" "}
-                    <h6>are you ready to start the game ?</h6>
-                  </h2>
+                  <div className="wrapper-start-container">
+                    <h1 style={{ alignSelf: "flex-start" }}>
+                      Welcome! {displayName}{" "}
+                    </h1>
+                    <h4 style={{ alignSelf: "flex-start" }}>
+                      are you ready to start the game ?
+                    </h4>
+
+                    <img
+                      src="/images/image-start-1.svg"
+                      alt="Rules illustration"
+                      className="image-Rules-controller"
+                    />
+                  </div>
+
                   <Button
                     onClick={handleStartButton}
                     className="btn-form-submit"
@@ -245,15 +275,12 @@ export default function QuizTest() {
       )}
 
       {gameStarted && currentQuestion && (
-        <div className="contaner-question-wrapper">
+        <div className="container-question-wrapper">
           <Container
-            className="contaner-question-display"
+            className="container-question-display"
             style={{ minHeight: "100vh" }}
           >
-            <div
-              className="card-question-wrapper"
-              
-            >
+            <div className="card-question-wrapper">
               <Card>
                 <Card.Body className="card-body-question">
                   <div>
@@ -286,7 +313,7 @@ export default function QuizTest() {
           </Container>
         </div>
       )}
-      <Footer/>
+      <Footer />
     </>
   );
 }

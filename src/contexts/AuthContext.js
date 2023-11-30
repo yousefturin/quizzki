@@ -1,7 +1,5 @@
 import React, { useContext, useEffect, useState } from "react";
-import { auth} from "../firebase";
-
-
+import { auth } from "../firebase";
 
 // Create a context for authentication to be used by components
 const AuthContext = React.createContext();
@@ -18,14 +16,17 @@ export function AuthProvider({ children }) {
     const [loading, setLoading] = useState(true);
 
     // Function to sign up a user with email and password
-    async function signup(email, password, displayName, displayAvatar) {
+    async function signup(email, password, displayName, photoURL) {
         // Create user with email and password
-        const userCredential = await auth.createUserWithEmailAndPassword(email, password);
+        const userCredential = await auth.createUserWithEmailAndPassword(
+            email,
+            password
+        );
 
         // Update user profile with display name
         await userCredential.user.updateProfile({
-        displayName: displayName,
-        displayAvatar: displayAvatar
+            displayName: displayName,
+            photoURL: photoURL,
         });
 
         // Set the current user state

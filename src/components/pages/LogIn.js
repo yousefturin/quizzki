@@ -1,5 +1,5 @@
 import React, { useRef, useState } from "react";
-import "../../App.css";
+import "../App.css";
 import { Card, Form, Container, Button, Alert } from "react-bootstrap";
 // import "bootstrap/dist/css/bootstrap.min.css";
 import { useAuth } from "../../contexts/AuthContext";
@@ -34,20 +34,28 @@ export default function LogIn() {
 
     return (
         <>
-            <div className="contaner-signup-wrapper">
+            <div className="container-signup-wrapper">
                 <Container
-                    className="contaner-signup-display"
+                    className="container-signup-display"
                     style={{ minHeight: "100vh" }}
                 >
                     <div className="card-signup-wrapper" style={{ maxWidth: "400px" }}>
                         <Card>
                             <Card.Body>
-                                <h2
-                                    className="text-header-signup"
-                                    style={{ fontWeight: "bold" }}
-                                >
-                                    Log In
-                                </h2>
+                                <div className="wrapper-start-container">
+                                    <h2
+                                        className="text-header-signup"
+                                        style={{ fontWeight: "bold" }}
+                                    >
+                                        Log In
+                                    </h2>
+                                    <img
+                                        src="/images/image-login-1.svg"
+                                        alt="Rules illustration"
+                                        className="image-login-controller"
+                                    />
+                                </div>
+
                                 {error && (
                                     <Alert className="alert-error-signup">
                                         <p>{error}</p>
@@ -55,7 +63,7 @@ export default function LogIn() {
                                 )}
                                 <Form onSubmit={handleSubmit}>
                                     <Form.Group id="email" className="form-group">
-                                        <Form.Label className="Form-lable-text">
+                                        <Form.Label className="Form-label-text">
                                             Email
                                             <Form.Control
                                                 type="email"
@@ -66,7 +74,7 @@ export default function LogIn() {
                                         </Form.Label>
                                     </Form.Group>
                                     <Form.Group id="password" className="form-group">
-                                        <Form.Label className="Form-lable-text">
+                                        <Form.Label className="Form-label-text">
                                             Password
                                             <Form.Control
                                                 type="password"
@@ -87,7 +95,7 @@ export default function LogIn() {
                                 </Form>
                                 <div className="bottom-text-signup">
                                     <Link
-                                        className="link-text-dispaly-signup"
+                                        className="link-text-display-signup"
                                         to="/reset-password"
                                         style={{ fontSize: "12px" }}
                                     >
@@ -102,7 +110,7 @@ export default function LogIn() {
                             className="under-card-text-signup"
                         >
                             Need an account?{" "}
-                            <Link className="link-text-dispaly-signup" to="/sign-up">
+                            <Link className="link-text-display-signup" to="/sign-up">
                                 Sign Up
                             </Link>
                         </div>
