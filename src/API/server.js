@@ -6,7 +6,7 @@ const path = require("path");
 const app = express();
 const port = 5000;
 // Enable CORS for all routes, this function is to allow all the URLs 
-// to sent an POST,GET request otherwise it will give statos error Cors
+// to sent an POST,GET request otherwise it will give stats error Cors
 app.use(cors());
 
 const db = new sqlite3.Database(path.join(__dirname, "userData.db"));
