@@ -1,12 +1,12 @@
 import React from "react";
-import "../App.css";
+import "./App.css";
 import { REButton } from "./Button";
 import "./DisplayScreen.css";
 import { Link } from "react-router-dom";
 
 function DisplayScreen() {
     return (
-        <div className="dispaly-container">
+        <div className="display-container">
             <div class="gradient-background">
                 <div class="gradient"></div>
             </div>
