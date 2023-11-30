@@ -1,13 +1,12 @@
 /* eslint-disable react-hooks/exhaustive-deps */
 import React, { useState, useEffect } from "react";
 import questionsData from "../../db/db_easy_level.json";
-import "../App.css";
 import { Card, Container, Button } from "react-bootstrap";
 import { useAuth } from "../../contexts/AuthContext";
+import { usePageVisibility } from "react-page-visibility";
 import axios from "axios";
 import Footer from "../Footer";
-import { usePageVisibility } from "react-page-visibility";
-
+import "../App.css";
 
 
 

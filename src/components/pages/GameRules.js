@@ -1,6 +1,6 @@
 import React from "react";
-import "../App.css";
 import Footer from "../Footer";
+import "../App.css";
 
 export default function GameRules() {
   return (
@@ -14,7 +14,7 @@ export default function GameRules() {
                     className="image-Rules-controller" />
 
         <p>
-           <strong>Welcome to Quizzki!</strong> To ensure a fair and exciting gaming
+          <strong>Welcome to Quizzki!</strong> To ensure a fair and exciting gaming
           experience for everyone, please familiarize yourself with the
           following rules:
         </p>

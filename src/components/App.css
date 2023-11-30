@@ -305,7 +305,6 @@ body::-webkit-scrollbar-track {
   padding: 8px;
   text-align: left;
   background-color: #f2f2f258;
-  /* Set the background color for both header and rows */
 }
 
 .user-table tbody tr:hover {

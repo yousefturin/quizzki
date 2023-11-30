@@ -1,8 +1,8 @@
 import React from "react";
 import { REButton } from "./Button";
-import "./Footer.css";
 import { Link } from "react-router-dom";
 import AppIcon from "./utils/AppIcon";
+import "./Footer.css";
 
 function Footer() {
     const getCurrentYear = () => {

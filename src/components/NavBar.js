@@ -2,11 +2,10 @@
 import React, { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
 import { REButton } from "./Button";
-import "./NavBar.css";
 import AppIcon from "./utils/AppIcon";
-import { Button } from "react-bootstrap";
 import { useAuth } from "../contexts/AuthContext";
 import { useNavigate } from "react-router-dom";
+import "./NavBar.css";
 
 
 function Navbar() {

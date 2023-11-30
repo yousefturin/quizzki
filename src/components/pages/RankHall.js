@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import axios from 'axios';
-import "../App.css";
 import Footer from "../Footer";
+import "../App.css";
 
 export default function RankHall() {
   const [userData, setUserData] = useState([]);

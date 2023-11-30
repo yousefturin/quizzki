@@ -1,8 +1,8 @@
 import React from "react";
-import "./App.css";
 import { REButton } from "./Button";
-import "./DisplayScreen.css";
 import { Link } from "react-router-dom";
+import "./App.css";
+import "./DisplayScreen.css";
 
 function DisplayScreen() {
     return (

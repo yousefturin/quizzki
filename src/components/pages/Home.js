@@ -1,7 +1,8 @@
 import React from 'react'
+import Footer from '../Footer';
 import '../App.css'
 import DisplayScreen from '../DisplayScreen'
-import Footer from '../Footer';
+
 function Home(){
     return(
         <>

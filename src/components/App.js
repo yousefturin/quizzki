@@ -1,18 +1,18 @@
 import React from "react";
-import "./App.css";
-import Home from "./pages/Home";
 import NavBar from "./NavBar";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
-import RankHall from "./pages/RankHall";
-import SignUp from "./pages/SignUp";
-import LogIn from "./pages/LogIn";
 import { AuthProvider } from "../contexts/AuthContext";
 import PrivateRoute from "./PrivateRoute";
 import ForgotPassword from "./pages/ForgotPassword";
+import Home from "./pages/Home";
+import RankHall from "./pages/RankHall";
+import SignUp from "./pages/SignUp";
+import LogIn from "./pages/LogIn";
 import QuizTest from "./pages/QuizTest";
 import GameRules from "./pages/GameRules";
 import AboutUs from "./pages/AboutUs";
 import Legal from "./pages/Legal";
+import "./App.css";
 
 function App() {
   return (
