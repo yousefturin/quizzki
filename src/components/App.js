@@ -1,5 +1,5 @@
 import React from "react";
-import "../App.css";
+import "./App.css";
 import Home from "./pages/Home";
 import NavBar from "./NavBar";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
@@ -11,6 +11,8 @@ import PrivateRoute from "./PrivateRoute";
 import ForgotPassword from "./pages/ForgotPassword";
 import QuizTest from "./pages/QuizTest";
 import GameRules from "./pages/GameRules";
+import AboutUs from "./pages/AboutUs";
+import Legal from "./pages/Legal";
 
 function App() {
   return (
@@ -53,6 +55,8 @@ function App() {
             <Route path="/sign-up" element={<SignUp />} />
             <Route path="/log-in" element={<LogIn />} />
             <Route path="/reset-password" element={<ForgotPassword />} />
+            <Route path="/company/about-us" element={<AboutUs />} />
+            <Route path="/company/legal" element={<Legal />} />
           </Routes>
         </AuthProvider>
       </Router>
