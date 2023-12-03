@@ -1,0 +1,110 @@
+/*======================
+    404 page
+=======================*/
+
+*{
+  transition: all 1s ease;
+}
+.page-404 {
+  height: 92vh;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  object-fit: contain;
+  padding-inline: 5rem;
+}
+
+.page-404 h1 {
+  font-size: 12rem;
+  text-align: center;
+  width: 100%;
+  margin-top: 4rem;
+}
+
+.page-404-background-bg {
+  background-image: url(https://cdn.dribbble.com/users/285475/screenshots/2083086/dribbble_1.gif);
+  background-repeat: no-repeat;
+  background-position: center;
+  object-fit: cover;
+  width: 700px;
+  height: 100%;
+  transform: scale(1.3);
+  z-index: -1;
+  overflow: hidden;
+}
+.page-404-content-box{
+  margin-bottom: 4rem;
+}
+.page-404-content-box h3 {
+  font-size: 3rem;
+}
+.page-404-content-box p {
+  font-size: 1.2rem;
+  margin-left: 0.3rem;
+}
+.page-404-link-wrapper{
+  display: flex;
+  justify-content: center;
+}
+.link-404 {
+  justify-self: center;
+  width: 50%;
+  text-align: center;
+  color: #fff !important;
+  padding: 10px 20px;
+  background: #663399;
+  margin: 20px 0;
+  display: inline-block;
+  text-decoration: none;
+  border-radius: 2px;
+}
+.link-404:hover ,
+.link-404:focus {
+  background-color: #522a7a;
+}
+@media screen and (max-width: 960px) {
+  .page-404 {
+    padding-inline: 3rem;
+  }
+  .page-404-background-bg {
+    width: 700px;
+    height: 100%;
+    transform: scale(1.2);
+    z-index: -1;
+    overflow: hidden;
+  }
+  .page-404 h1 {
+    font-size: 9rem;
+  }
+  .page-404-content-box h3 {
+    font-size: 2.5rem;
+  }
+  .page-404-content-box p {
+    font-size: 1rem;
+    margin-left: 0.3rem;
+  }
+}
+@media screen and (max-width: 768px) {
+  .page-404 {
+    padding-inline: 2rem;
+  }
+  .page-404-background-bg {
+    width: 700px;
+    height: 100%;
+    transform: scale(0.5);
+    z-index: -1;
+    overflow: hidden;
+  }
+  .page-404 h1 {
+    font-size: 7rem;
+  }
+  .page-404-content-box h3 {
+    font-size: 2rem;
+  }
+  .page-404-content-box p {
+    font-size: 0.8rem;
+    margin-left: 0.3rem;
+  }
+}
