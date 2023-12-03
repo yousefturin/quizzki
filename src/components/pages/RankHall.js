@@ -12,7 +12,7 @@ export default function RankHall() {
     // Fetch all user data from the server when the component mounts
     const fetchData = async () => {
       try {
-        const response = await axios.get('http://localhost:5000/getAllUserData');
+        const response = await axios.get('https://quizzkiapi-quizzki.onrender.com/v0/api/Quizzki/getAllUserData');
         setUserData(response.data.data);
       } catch (error) {
         console.error('Error fetching user data', error);

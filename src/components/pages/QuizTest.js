@@ -173,7 +173,7 @@ export default function QuizTest() {
   const storeUserData = async () => {
     try {
       const currentTime = new Date().toLocaleString();
-      const apiUrl = "http://localhost:5000/PostUserData";
+      const apiUrl = "https://quizzkiapi-quizzki.onrender.com/v0/api/Quizzki/PostUserData";
       const apiKey = "4111ad3f15115c1a4c60c3c0e73abdbbbffb435b"; 
       const response = await axios.post(apiUrl, {
         displayName,

@@ -27,7 +27,7 @@ const apiKeyMiddleware = (req, res, next) => {
     next();
 };
 
-app.use("/PostUserData", apiKeyMiddleware);
+app.use("/v0/api/Quizzki/PostUserData", apiKeyMiddleware);
 
 const db = new sqlite3.Database(path.join(__dirname, "../db", "db_userData.db"));
 
@@ -45,7 +45,7 @@ db.run(`
 app.use(express.json()); // Enable JSON parsing for request bodies
 
 // API end point , that is to make and POST request to the APIs
-app.post("/PostUserData", async (req, res) => {
+app.post("/v0/api/Quizzki/PostUserData", async (req, res) => {
     const { displayName, time, score, email } = req.body;
 
     // Check if user ID exists in the database
@@ -104,7 +104,7 @@ app.post("/PostUserData", async (req, res) => {
     );
 });
 
-app.get("/getAllUserData", (req, res) => {
+app.get("/v0/api/Quizzki/getAllUserData", (req, res) => {
     // Retrieve all user data from the database
     db.all("SELECT displayName,time,score FROM users", (err, rows) => {
         if (err) {
