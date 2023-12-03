@@ -8,15 +8,11 @@ import axios from "axios";
 import Footer from "../Footer";
 import "../App.css";
 
-
-
 export default function QuizTest() {
   // State variables to manage game state and user progress
   const [currentQuestion, setCurrentQuestion] = useState(null);
   const [usedQuestionIds, setUsedQuestionIds] = useState([]);
   const [userAnswer, setUserAnswer] = useState(null);
-
-
 
   const [isCorrect, setIsCorrect] = useState(null); // State to track if user's answer is correct
   const [gameOver, setGameOver] = useState(false); // State to track if the game is over
@@ -27,12 +23,10 @@ export default function QuizTest() {
   const [score, setScore] = useState(0); // User's score
   const [timeUp, setTimeUp] = useState(false); // State variable to track the cause of game over
   const [tabOpened, setTabOpened] = useState(false); // State variable to track if the user onend a tab in teh browser
- 
+
   // Accessing current user information using the useAuth hook
   const { currentUser } = useAuth();
-  const { displayName } = currentUser || {};
-
-
+  const { displayName, email } = currentUser || {};
 
   // Variable to store the question timer
   let questionTimer;
@@ -42,7 +36,8 @@ export default function QuizTest() {
   // Effect to check if the user playing the view port on the background
   useEffect(() => {
     const handleVisibilityChange = () => {
-      if (!isPageVisible) {
+      if (!isPageVisible && gameStarted) {
+        // Without the start of teh game the GameOver will be shown even if the game did not start.
         setTabOpened(true); // Set the state variable to True so it indicate a tab onend
         setGameOver(true); // Set the state variable to True so it triggers teh game over
         clearInterval(questionTimer);
@@ -55,7 +50,6 @@ export default function QuizTest() {
       document.removeEventListener("visibilitychange", handleVisibilityChange);
     };
   }, [isPageVisible]);
-
 
   //#region getRandomQuestion
   // Function to get a random question and reset relevant states
@@ -81,11 +75,10 @@ export default function QuizTest() {
     setIsCorrect(null);
     setRemainingTime(20);
 
-    // Add the used question ID to the list    ***The number of added id is getting to more 6 zeros which may have effect on performance 
+    // Add the used question ID to the list    ***The number of added id is getting to more 6 zeros which may have effect on performance
     setUsedQuestionIds((prevIds) => [...prevIds, randomQuestion.id]);
   };
   //#endregion
-
 
   //#region asynchronous start timer instant
   // Effect to start the question timer when the game has started or restarted
@@ -134,7 +127,6 @@ export default function QuizTest() {
   };
   //#endregion
 
-
   //#region startGame
   // Function to handle the start button click, initiating the game
   const handleStartButton = () => {
@@ -143,13 +135,12 @@ export default function QuizTest() {
   };
   //#endregion
 
-
   //#region restartGame
   // Function to restart the game, resetting relevant states
   const restartGame = () => {
     clearInterval(questionTimer);
     setTabOpened(false); // Resetting open tabs state to false
-    storeUserData(); // Store user data after restart of the game
+    // storeUserData(); // Store user data after restart of the game
 
     // Resetting relevant states
     getRandomQuestion();
@@ -162,7 +153,6 @@ export default function QuizTest() {
   };
   //#endregion
 
-
   //#region asynchronous get new Question after component mounts
   // Effect to get a random question when the rendered and inserted into the DOM for first time.
   useEffect(() => {
@@ -171,24 +161,37 @@ export default function QuizTest() {
   }, []);
   //#endregion
 
+  //#region asynchronous Post the data to the API end point
+  // Effect to Post user data after each time a gameOver is triggered
+  useEffect(() => {
+    if (gameOver) {
+      storeUserData();
+    }
+  }, [gameStarted, gameOver]);
 
   //#region send http Post to store teh data
   const storeUserData = async () => {
     try {
       const currentTime = new Date().toLocaleString();
-      const response = await axios.post("http://localhost:5000/PostUserData", {
+      const apiUrl = "http://localhost:5000/PostUserData";
+      const apiKey = "4111ad3f15115c1a4c60c3c0e73abdbbbffb435b"; 
+      const response = await axios.post(apiUrl, {
         displayName,
         time: currentTime,
         score,
+        email
+      }, {
+        headers: {
+          "x-api-key": apiKey,
+        },
       });
-
+  
       console.log(response.data);
     } catch (error) {
       console.error("Error storing user data", error);
     }
   };
   //#endregion
-
 
   if (gameOver) {
     return (
@@ -199,19 +202,20 @@ export default function QuizTest() {
             style={{ minHeight: "100vh" }}
           >
             <div className="card-question-wrapper">
-              <Card>
+              <Card
+                style={{ display: "flex", flexDirection: "row", gap: "20px" }}
+              >
                 <Card.Body>
                   <div className="wrapper-start-container">
                     <h1 style={{ alignSelf: "flex-start" }}>
                       {timeUp
                         ? "Time's up!"
                         : isCorrect === false
-                          ? "You answered incorrectly."
-                          : tabOpened
-                            ? "Ops You are cheating!"
-                            : ""}{" "}
+                        ? "You answered incorrectly."
+                        : tabOpened
+                        ? "Ops You are cheating!"
+                        : ""}{" "}
                     </h1>
-
                     <img
                       src="/images/image-restart-1.svg"
                       alt="Rules illustration"
@@ -225,6 +229,42 @@ export default function QuizTest() {
                     Restart Game
                   </Button>
                 </Card.Body>
+                {isCorrect === false && (
+                  <>
+                    <hr />
+                    <Card.Body className="card-body-question">
+                      <div className="question-wrapper">
+                        <h3>{currentQuestion.question}</h3>
+                      </div>
+
+                      <ul className="questions-grid">
+                        {currentQuestion.options.map((option, index) => (
+                          <li key={index}>
+                            <Button
+                              className="btn-question-submit"
+                              disabled={userAnswer !== null}
+                              style={{
+                                marginTop:0,
+                                textAlign: "left",
+                                fontSize: "11px",
+                                background:
+                                  option === currentQuestion.answer
+                                    ? "#663399"
+                                    : "gray",
+                                color:
+                                  option === currentQuestion.answer
+                                    ? "white"
+                                    : "black",
+                              }}
+                            >
+                              {option}
+                            </Button>
+                          </li>
+                        ))}
+                      </ul>
+                    </Card.Body>
+                  </>
+                )}
               </Card>
             </div>
           </Container>
