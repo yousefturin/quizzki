@@ -13,6 +13,9 @@ import GameRules from "./pages/GameRules";
 import AboutUs from "./pages/AboutUs";
 import Legal from "./pages/Legal";
 import "./App.css";
+import Profile from "./pages/Profile";
+import UserPrivateRoute from "./UserPrivateRoute";
+import Error from "./pages/Error";
 
 function App() {
   return (
@@ -21,13 +24,7 @@ function App() {
         <AuthProvider>
           <NavBar />
           <Routes>
-            <Route
-              path="/"
-              exact
-              element={
-                  <Home />
-              }
-            />
+            <Route path="/" exact element={<Home />} />
             <Route
               path="/rank-hall"
               element={
@@ -52,11 +49,18 @@ function App() {
                 </PrivateRoute>
               }
             />
+            {/* No need for both PrivateRoute and UserPrivateRoute at the same time for the user page */}
+            <Route
+              path="/users/:uid"
+              element={<UserPrivateRoute element={<Profile />} />}
+            />
+
             <Route path="/sign-up" element={<SignUp />} />
             <Route path="/log-in" element={<LogIn />} />
             <Route path="/reset-password" element={<ForgotPassword />} />
             <Route path="/company/about-us" element={<AboutUs />} />
             <Route path="/company/legal" element={<Legal />} />
+            <Route path="/error" element={<Error />} />
           </Routes>
         </AuthProvider>
       </Router>
