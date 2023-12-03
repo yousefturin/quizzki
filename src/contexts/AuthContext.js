@@ -48,6 +48,19 @@ export function AuthProvider({ children }) {
         return auth.sendPasswordResetEmail(email);
     }
 
+    function updateEmail(email){
+        return currentUser.updateEmail(email)
+    }
+
+    function updatePassword(password){
+        currentUser.updateProfile()
+        return currentUser.updatePassword(password)
+        
+    }
+    function updateAvatar(displayName){
+        return currentUser.updateProfile(displayName)
+    }
+
     // Effect hook to listen for changes in the user's authentication state
     useEffect(() => {
         // Set up a listener for authentication state changes
@@ -68,6 +81,9 @@ export function AuthProvider({ children }) {
         login,
         logout,
         resetPassword,
+        updateEmail,
+        updatePassword,
+        updateAvatar
     };
 
     // Provide the context and its values to the wrapped components
