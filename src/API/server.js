@@ -3,18 +3,39 @@ const cors = require("cors"); // Import the cors middleware
 const sqlite3 = require("sqlite3");
 const path = require("path");
 
+
 const app = express();
 const port = 5000;
-// Enable CORS for all routes, this function is to allow all the URLs 
+// Enable CORS for all routes, this function is to allow all the URLs
 // to sent an POST,GET request otherwise it will give stats error Cors
 app.use(cors());
 
-const db = new sqlite3.Database(path.join(__dirname, "userData.db"));
+
+const apiKey = "4111ad3f15115c1a4c60c3c0e73abdbbbffb435b";
+
+// Middleware for API key validation
+const apiKeyMiddleware = (req, res, next) => {
+    const providedApiKey = req.headers["x-api-key"];
+
+    // console.log("Provided API Key:", providedApiKey);
+    // console.log("Expected API Key:", apiKey);
+
+    if (!providedApiKey || providedApiKey !== apiKey) {
+        return res.status(401).json({ error: "Unauthorized: Invalid API key" });
+    }
+
+    next();
+};
+
+app.use("/PostUserData", apiKeyMiddleware);
+
+const db = new sqlite3.Database(path.join(__dirname, "../db", "db_userData.db"));
 
 // Create a users table if it doesn't exist
 db.run(`
   CREATE TABLE IF NOT EXISTS users (
     id INTEGER PRIMARY KEY AUTOINCREMENT,
+    email TEXT,
     displayName TEXT,
     time TEXT,
     score INTEGER
@@ -23,15 +44,14 @@ db.run(`
 
 app.use(express.json()); // Enable JSON parsing for request bodies
 
-
 // API end point , that is to make and POST request to the APIs
 app.post("/PostUserData", async (req, res) => {
-    const { displayName, time, score } = req.body;
+    const { displayName, time, score, email } = req.body;
 
     // Check if user ID exists in the database
     db.get(
-        "SELECT * FROM users WHERE displayName = ?",
-        [displayName],
+        "SELECT * FROM users WHERE email = ?",
+        [email],
         (err, row) => {
             if (err) {
                 return res.status(500).json({ error: "Error checking user data" });
@@ -42,8 +62,8 @@ app.post("/PostUserData", async (req, res) => {
                 if (score > row.score) {
                     // Update the score if the new score is higher
                     db.run(
-                        "UPDATE users SET time = ?, score = ? WHERE displayName = ?",
-                        [time, score, displayName],
+                        "UPDATE users SET time = ?, score = ?, displayName = ? WHERE email = ?",
+                        [time, score, displayName, email],
                         (updateErr) => {
                             if (updateErr) {
                                 return res
@@ -64,8 +84,8 @@ app.post("/PostUserData", async (req, res) => {
             } else {
                 // User does not exist, insert new data
                 db.run(
-                    "INSERT INTO users (displayName, time, score) VALUES (?, ?, ?)",
-                    [displayName, time, score],
+                    "INSERT INTO users (displayName, time, score, email) VALUES (?, ?, ?, ?)",
+                    [displayName, time, score, email],
                     (insertErr) => {
                         if (insertErr) {
                             return res
@@ -86,7 +106,7 @@ app.post("/PostUserData", async (req, res) => {
 
 app.get("/getAllUserData", (req, res) => {
     // Retrieve all user data from the database
-    db.all("SELECT * FROM users", (err, rows) => {
+    db.all("SELECT displayName,time,score FROM users", (err, rows) => {
         if (err) {
             return res.status(500).json({ error: "Error retrieving user data" });
         }
