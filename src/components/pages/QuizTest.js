@@ -1,14 +1,42 @@
 /* eslint-disable react-hooks/exhaustive-deps */
 import React, { useState, useEffect } from "react";
-import questionsData from "../../db/db_easy_level.json";
+// import questionsData from "../../db/db_easy_level.json";
 import { Card, Container, Button } from "react-bootstrap";
 import { useAuth } from "../../contexts/AuthContext";
+import { useQuiz  } from "../../contexts/QuizContext";
 import { usePageVisibility } from "react-page-visibility";
 import axios from "axios";
 import Footer from "../Footer";
 import "../App.css";
+import { Link, useParams } from 'react-router-dom';
+
 
 export default function QuizTest() {
+
+  const { idTest } = useParams();
+  const { selectedCard } = useQuiz();
+  const [questionsData, setQuestionsData] = useState([]);
+
+  // dynamically importing the location of database for questions
+  useEffect(() => {
+    const fetchQuestionsData = async () => {
+      if (selectedCard?.fileLocation) {
+        try {
+          const module = await import(`../../db/${selectedCard.fileLocation}`);
+          if (module && module.default && module.default.questions) {
+            setQuestionsData(module.default);
+          } else {
+            console.error("Invalid questions data structure");
+          }
+        } catch (error) {
+          console.error("Error loading questions data:", error);
+        }
+      }
+    };
+
+    fetchQuestionsData();
+  }, [selectedCard]);
+
   // State variables to manage game state and user progress
   const [currentQuestion, setCurrentQuestion] = useState(null);
   const [usedQuestionIds, setUsedQuestionIds] = useState([]);
@@ -19,7 +47,7 @@ export default function QuizTest() {
   const [gameStarted, setGameStarted] = useState(false); // State to track if the game has started
 
   // Time-related state variables
-  const [remainingTime, setRemainingTime] = useState(20); // Remaining time for each question
+  const [remainingTime, setRemainingTime] = useState(3000000000); // Remaining time for each question
   const [score, setScore] = useState(0); // User's score
   const [timeUp, setTimeUp] = useState(false); // State variable to track the cause of game over
   const [tabOpened, setTabOpened] = useState(false); // State variable to track if the user onend a tab in teh browser
@@ -54,6 +82,8 @@ export default function QuizTest() {
   //#region getRandomQuestion
   // Function to get a random question and reset relevant states
   const getRandomQuestion = () => {
+    // Check if the questions are mounted
+    if (questionsData.questions) {
     // Check if all questions have been used
     let availableQuestions = questionsData.questions.filter(
       (question) => !usedQuestionIds.includes(question.id)
@@ -73,10 +103,11 @@ export default function QuizTest() {
     setCurrentQuestion(randomQuestion);
     setUserAnswer(null);
     setIsCorrect(null);
-    setRemainingTime(20);
+    setRemainingTime(30000000);
 
     // Add the used question ID to the list    ***The number of added id is getting to more 6 zeros which may have effect on performance
     setUsedQuestionIds((prevIds) => [...prevIds, randomQuestion.id]);
+  }
   };
   //#endregion
 
@@ -156,8 +187,10 @@ export default function QuizTest() {
   //#region asynchronous get new Question after component mounts
   // Effect to get a random question when the rendered and inserted into the DOM for first time.
   useEffect(() => {
+    if (questionsData.questions) {
     console.log("Component mounted");
     getRandomQuestion();
+    }
   }, []);
   //#endregion
 
@@ -228,6 +261,12 @@ export default function QuizTest() {
                   <Button onClick={restartGame} className="btn-form-submit">
                     Restart Game
                   </Button>
+                  <Link to="/quiz-test" className="btn-mobile">
+                    <Button className="btn-form-submit-second"
+                    >
+                        Back to main
+                    </Button>
+                </Link>
                 </Card.Body>
                 {isCorrect === false && (
                   <>
@@ -290,9 +329,8 @@ export default function QuizTest() {
                       Welcome! {displayName}{" "}
                     </h1>
                     <h4 style={{ alignSelf: "flex-start" }}>
-                      are you ready to start the game ?
+                      are you ready to start the {idTest} game ?
                     </h4>
-
                     <img
                       src="/images/image-start-1.svg"
                       alt="Rules illustration"
