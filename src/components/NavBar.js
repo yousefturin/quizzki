@@ -7,7 +7,6 @@ import { useAuth } from "../contexts/AuthContext";
 import { useNavigate } from "react-router-dom";
 import "./NavBar.css";
 
-
 function Navbar() {
   const [click, setClick] = useState(false);
   const [button, setButton] = useState(true);
@@ -18,7 +17,7 @@ function Navbar() {
   const [extendedContainer, setExtendedContainer] = useState(false);
   const [showBlock, setShowBlock] = useState(false);
   // This shit was pain in the ass giving me that a users is already a null so had to do that
-  const { displayName, email, photoURL, uid  } = currentUser || {};
+  const { displayName, email, photoURL, uid } = currentUser || {};
 
   const showButton = () => {
     if (window.innerWidth <= 960) {
@@ -76,11 +75,11 @@ function Navbar() {
   const closeMobileMenu = () => setClick(false);
   const handleContainer = () => setExtendedContainer(!extendedContainer);
 
-  // when closing the menu with button the container will be closed 
-  const handleContainerClick =()=>{
+  // when closing the menu with button the container will be closed
+  const handleContainerClick = () => {
     setExtendedContainer(false);
-    handleClick()
-  }
+    handleClick();
+  };
   // when logging out the menu will close then the logo out will be handled
   const handleLogoutAndCloseMenu = () => {
     closeMobileMenu();
@@ -88,11 +87,10 @@ function Navbar() {
   };
 
   // when cancel and open the Menu back the container will be closed.
-  const handleContainerCloseMobileMenu =()=>{
+  const handleContainerCloseMobileMenu = () => {
     closeMobileMenu();
     setShowBlock(false);
-  }
-
+  };
 
   useEffect(() => {
     if (currentUser !== null && extendedContainer) {
@@ -101,7 +99,6 @@ function Navbar() {
       setShowBlock(false);
     }
   }, [currentUser, extendedContainer]);
-
 
   return (
     <>
@@ -114,7 +111,10 @@ function Navbar() {
           <div className="menu-icon" onClick={handleContainerClick}>
             <i className={click ? "fas fa-times" : "fas fa-bars"} />
           </div>
-          <ul className={click ? "nav-menu active" : "nav-menu"}>
+          <ul
+            className={click ? "nav-menu active" : "nav-menu"}
+            style={{ width: currentUser ? "75vw" : "50vw" }}
+          >
             {currentUser && (
               <li
                 className={
@@ -158,16 +158,16 @@ function Navbar() {
                     {showBlock && (
                       <>
                         <hr className="horizontal-line-separator" />
-                    
-                      <li className="nav-item-user">
-                        <Link
-                          className="nav-links"
-                          to={`/users/${uid}`}
-                          onClick={handleContainerCloseMobileMenu}
-                        >
-                          Profile
-                        </Link>
-                      </li>
+
+                        <li className="nav-item-user">
+                          <Link
+                            className="nav-links"
+                            to={`/users/${uid}`}
+                            onClick={handleContainerCloseMobileMenu}
+                          >
+                            Profile
+                          </Link>
+                        </li>
                       </>
                     )}
                     {showBlock && (
