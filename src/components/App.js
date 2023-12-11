@@ -16,12 +16,15 @@ import "./App.css";
 import Profile from "./pages/Profile";
 import UserPrivateRoute from "./UserPrivateRoute";
 import Error from "./pages/Error";
+import QuizLanding from "./pages/QuizLanding";
+import { QuizProvider } from "../contexts/QuizContext";
 
 function App() {
   return (
     <>
       <Router>
         <AuthProvider>
+        <QuizProvider>
           <NavBar />
           <Routes>
             <Route path="/" exact element={<Home />} />
@@ -34,7 +37,7 @@ function App() {
               }
             />
             <Route
-              path="/quiz-test"
+              path="/quiz-test/:idTest"
               element={
                 <PrivateRoute>
                   <QuizTest />
@@ -49,6 +52,15 @@ function App() {
                 </PrivateRoute>
               }
             />
+            <Route
+              path="/quiz-test"
+              element={
+                <PrivateRoute>
+                  <QuizLanding />
+                </PrivateRoute>
+              }
+            />
+            
             {/* No need for both PrivateRoute and UserPrivateRoute at the same time for the user page */}
             <Route
               path="/users/:uid"
@@ -62,6 +74,7 @@ function App() {
             <Route path="/company/legal" element={<Legal />} />
             <Route path="/error" element={<Error />} />
           </Routes>
+          </QuizProvider>
         </AuthProvider>
       </Router>
     </>
