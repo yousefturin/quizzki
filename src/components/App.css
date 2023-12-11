@@ -139,6 +139,22 @@ body::-webkit-scrollbar-track {
 .btn-form-submit:focus {
   background-color: #522a7a;
 }
+.btn-form-submit-second {
+  width: 100%;
+  margin-top: 0.5rem;
+  height: 3rem;
+  color: #c9c0dc;
+  background-color: transparent;
+  transition: all 0.5s ease;
+  font-size: 15px;
+  border: 2px solid #c9c0dc !important;
+}
+
+.btn-form-submit-second:hover,
+.btn-form-submit-second:focus {
+  background-color: #c9c0dc;
+  color: #fefffe;
+}
 
 .link-text-display-signup {
   text-decoration: none;
