@@ -1,0 +1,124 @@
+{
+    "questions": [
+        {
+            "id": 1,
+            "question": "What is the function to calculate the mean of a numeric vector in R?",
+            "options": ["average()", "mean()", "avg()", "calculate_mean()"],
+            "answer": "mean()"
+        },
+        {
+            "id": 2,
+            "question": "How do you assign a value to a variable in R?",
+            "options": ["variable x = 5", "x <- 5", "x = 5", "set x to 5"],
+            "answer": "x <- 5"
+        },
+        {
+            "id": 3,
+            "question": "What does the 'seq()' function do in R?",
+            "options": ["Generate a sequence of numbers", "Calculate the square root", "Sort a vector", "Find the length of a vector"],
+            "answer": "Generate a sequence of numbers"
+        },
+        {
+            "id": 4,
+            "question": "How do you check the length of a vector in R?",
+            "options": ["length(vector)", "vector.length()", "len(vector)", "count(vector)"],
+            "answer": "length(vector)"
+        },
+        {
+            "id": 5,
+            "question": "What is the operator for matrix multiplication in R?",
+            "options": ["*", "%", "%*%", "@"],
+            "answer": "%*%"
+        },
+        {
+            "id": 6,
+            "question": "Which function is used to read data from a CSV file in R?",
+            "options": ["read.csv()", "import.csv()", "load.csv()", "read_data()"],
+            "answer": "read.csv()"
+        },
+        {
+            "id": 7,
+            "question": "What is the purpose of the 'str()' function in R?",
+            "options": ["Convert to string", "Display structure of an object", "Find substring in a string", "Strip whitespace from a string"],
+            "answer": "Display structure of an object"
+        },
+        {
+            "id": 8,
+            "question": "How do you generate a random sample of numbers from a normal distribution in R?",
+            "options": ["random_normal()", "rnorm()", "generate_normal()", "sample_normal()"],
+            "answer": "rnorm()"
+        },
+        {
+            "id": 9,
+            "question": "What does the 'rep()' function do in R?",
+            "options": ["Repeat elements of a vector", "Replace values in a vector", "Reverse a vector", "Remove duplicates from a vector"],
+            "answer": "Repeat elements of a vector"
+        },
+        {
+            "id": 10,
+            "question": "What is the purpose of the 'summary()' function in R?",
+            "options": ["Generate a summary statistics", "Print summary of a data frame", "Summarize a vector", "Summary of a matrix"],
+            "answer": "Print summary of a data frame"
+        },
+        {
+            "id": 11,
+            "question": "How do you install a package in R?",
+            "options": ["install.package()", "pkg_install()", "install.packages()", "get_package()"],
+            "answer": "install.packages()"
+        },
+        {
+            "id": 12,
+            "question": "What does the 'head()' function do in R?",
+            "options": ["Return the last elements of a vector", "Display the first few rows of a data frame", "Find the head of a list", "Compute the head of a distribution"],
+            "answer": "Display the first few rows of a data frame"
+        },
+        {
+            "id": 13,
+            "question": "What is the operator for exponentiation in R?",
+            "options": ["^", "**", "*", "%^%"],
+            "answer": "^"
+        },
+        {
+            "id": 14,
+            "question": "Which function is used to create a bar plot in R?",
+            "options": ["barplot()", "plot_bar()", "create_barplot()", "draw_bar()"],
+            "answer": "barplot()"
+        },
+        {
+            "id": 15,
+            "question": "What is the purpose of the 'paste()' function in R?",
+            "options": ["Paste together elements of character vectors", "Find the paste of a matrix", "Paste numbers in a vector", "Create a new vector"],
+            "answer": "Paste together elements of character vectors"
+        },
+        {
+            "id": 16,
+            "question": "How do you comment a single line in R?",
+            "options": ["/* This is a comment */", "// This is a comment", "# This is a comment", "comment: This is a comment"],
+            "answer": "# This is a comment"
+        },
+        {
+            "id": 17,
+            "question": "What is the purpose of the 'max()' function in R?",
+            "options": ["Calculate the maximum value in a vector", "Generate a matrix", "Compute the maximum element in a list", "Find the maximum length of a data frame"],
+            "answer": "Calculate the maximum value in a vector"
+        },
+        {
+            "id": 18,
+            "question": "Which function is used for conditional statements in R?",
+            "options": ["ifelse()", "condition()", "test_condition()", "evaluate()"],
+            "answer": "ifelse()"
+        },
+        {
+            "id": 19,
+            "question": "How do you create a data frame in R?",
+            "options": ["create_frame()", "data.frame()", "new_dataframe()", "frame.create()"],
+            "answer": "data.frame()"
+        },
+        {
+            "id": 20,
+            "question": "What does the 'which()' function do in R?",
+            "options": ["Find the index of TRUE values", "Which elements are larger", "Choose elements from a list", "Determine which function to use"],
+            "answer": "Find the index of TRUE values"
+        }
+    ]
+}

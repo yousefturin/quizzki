@@ -1,0 +1,124 @@
+{
+    "questions": [
+        {
+            "id": 1,
+            "question": "What is the time complexity of inserting an element at the end of an array?",
+            "options": ["O(1)", "O(log n)", "O(n)", "O(n^2)"],
+            "answer": "O(1)"
+        },
+        {
+            "id": 2,
+            "question": "Which data structure uses the Last In, First Out (LIFO) principle?",
+            "options": ["Queue", "Stack", "Linked List", "Array"],
+            "answer": "Stack"
+        },
+        {
+            "id": 3,
+            "question": "What is the purpose of a hash function in hash tables?",
+            "options": ["To sort elements", "To search elements", "To map data to an index", "To delete elements"],
+            "answer": "To map data to an index"
+        },
+        {
+            "id": 4,
+            "question": "Which sorting algorithm has the best average-case time complexity?",
+            "options": ["Bubble Sort", "Insertion Sort", "Merge Sort", "Quick Sort"],
+            "answer": "Merge Sort"
+        },
+        {
+            "id": 5,
+            "question": "In a binary search tree, what is stored in the left subtree of a node?",
+            "options": ["Smaller elements", "Larger elements", "Equal elements", "None of the above"],
+            "answer": "Smaller elements"
+        },
+        {
+            "id": 6,
+            "question": "What is the primary purpose of a queue?",
+            "options": ["To store data in a random order", "To retrieve the most recently added element", "To store data in a sorted order", "To implement First In, First Out (FIFO) behavior"],
+            "answer": "To implement First In, First Out (FIFO) behavior"
+        },
+        {
+            "id": 7,
+            "question": "Which data structure is used to represent a hierarchical relationship between elements?",
+            "options": ["Graph", "Tree", "Heap", "Array"],
+            "answer": "Tree"
+        },
+        {
+            "id": 8,
+            "question": "What is the time complexity of searching for an element in a binary search tree?",
+            "options": ["O(1)", "O(log n)", "O(n)", "O(n^2)"],
+            "answer": "O(log n)"
+        },
+        {
+            "id": 9,
+            "question": "In a linked list, what is the node at the beginning called?",
+            "options": ["End node", "Head node", "Tail node", "Root node"],
+            "answer": "Head node"
+        },
+        {
+            "id": 10,
+            "question": "Which of the following is a dynamic data structure?",
+            "options": ["Array", "Queue", "Stack", "Linked List"],
+            "answer": "Linked List"
+        },
+        {
+            "id": 11,
+            "question": "What is the purpose of a stack?",
+            "options": ["To store elements in a sorted order", "To implement Last In, First Out (LIFO) behavior", "To search for elements", "To perform mathematical calculations"],
+            "answer": "To implement Last In, First Out (LIFO) behavior"
+        },
+        {
+            "id": 12,
+            "question": "Which algorithm is used to traverse a graph?",
+            "options": ["Depth-First Search (DFS)", "Breadth-First Search (BFS)", "Dijkstra's Algorithm", "Merge Sort"],
+            "answer": "Depth-First Search (DFS)"
+        },
+        {
+            "id": 13,
+            "question": "What is the time complexity of inserting an element at the beginning of an array?",
+            "options": ["O(1)", "O(log n)", "O(n)", "O(n^2)"],
+            "answer": "O(n)"
+        },
+        {
+            "id": 14,
+            "question": "In a priority queue, which element is removed first?",
+            "options": ["Smallest element", "Largest element", "Random element", "None of the above"],
+            "answer": "Smallest element"
+        },
+        {
+            "id": 15,
+            "question": "What is the space complexity of quicksort in the worst case?",
+            "options": ["O(1)", "O(log n)", "O(n)", "O(n^2)"],
+            "answer": "O(n)"
+        },
+        {
+            "id": 16,
+            "question": "Which data structure is used for efficient searching, inserting, and deleting operations?",
+            "options": ["Array", "Linked List", "Heap", "Hash Table"],
+            "answer": "Hash Table"
+        },
+        {
+            "id": 17,
+            "question": "What is the purpose of an adjacency matrix in graph representation?",
+            "options": ["To store node values", "To represent edge connections between nodes", "To perform sorting", "To store parent-child relationships"],
+            "answer": "To represent edge connections between nodes"
+        },
+        {
+            "id": 18,
+            "question": "What is the time complexity of a linear search?",
+            "options": ["O(1)", "O(log n)", "O(n)", "O(n^2)"],
+            "answer": "O(n)"
+        },
+        {
+            "id": 19,
+            "question": "Which data structure is used in recursion?",
+            "options": ["Queue", "Stack", "Array", "Linked List"],
+            "answer": "Stack"
+        },
+        {
+            "id": 20,
+            "question": "What is the main advantage of a linked list over an array?",
+            "options": ["Constant-time access", "Fixed size", "Dynamic size", "Random access"],
+            "answer": "Dynamic size"
+        }
+    ]
+}

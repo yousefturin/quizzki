@@ -1,0 +1,124 @@
+{
+    "questions": [
+        {
+            "id": 1,
+            "question": "If the day after tomorrow is a Sunday, what day is it today?",
+            "options": ["Monday", "Tuesday", "Wednesday", "Thursday"],
+            "answer": "Friday"
+        },
+        {
+            "id": 2,
+            "question": "If a shirt costs $20 after a 25% discount, what was its original price?",
+            "options": ["$15", "$18", "$22", "$25"],
+            "answer": "$25"
+        },
+        {
+            "id": 3,
+            "question": "If X = 5, Y = 8, and Z = 12, what is the value of X + Y - Z?",
+            "options": ["1", "5", "9", "11"],
+            "answer": "1"
+        },
+        {
+            "id": 4,
+            "question": "Which number comes next in the sequence: 2, 5, 10, 17, ___?",
+            "options": ["24", "26", "29", "32"],
+            "answer": "26"
+        },
+        {
+            "id": 5,
+            "question": "If a clock shows 3:15, what is the angle between the hour and minute hands?",
+            "options": ["45 degrees", "90 degrees", "105 degrees", "120 degrees"],
+            "answer": "7.5 degrees"
+        },
+        {
+            "id": 6,
+            "question": "What is the next letter in the series: A, C, E, ___?",
+            "options": ["F", "G", "H", "I"],
+            "answer": "G"
+        },
+        {
+            "id": 7,
+            "question": "If 6 pencils cost $2, how much do 9 pencils cost?",
+            "options": ["$2.50", "$3", "$3.50", "$4"],
+            "answer": "$3"
+        },
+        {
+            "id": 8,
+            "question": "If RED is coded as 27, how is BLUE coded?",
+            "options": ["40", "41", "42", "43"],
+            "answer": "42"
+        },
+        {
+            "id": 9,
+            "question": "What is the missing number: 8, 14, 20, ___, 32?",
+            "options": ["26", "27", "28", "29"],
+            "answer": "26"
+        },
+        {
+            "id": 10,
+            "question": "If a bookshelf has 5 shelves and each shelf can hold 8 books, how many books can the bookshelf hold?",
+            "options": ["35", "40", "45", "50"],
+            "answer": "40"
+        },
+        {
+            "id": 11,
+            "question": "What comes next in the sequence: 3, 6, 9, 12, ___?",
+            "options": ["14", "15", "16", "18"],
+            "answer": "15"
+        },
+        {
+            "id": 12,
+            "question": "If a triangle has sides of lengths 3 cm, 4 cm, and 5 cm, what type of triangle is it?",
+            "options": ["Equilateral", "Isosceles", "Scalene", "Right-angled"],
+            "answer": "Right-angled"
+        },
+        {
+            "id": 13,
+            "question": "What is the next number in the series: 2, 6, 12, 20, ___?",
+            "options": ["24", "30", "36", "42"],
+            "answer": "30"
+        },
+        {
+            "id": 14,
+            "question": "If a train travels at 60 km/h, how far will it travel in 2 hours?",
+            "options": ["90 km", "120 km", "150 km", "180 km"],
+            "answer": "120 km"
+        },
+        {
+            "id": 15,
+            "question": "If the day before yesterday was a Thursday, what day is it today?",
+            "options": ["Friday", "Saturday", "Sunday", "Monday"],
+            "answer": "Saturday"
+        },
+        {
+            "id": 16,
+            "question": "What is the product of 7 and 9?",
+            "options": ["56", "63", "72", "81"],
+            "answer": "63"
+        },
+        {
+            "id": 17,
+            "question": "If a shirt costs $30 before a 20% discount, what is the discounted price?",
+            "options": ["$18", "$22", "$24", "$26"],
+            "answer": "$24"
+        },
+        {
+            "id": 18,
+            "question": "If the time is 3:45, what is the angle between the hour and minute hands?",
+            "options": ["45 degrees", "90 degrees", "105 degrees", "135 degrees"],
+            "answer": "112.5 degrees"
+        },
+        {
+            "id": 19,
+            "question": "What is the next letter in the series: B, D, F, H, ___?",
+            "options": ["J", "K", "L", "M"],
+            "answer": "J"
+        },
+        {
+            "id": 20,
+            "question": "If TOMATO is coded as 78, how is POTATO coded?",
+            "options": ["80", "82", "84", "86"],
+            "answer": "80"
+        }
+    ]
+}

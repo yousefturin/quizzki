@@ -1,0 +1,124 @@
+{
+    "questions": [
+        {
+            "id": 1,
+            "question": "Which of the following is a synonym for 'examine'?",
+            "options": ["Ignore", "Explore", "Overlook", "Neglect"],
+            "answer": "Explore"
+        },
+        {
+            "id": 2,
+            "question": "What is the plural form of 'child'?",
+            "options": ["Childs", "Childies", "Children", "Childs"],
+            "answer": "Children"
+        },
+        {
+            "id": 3,
+            "question": "Choose the correct spelling: 'Occasion' or 'Occassion'?",
+            "options": ["Occasion", "Occassion", "Ocassion", "Ocasion"],
+            "answer": "Occasion"
+        },
+        {
+            "id": 4,
+            "question": "Which word is the antonym of 'benevolent'?",
+            "options": ["Generous", "Kind", "Malevolent", "Altruistic"],
+            "answer": "Malevolent"
+        },
+        {
+            "id": 5,
+            "question": "What is the past tense of 'sing'?",
+            "options": ["Sang", "Sung", "Singed", "Singed"],
+            "answer": "Sang"
+        },
+        {
+            "id": 6,
+            "question": "Identify the correctly punctuated sentence: 'She went to the store, and bought apples.' or 'She went to the store and bought apples.'?",
+            "options": ["She went to the store, and bought apples.", "She went to the store and bought apples.", "Both are correct.", "Neither is correct."],
+            "answer": "She went to the store and bought apples."
+        },
+        {
+            "id": 7,
+            "question": "What is the meaning of the idiom 'Bite the bullet'?",
+            "options": ["Face a difficult situation with courage", "Avoid facing a difficult situation", "Give up easily", "Enjoy a pleasant experience"],
+            "answer": "Face a difficult situation with courage"
+        },
+        {
+            "id": 8,
+            "question": "Which sentence is grammatically correct: 'I haven't seen him yesterday.' or 'I didn't see him yesterday.'?",
+            "options": ["I haven't seen him yesterday.", "I didn't see him yesterday.", "Both are correct.", "Neither is correct."],
+            "answer": "I didn't see him yesterday."
+        },
+        {
+            "id": 9,
+            "question": "Choose the correct form of the verb: 'She _____ to the store yesterday.'",
+            "options": ["Go", "Goes", "Went", "Gone"],
+            "answer": "Went"
+        },
+        {
+            "id": 10,
+            "question": "What is the meaning of the word 'ephemeral'?",
+            "options": ["Lasting for a very short time", "Eternal", "Fleeting", "Permanent"],
+            "answer": "Lasting for a very short time"
+        },
+        {
+            "id": 11,
+            "question": "Select the correct sentence: 'Their going to the park.' or 'They're going to the park.'?",
+            "options": ["Their going to the park.", "They're going to the park.", "Both are correct.", "Neither is correct."],
+            "answer": "They're going to the park."
+        },
+        {
+            "id": 12,
+            "question": "Which of the following is a homophone for 'two'?",
+            "options": ["To", "Too", "Tow", "Tue"],
+            "answer": "Too"
+        },
+        {
+            "id": 13,
+            "question": "What is the correct plural form of 'person'?",
+            "options": ["Persons", "People", "Persone", "Persones"],
+            "answer": "People"
+        },
+        {
+            "id": 14,
+            "question": "Choose the correct usage: 'Fewer people' or 'Less people'?",
+            "options": ["Fewer people", "Less people", "Both are correct.", "Neither is correct."],
+            "answer": "Fewer people"
+        },
+        {
+            "id": 15,
+            "question": "What is the meaning of the word 'ubiquitous'?",
+            "options": ["Present, appearing, or found everywhere", "Limited to a particular place or time", "Confusing", "Scarce"],
+            "answer": "Present, appearing, or found everywhere"
+        },
+        {
+            "id": 16,
+            "question": "Choose the correct form: 'Its' or 'It's'?",
+            "options": ["Its", "It's", "Both are correct.", "Neither is correct."],
+            "answer": "It's"
+        },
+        {
+            "id": 17,
+            "question": "What is the correct spelling: 'Embarrass' or 'Embarass'?",
+            "options": ["Embarrass", "Embarass", "Embarras", "Embaras"],
+            "answer": "Embarrass"
+        },
+        {
+            "id": 18,
+            "question": "Which sentence is grammatically correct: 'I can't hardly wait.' or 'I can hardly wait.'?",
+            "options": ["I can't hardly wait.", "I can hardly wait.", "Both are correct.", "Neither is correct."],
+            "answer": "I can hardly wait."
+        },
+        {
+            "id": 19,
+            "question": "What is the meaning of the phrase 'beat around the bush'?",
+            "options": ["Avoiding the main topic", "Being direct and straightforward", "Taking a detour", "Walking in the forest"],
+            "answer": "Avoiding the main topic"
+        },
+        {
+            "id": 20,
+            "question": "Choose the correct form: 'Your' or 'You're'?",
+            "options": ["Your", "You're", "Both are correct.", "Neither is correct."],
+            "answer": "You're"
+        }
+    ]
+}

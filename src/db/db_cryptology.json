@@ -1,0 +1,124 @@
+{
+    "questions": [
+        {
+            "id": 1,
+            "question": "What is the main goal of cryptography?",
+            "options": ["To hide information", "To compress data", "To increase processing speed", "To create new programming languages"],
+            "answer": "To hide information"
+        },
+        {
+            "id": 2,
+            "question": "What does RSA stand for in the context of cryptography?",
+            "options": ["Randomized Secure Algorithm", "Rapid Symmetric Authentication", "Rivest-Shamir-Adleman", "Redundant Systemic Approach"],
+            "answer": "Rivest-Shamir-Adleman"
+        },
+        {
+            "id": 3,
+            "question": "Which cryptographic algorithm is commonly used for secure communication over the Internet?",
+            "options": ["DES", "SHA-256", "AES", "MD5"],
+            "answer": "AES"
+        },
+        {
+            "id": 4,
+            "question": "What is the purpose of a digital signature in cryptography?",
+            "options": ["To encrypt data", "To prove the authenticity of a message", "To generate random numbers", "To compress files"],
+            "answer": "To prove the authenticity of a message"
+        },
+        {
+            "id": 5,
+            "question": "What is the concept of a public key in public-key cryptography?",
+            "options": ["It is shared with everyone", "It is kept secret", "It is used for symmetric encryption", "It is used for hashing"],
+            "answer": "It is shared with everyone"
+        },
+        {
+            "id": 6,
+            "question": "Which type of attack involves trying every possible key until the correct one is found?",
+            "options": ["Brute-force attack", "Man-in-the-middle attack", "Phishing attack", "DNS spoofing attack"],
+            "answer": "Brute-force attack"
+        },
+        {
+            "id": 7,
+            "question": "What is the role of a nonce in cryptographic protocols?",
+            "options": ["To provide authentication", "To prevent replay attacks", "To encrypt data", "To compress files"],
+            "answer": "To prevent replay attacks"
+        },
+        {
+            "id": 8,
+            "question": "In the context of encryption, what is a plaintext?",
+            "options": ["Encrypted data", "The original, unencrypted data", "A type of cipher", "A cryptographic key"],
+            "answer": "The original, unencrypted data"
+        },
+        {
+            "id": 9,
+            "question": "What is the purpose of a hash function in cryptography?",
+            "options": ["To encrypt data", "To prove the authenticity of a message", "To generate random numbers", "To compress files"],
+            "answer": "To prove the authenticity of a message"
+        },
+        {
+            "id": 10,
+            "question": "Which cryptographic algorithm is commonly used for secure email communication?",
+            "options": ["DES", "RSA", "PGP", "MD5"],
+            "answer": "PGP"
+        },
+        {
+            "id": 11,
+            "question": "What is the primary purpose of the Diffie-Hellman key exchange algorithm?",
+            "options": ["To encrypt data", "To establish a shared secret key over an untrusted network", "To sign digital documents", "To compress files"],
+            "answer": "To establish a shared secret key over an untrusted network"
+        },
+        {
+            "id": 12,
+            "question": "What is the concept of perfect forward secrecy in cryptography?",
+            "options": ["Keys are never reused", "Keys are generated randomly", "Keys are never shared", "Keys are changed frequently"],
+            "answer": "Keys are changed frequently"
+        },
+        {
+            "id": 13,
+            "question": "What is the purpose of the birthday paradox in cryptography?",
+            "options": ["To generate random numbers", "To break hash functions", "To prove the authenticity of a message", "To encrypt data"],
+            "answer": "To break hash functions"
+        },
+        {
+            "id": 14,
+            "question": "What is the primary goal of a zero-knowledge proof in cryptography?",
+            "options": ["To hide information", "To prove a statement without revealing the information", "To compress data", "To create new programming languages"],
+            "answer": "To prove a statement without revealing the information"
+        },
+        {
+            "id": 15,
+            "question": "What is steganography in the context of cryptography?",
+            "options": ["The study of cryptographic algorithms", "The art of hiding information within other information", "The process of creating digital signatures", "The analysis of network traffic"],
+            "answer": "The art of hiding information within other information"
+        },
+        {
+            "id": 16,
+            "question": "What is the primary purpose of a salt in password hashing?",
+            "options": ["To add flavor to passwords", "To enhance encryption", "To prevent rainbow table attacks", "To compress files"],
+            "answer": "To prevent rainbow table attacks"
+        },
+        {
+            "id": 17,
+            "question": "Which encryption algorithm is commonly used for securing wireless networks?",
+            "options": ["AES", "DES", "RSA", "Blowfish"],
+            "answer": "AES"
+        },
+        {
+            "id": 18,
+            "question": "What is the purpose of the Block Cipher mode of operation in cryptography?",
+            "options": ["To encrypt large amounts of data", "To encrypt individual blocks of data", "To hash passwords", "To create digital signatures"],
+            "answer": "To encrypt individual blocks of data"
+        },
+        {
+            "id": 19,
+            "question": "What is the concept of a digital certificate in public-key cryptography?",
+            "options": ["A cryptographic key", "A form of encryption", "A method of authentication", "A proof of purchase"],
+            "answer": "A method of authentication"
+        },
+        {
+            "id": 20,
+            "question": "What is the role of a key exchange protocol in cryptographic systems?",
+            "options": ["To exchange encryption keys securely", "To exchange digital signatures", "To exchange public keys", "To exchange passwords"],
+            "answer": "To exchange encryption keys securely"
+        }
+    ]
+}

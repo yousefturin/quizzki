@@ -1,0 +1,124 @@
+{
+    "questions": [
+        {
+            "id": 1,
+            "question": "What is the symbol used for a single-line comment in C++?",
+            "options": ["//", "/*", "#", "--"],
+            "answer": "//"
+        },
+        {
+            "id": 2,
+            "question": "How do you declare a variable in C++?",
+            "options": ["variable x;", "int x;", "var x;", "x = 5;"],
+            "answer": "int x;"
+        },
+        {
+            "id": 3,
+            "question": "What is the purpose of the 'cout' statement in C++?",
+            "options": ["To read input from the user", "To print output to the console", "To declare a variable", "To perform conditional execution"],
+            "answer": "To print output to the console"
+        },
+        {
+            "id": 4,
+            "question": "What is the result of the expression 10 / 2 in C++?",
+            "options": ["5.0", "5", "2.5", "2"],
+            "answer": "5"
+        },
+        {
+            "id": 5,
+            "question": "How do you include the standard input/output stream in C++?",
+            "options": ["#include <iostream>", "import io;", "include iostream", "<iostream>"],
+            "answer": "#include <iostream>"
+        },
+        {
+            "id": 6,
+            "question": "What is the correct way to write an array in C++?",
+            "options": ["[1, 2, 3]", "(1, 2, 3)", "{1, 2, 3}", "array(1, 2, 3)"],
+            "answer": "{1, 2, 3}"
+        },
+        {
+            "id": 7,
+            "question": "What is the purpose of the 'if' statement in C++?",
+            "options": ["To create a loop", "To define a function", "To perform conditional execution", "To print the output"],
+            "answer": "To perform conditional execution"
+        },
+        {
+            "id": 8,
+            "question": "How do you check the equality of two values in C++?",
+            "options": ["x = y", "x == y", "x === y", "x = = y"],
+            "answer": "x == y"
+        },
+        {
+            "id": 9,
+            "question": "What is the purpose of the 'else' statement in C++?",
+            "options": ["To define a function", "To perform conditional execution", "To iterate over a list", "To print the output"],
+            "answer": "To perform conditional execution"
+        },
+        {
+            "id": 10,
+            "question": "How do you declare a constant in C++?",
+            "options": ["const int myConst = 10;", "final int myConst = 10;", "var myConst = 10;", "const myConst = 10;"],
+            "answer": "const int myConst = 10;"
+        },
+        {
+            "id": 11,
+            "question": "What is the purpose of the 'return' statement in a function in C++?",
+            "options": ["To print a value", "To exit the loop", "To terminate the function and return a value", "To create a loop"],
+            "answer": "To terminate the function and return a value"
+        },
+        {
+            "id": 12,
+            "question": "How do you round a floating-point number to the nearest integer in C++?",
+            "options": ["round()", "ceil()", "floor()", "int()"],
+            "answer": "round()"
+        },
+        {
+            "id": 13,
+            "question": "What is the result of the expression '5' + 3 in C++?",
+            "options": ["8", "53", "53.0", "NaN"],
+            "answer": "53"
+        },
+        {
+            "id": 14,
+            "question": "What is the purpose of the '&&' operator in C++?",
+            "options": ["Logical OR", "Logical AND", "Bitwise OR", "Bitwise AND"],
+            "answer": "Logical AND"
+        },
+        {
+            "id": 15,
+            "question": "Which function is used to allocate memory dynamically in C++?",
+            "options": ["malloc()", "calloc()", "allocate()", "new()"],
+            "answer": "new()"
+        },
+        {
+            "id": 16,
+            "question": "What is the purpose of the 'sizeof' operator in C++?",
+            "options": ["To find the size of a file", "To find the size of an array", "To find the size of a variable", "To find the size of a function"],
+            "answer": "To find the size of a variable"
+        },
+        {
+            "id": 17,
+            "question": "What is the result of the expression 10 % 3 in C++?",
+            "options": ["1", "2", "3", "0"],
+            "answer": "1"
+        },
+        {
+            "id": 18,
+            "question": "How do you declare a character variable in C++?",
+            "options": ["char x;", "int x;", "var x;", "x = 'a';"],
+            "answer": "char x;"
+        },
+        {
+            "id": 19,
+            "question": "What is the purpose of the 'break' statement in C++?",
+            "options": ["To exit the loop", "To print a value", "To define a function", "To perform conditional execution"],
+            "answer": "To exit the loop"
+        },
+        {
+            "id": 20,
+            "question": "What is the purpose of the 'typedef' keyword in C++?",
+            "options": ["To define a type alias", "To create a constant", "To declare a variable", "To include a library"],
+            "answer": "To define a type alias"
+        }
+    ]
+}

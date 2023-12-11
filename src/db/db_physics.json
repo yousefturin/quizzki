@@ -1,0 +1,124 @@
+{
+    "questions": [
+        {
+            "id": 1,
+            "question": "What is the formula for calculating kinetic energy?",
+            "options": ["KE = mv", "KE = 0.5mv^2", "KE = mgh", "KE = mgh/2"],
+            "answer": "KE = 0.5mv^2"
+        },
+        {
+            "id": 2,
+            "question": "What is the speed of light in a vacuum?",
+            "options": ["300,000 km/s", "500,000 km/s", "700,000 km/s", "1,000,000 km/s"],
+            "answer": "300,000 km/s"
+        },
+        {
+            "id": 3,
+            "question": "What is the SI unit of force?",
+            "options": ["Joule", "Newton", "Watt", "Coulomb"],
+            "answer": "Newton"
+        },
+        {
+            "id": 4,
+            "question": "What is the acceleration due to gravity on Earth?",
+            "options": ["5 m/s^2", "9.8 m/s^2", "12 m/s^2", "15.6 m/s^2"],
+            "answer": "9.8 m/s^2"
+        },
+        {
+            "id": 5,
+            "question": "What is the relationship between voltage, current, and resistance in a circuit?",
+            "options": ["V = IR", "V = I/R", "V = R/I", "I = VR"],
+            "answer": "V = IR"
+        },
+        {
+            "id": 6,
+            "question": "What is the law of reflection?",
+            "options": ["Refraction of light", "Diffraction of light", "Reflection of sound", "Reflection of light"],
+            "answer": "Reflection of light"
+        },
+        {
+            "id": 7,
+            "question": "What is the first law of thermodynamics also known as?",
+            "options": ["Law of Entropy", "Law of Conservation of Energy", "Law of Relativity", "Law of Inertia"],
+            "answer": "Law of Conservation of Energy"
+        },
+        {
+            "id": 8,
+            "question": "What is the unit of electric charge?",
+            "options": ["Ampere", "Ohm", "Coulomb", "Volt"],
+            "answer": "Coulomb"
+        },
+        {
+            "id": 9,
+            "question": "What is the momentum of an object with mass 5 kg and velocity 10 m/s?",
+            "options": ["20 kg m/s", "30 kg m/s", "40 kg m/s", "50 kg m/s"],
+            "answer": "50 kg m/s"
+        },
+        {
+            "id": 10,
+            "question": "What is the relationship between frequency and wavelength in a wave?",
+            "options": ["c = fλ", "c = f/λ", "c = λ/f", "c = 2fλ"],
+            "answer": "c = fλ"
+        },
+        {
+            "id": 11,
+            "question": "What is the law of conservation of momentum?",
+            "options": ["Total momentum is constant", "Total momentum increases", "Total momentum decreases", "Total momentum is zero"],
+            "answer": "Total momentum is constant"
+        },
+        {
+            "id": 12,
+            "question": "What is the SI unit of power?",
+            "options": ["Joule", "Watt", "Coulomb", "Volt"],
+            "answer": "Watt"
+        },
+        {
+            "id": 13,
+            "question": "What is the direction of the magnetic field lines around a current-carrying wire?",
+            "options": ["Away from the wire", "Toward the wire", "Clockwise", "Counterclockwise"],
+            "answer": "Counterclockwise"
+        },
+        {
+            "id": 14,
+            "question": "What is the law of gravitation?",
+            "options": ["Newton's First Law", "Newton's Second Law", "Newton's Third Law", "Inverse Square Law"],
+            "answer": "Inverse Square Law"
+        },
+        {
+            "id": 15,
+            "question": "What is the SI unit of resistance?",
+            "options": ["Ohm", "Ampere", "Volt", "Watt"],
+            "answer": "Ohm"
+        },
+        {
+            "id": 16,
+            "question": "What is the principle of conservation of angular momentum?",
+            "options": ["Angular momentum is constant", "Angular momentum increases", "Angular momentum decreases", "Angular momentum is zero"],
+            "answer": "Angular momentum is constant"
+        },
+        {
+            "id": 17,
+            "question": "What is the relationship between pressure, volume, and temperature in an ideal gas?",
+            "options": ["Boyle's Law", "Charles's Law", "Gay-Lussac's Law", "Avogadro's Law"],
+            "answer": "Boyle's Law"
+        },
+        {
+            "id": 18,
+            "question": "What is the definition of work in physics?",
+            "options": ["Force times distance", "Mass times acceleration", "Power divided by time", "Energy divided by time"],
+            "answer": "Force times distance"
+        },
+        {
+            "id": 19,
+            "question": "What is the speed of sound in air at room temperature?",
+            "options": ["343 m/s", "500 m/s", "700 m/s", "1,000 m/s"],
+            "answer": "343 m/s"
+        },
+        {
+            "id": 20,
+            "question": "What is the law of electromagnetic induction?",
+            "options": ["Faraday's Law", "Ampere's Law", "Ohm's Law", "Coulomb's Law"],
+            "answer": "Faraday's Law"
+        }
+    ]
+}

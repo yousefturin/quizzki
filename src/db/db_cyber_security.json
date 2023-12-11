@@ -1,0 +1,125 @@
+
+{
+    "questions": [
+    {
+    "id": 1,
+    "question": "What is a common method to protect against phishing attacks?",
+    "options": ["Firewall", "Antivirus software", "Two-factor authentication", "Cookies"],
+    "answer": "Two-factor authentication"
+    },
+    {
+    "id": 2,
+    "question": "Which protocol encrypts data transmitted over the web?",
+    "options": ["HTTP", "FTP", "SSL/TLS", "UDP"],
+    "answer": "SSL/TLS"
+    },
+    {
+    "id": 3,
+    "question": "What does the term 'DDoS' stand for in the context of cybersecurity?",
+    "options": ["Data Deletion on Storage", "Direct Denial of Service", "Distributed Denial of Service", "Data Download over Server"],
+    "answer": "Distributed Denial of Service"
+    },
+    {
+    "id": 4,
+    "question": "Which of the following is a strong password practice?",
+    "options": ["Using your name", "Using common words", "Including special characters", "Reusing passwords"],
+    "answer": "Including special characters"
+    },
+    {
+    "id": 5,
+    "question": "What is the purpose of a VPN (Virtual Private Network)?",
+    "options": ["Enhancing internet speed", "Bypassing firewalls", "Securing communication over the internet", "Blocking websites"],
+    "answer": "Securing communication over the internet"
+    },
+    {
+    "id": 6,
+    "question": "What is the primary function of a firewall in cybersecurity?",
+    "options": ["Virus scanning", "Packet filtering", "Website blocking", "Keyboard encryption"],
+    "answer": "Packet filtering"
+    },
+    {
+    "id": 7,
+    "question": "Which type of malware is designed to spread from one system to another?",
+    "options": ["Adware", "Spyware", "Worm", "Trojan horse"],
+    "answer": "Worm"
+    },
+    {
+    "id": 8,
+    "question": "What does 'IoT' stand for in the context of cybersecurity?",
+    "options": ["Internet of Things", "Input/Output Technology", "Information over Time", "Integrated Online Tools"],
+    "answer": "Internet of Things"
+    },
+    {
+    "id": 9,
+    "question": "In cybersecurity, what does the term 'Pharming' refer to?",
+    "options": ["Manipulating financial records", "Redirecting website traffic", "Forgery of digital certificates", "Harvesting sensitive information"],
+    "answer": "Redirecting website traffic"
+    },
+    {
+    "id": 10,
+    "question": "Which of the following is a common social engineering tactic?",
+    "options": ["Brute force attack", "SQL injection", "Phishing", "Denial of Service"],
+    "answer": "Phishing"
+    },
+    {
+    "id": 11,
+    "question": "What is the purpose of a security patch?",
+    "options": ["Enhancing system performance", "Fixing software vulnerabilities", "Installing new features", "Deleting unnecessary files"],
+    "answer": "Fixing software vulnerabilities"
+    },
+    {
+    "id": 12,
+    "question": "Which encryption algorithm is commonly used for securing Wi-Fi networks?",
+    "options": ["AES", "RSA", "MD5", "SHA-256"],
+    "answer": "AES"
+    },
+    {
+    "id": 13,
+    "question": "What is the first line of defense against unauthorized access to a computer system?",
+    "options": ["Antivirus software", "Firewall", "User authentication", "Biometric identification"],
+    "answer": "User authentication"
+    },
+    {
+    "id": 14,
+    "question": "What is the purpose of a 'Honeypot' in cybersecurity?",
+    "options": ["Detecting and deflecting malicious activity", "Generating fake website traffic", "Blocking spam emails", "Encrypting sensitive files"],
+    "answer": "Detecting and deflecting malicious activity"
+    },
+    {
+    "id": 15,
+    "question": "Which of the following is an example of a strong authentication factor?",
+    "options": ["Username", "Password", "Fingerprint", "Browser history"],
+    "answer": "Fingerprint"
+    },
+    {
+    "id": 16,
+    "question": "What is the primary purpose of penetration testing in cybersecurity?",
+    "options": ["Creating new software", "Identifying vulnerabilities", "Encrypting data", "Managing user permissions"],
+    "answer": "Identifying vulnerabilities"
+    },
+    {
+    "id": 17,
+    "question": "What is the term for malicious software that disguises itself as legitimate software?",
+    "options": ["Ransomware", "Spyware", "Adware", "Trojan horse"],
+    "answer": "Trojan horse"
+    },
+    {
+    "id": 18,
+    "question": "Which of the following is a best practice for securing mobile devices?",
+    "options": ["Disabling passcodes", "Downloading apps from unofficial sources", "Regularly updating software", "Sharing passwords"],
+    "answer": "Regularly updating software"
+    },
+    {
+    "id": 19,
+    "question": "What is the purpose of encryption in cybersecurity?",
+    "options": ["Increasing internet speed", "Protecting data confidentiality", "Blocking spam emails", "Detecting malware"],
+    "answer": "Protecting data confidentiality"
+    },
+    {
+    "id": 20,
+    "question": "What does the term 'Man-in-the-Middle (MitM)' refer to in cybersecurity?",
+    "options": ["A type of virus", "A form of biometric authentication", "Unauthorized interception of communication", "Data storage technique"],
+    "answer": "Unauthorized interception of communication"
+    }
+    ]
+    }

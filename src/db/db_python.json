@@ -1,0 +1,124 @@
+{
+    "questions": [
+        {
+            "id": 1,
+            "question": "What is the result of 5 + 3 in Python?",
+            "options": ["6", "8", "15", "53"],
+            "answer": "8"
+        },
+        {
+            "id": 2,
+            "question": "How do you comment a single line in Python?",
+            "options": ["// Comment", "# Comment", "/* Comment */", "// Comment //"],
+            "answer": "# Comment"
+        },
+        {
+            "id": 3,
+            "question": "What is the correct way to define a function in Python?",
+            "options": ["def myFunction:", "function myFunction():", "define myFunction():", "function myFunction:"],
+            "answer": "def myFunction:"
+        },
+        {
+            "id": 4,
+            "question": "How do you print the type of a variable in Python?",
+            "options": ["print(type(variable))", "printVariableType(variable)", "printVariableType variable", "print(variable.type())"],
+            "answer": "print(type(variable))"
+        },
+        {
+            "id": 5,
+            "question": "What is the result of the expression 2 ** 3?",
+            "options": ["6", "8", "15", "16"],
+            "answer": "8"
+        },
+        {
+            "id": 6,
+            "question": "Which keyword is used for creating a list in Python?",
+            "options": ["list", "array", "ArrayList", "list[]"],
+            "answer": "list"
+        },
+        {
+            "id": 7,
+            "question": "How do you check if a key is present in a dictionary?",
+            "options": ["key in my_dict", "isKey(my_dict)", "containsKey(my_dict)", "my_dict.hasKey(key)"],
+            "answer": "key in my_dict"
+        },
+        {
+            "id": 8,
+            "question": "What is the result of the expression 'Hello' + 'World'?",
+            "options": ["'HelloWorld'", "'Hello World'", "'Hello' 'World'", "'Hello' + ' ' + 'World'"],
+            "answer": "'Hello' + ' ' + 'World'"
+        },
+        {
+            "id": 9,
+            "question": "How do you convert a string to lowercase in Python?",
+            "options": ["str.lower()", "string.toLower()", "lowercase(str)", "str.caseLower()"],
+            "answer": "str.lower()"
+        },
+        {
+            "id": 10,
+            "question": "What is the purpose of the 'if' statement in Python?",
+            "options": ["To define a function", "To iterate over a list", "To perform conditional execution", "To print the output"],
+            "answer": "To perform conditional execution"
+        },
+        {
+            "id": 11,
+            "question": "Which data type is mutable in Python?",
+            "options": ["int", "str", "list", "tuple"],
+            "answer": "list"
+        },
+        {
+            "id": 12,
+            "question": "What is the correct way to import a module in Python?",
+            "options": ["include module", "import module", "require module", "from module import *"],
+            "answer": "import module"
+        },
+        {
+            "id": 13,
+            "question": "How do you get the length of a list in Python?",
+            "options": ["list.length()", "length(list)", "len(list)", "size(list)"],
+            "answer": "len(list)"
+        },
+        {
+            "id": 14,
+            "question": "What is the result of the expression 10 % 3?",
+            "options": ["1", "2", "3", "0"],
+            "answer": "1"
+        },
+        {
+            "id": 15,
+            "question": "What is the correct syntax for a 'while' loop in Python?",
+            "options": ["while condition:", "for i in range:", "do while condition:", "while (condition)"],
+            "answer": "while condition:"
+        },
+        {
+            "id": 16,
+            "question": "How do you remove an element from a list in Python?",
+            "options": ["list.remove(element)", "list.delete(element)", "remove(list, element)", "delete(list, element)"],
+            "answer": "list.remove(element)"
+        },
+        {
+            "id": 17,
+            "question": "What is the purpose of the 'else' statement in Python?",
+            "options": ["To define a function", "To perform conditional execution", "To iterate over a list", "To print the output"],
+            "answer": "To perform conditional execution"
+        },
+        {
+            "id": 18,
+            "question": "Which built-in function is used to find the maximum value in a list?",
+            "options": ["max()", "maximum()", "findMax()", "largest()"],
+            "answer": "max()"
+        },
+        {
+            "id": 19,
+            "question": "What is the result of the expression 'python'[-2]?",
+            "options": ["'y'", "'o'", "'n'", "'t'"],
+            "answer": "'o'"
+        },
+        {
+            "id": 20,
+            "question": "What is the correct way to create an empty set in Python?",
+            "options": ["set()", "{}", "emptySet()", "new Set()"],
+            "answer": "set()"
+        }
+    ]
+}

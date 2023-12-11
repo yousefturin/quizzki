@@ -1,0 +1,124 @@
+{
+    "questions": [
+        {
+            "id": 1,
+            "question": "In C#, what keyword is used to declare a constant?",
+            "options": ["var", "final", "const", "static"],
+            "answer": "const"
+        },
+        {
+            "id": 2,
+            "question": "What is the default access modifier for a class in C#?",
+            "options": ["private", "protected", "public", "internal"],
+            "answer": "internal"
+        },
+        {
+            "id": 3,
+            "question": "How do you declare a variable in C#?",
+            "options": ["variable x;", "int x;", "var x;", "x = 5;"],
+            "answer": "var x;"
+        },
+        {
+            "id": 4,
+            "question": "What is the result of the expression 10 / 2 in C#?",
+            "options": ["5.0", "5", "2.5", "2"],
+            "answer": "5"
+        },
+        {
+            "id": 5,
+            "question": "Which of the following is a valid way to comment in C#?",
+            "options": ["// This is a comment", "/* This is a comment */", "# This is a comment", "' This is a comment"],
+            "answer": "// This is a comment"
+        },
+        {
+            "id": 6,
+            "question": "What is the purpose of the 'if' statement in C#?",
+            "options": ["To create a loop", "To define a function", "To perform conditional execution", "To print the output"],
+            "answer": "To perform conditional execution"
+        },
+        {
+            "id": 7,
+            "question": "How do you check the type of a variable in C#?",
+            "options": ["typeOf variable", "variable.type()", "checkType(variable)", "typeof(variable)"],
+            "answer": "typeof(variable)"
+        },
+        {
+            "id": 8,
+            "question": "What is the correct way to write an array in C#?",
+            "options": ["[1, 2, 3]", "(1, 2, 3)", "{1, 2, 3}", "array(1, 2, 3)"],
+            "answer": "[1, 2, 3]"
+        },
+        {
+            "id": 9,
+            "question": "What is the purpose of the 'else' statement in C#?",
+            "options": ["To define a function", "To perform conditional execution", "To iterate over a list", "To print the output"],
+            "answer": "To perform conditional execution"
+        },
+        {
+            "id": 10,
+            "question": "How do you create an object in C#?",
+            "options": ["var obj = new Object();", "create object obj;", "new Object obj;", "obj = createObject();"],
+            "answer": "var obj = new Object();"
+        },
+        {
+            "id": 11,
+            "question": "Which operator is used for strict equality comparison in C#?",
+            "options": ["==", "===", "=", "!=", "!=="],
+            "answer": "==="
+        },
+        {
+            "id": 12,
+            "question": "What is the result of the expression 'Hello'.Length in C#?",
+            "options": ["5", "6", "10", "null"],
+            "answer": "5"
+        },
+        {
+            "id": 13,
+            "question": "What is the purpose of the 'return' statement in a function in C#?",
+            "options": ["To print a value", "To exit the loop", "To terminate the function and return a value", "To create a loop"],
+            "answer": "To terminate the function and return a value"
+        },
+        {
+            "id": 14,
+            "question": "What is the correct way to include an external C# file in another C# file?",
+            "options": ["<include file='file.cs'>", "using file.cs;", "#include 'file.cs'", "include 'file.cs';"],
+            "answer": "using file.cs;"
+        },
+        {
+            "id": 15,
+            "question": "What is the purpose of the 'var' keyword in C#?",
+            "options": ["To declare a variable with an unknown type", "To create a constant", "To define a class variable", "To create an instance of a class"],
+            "answer": "To declare a variable with an unknown type"
+        },
+        {
+            "id": 16,
+            "question": "How do you round a floating-point number to the nearest integer in C#?",
+            "options": ["Math.Round()", "Math.Ceiling()", "Math.Floor()", "Math.Int()"],
+            "answer": "Math.Round()"
+        },
+        {
+            "id": 17,
+            "question": "What is the result of the expression 10 % 3 in C#?",
+            "options": ["1", "2", "3", "0"],
+            "answer": "1"
+        },
+        {
+            "id": 18,
+            "question": "Which method is used to remove the last element from a list in C#?",
+            "options": ["RemoveLast()", "DeleteLast()", "list.RemoveAt(list.Count - 1)", "list.RemoveLast()"],
+            "answer": "list.RemoveAt(list.Count - 1)"
+        },
+        {
+            "id": 19,
+            "question": "What is the purpose of the 'using' statement in C#?",
+            "options": ["To include a namespace", "To create an object", "To define a function", "To exit the loop"],
+            "answer": "To include a namespace"
+        },
+        {
+            "id": 20,
+            "question": "What is the correct way to define a constant in C#?",
+            "options": ["const int myConst = 10;", "final int myConst = 10;", "var myConst = 10;", "const myConst = 10;"],
+            "answer": "const int myConst = 10;"
+        }
+    ]
+}

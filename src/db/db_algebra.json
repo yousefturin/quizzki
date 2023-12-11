@@ -1,0 +1,124 @@
+{
+    "questions": [
+        {
+            "id": 1,
+            "question": "Simplify the expression: 3x - 7 + 2x",
+            "options": ["5x - 7", "5x - 6", "6x - 7", "5x + 7"],
+            "answer": "5x - 7"
+        },
+        {
+            "id": 2,
+            "question": "If 2y = 16, what is the value of y?",
+            "options": ["4", "6", "8", "10"],
+            "answer": "8"
+        },
+        {
+            "id": 3,
+            "question": "Factorize the expression: 4x^2 - 9",
+            "options": ["(2x - 3)(2x + 3)", "(2x + 3)(2x + 3)", "(2x - 3)(2x - 3)", "(4x - 9)"],
+            "answer": "(2x - 3)(2x + 3)"
+        },
+        {
+            "id": 4,
+            "question": "Solve for x: 4(x - 2) = 20",
+            "options": ["x = 2", "x = 5", "x = 6", "x = 8"],
+            "answer": "x = 6"
+        },
+        {
+            "id": 5,
+            "question": "If 3a = 15, what is the value of a?",
+            "options": ["3", "5", "8", "10"],
+            "answer": "5"
+        },
+        {
+            "id": 6,
+            "question": "What is the solution to the equation: 2y + 7 = 15",
+            "options": ["y = 4", "y = 5", "y = 6", "y = 8"],
+            "answer": "y = 4"
+        },
+        {
+            "id": 7,
+            "question": "Expand the expression: (x - 3)(x + 2)",
+            "options": ["x^2 - x - 6", "x^2 - x + 6", "x^2 + x - 6", "x^2 + x + 6"],
+            "answer": "x^2 - x - 6"
+        },
+        {
+            "id": 8,
+            "question": "If 5z = 25, what is the value of z?",
+            "options": ["3", "4", "5", "6"],
+            "answer": "5"
+        },
+        {
+            "id": 9,
+            "question": "Simplify the expression: 2a + 3a - 4a",
+            "options": ["a", "3a", "-a", "5a"],
+            "answer": "a"
+        },
+        {
+            "id": 10,
+            "question": "If 2(x + 4) = 18, what is the value of x?",
+            "options": ["5", "6", "7", "8"],
+            "answer": "5"
+        },
+        {
+            "id": 11,
+            "question": "Factorize the expression: x^2 - 4",
+            "options": ["(x - 2)(x - 2)", "(x + 2)(x + 2)", "(x - 2)(x + 2)", "(x + 2)(x - 2)"],
+            "answer": "(x - 2)(x + 2)"
+        },
+        {
+            "id": 12,
+            "question": "What is the value of 3b - 2b + 5b?",
+            "options": ["6b", "8b", "5b", "10b"],
+            "answer": "6b"
+        },
+        {
+            "id": 13,
+            "question": "If 4c = 12, what is the value of c?",
+            "options": ["2", "3", "4", "5"],
+            "answer": "3"
+        },
+        {
+            "id": 14,
+            "question": "Solve for y: 2y/3 = 8",
+            "options": ["y = 4", "y = 6", "y = 8", "y = 12"],
+            "answer": "y = 12"
+        },
+        {
+            "id": 15,
+            "question": "What is the value of 5x - 3x + 2x?",
+            "options": ["4x", "5x", "7x", "10x"],
+            "answer": "4x"
+        },
+        {
+            "id": 16,
+            "question": "If 3(x - 1) = 15, what is the value of x?",
+            "options": ["4", "5", "6", "7"],
+            "answer": "6"
+        },
+        {
+            "id": 17,
+            "question": "Factorize the expression: 9a^2 - 25b^2",
+            "options": ["(3a + 5b)(3a - 5b)", "(3a - 5b)(3a + 5b)", "(9a + 5b)(9a - 5b)", "(9a - 5b)(9a + 5b)"],
+            "answer": "(3a + 5b)(3a - 5b)"
+        },
+        {
+            "id": 18,
+            "question": "What is the solution to the equation: 2z - 7 = 11",
+            "options": ["z = 4", "z = 6", "z = 9", "z = 18"],
+            "answer": "z = 9"
+        },
+        {
+            "id": 19,
+            "question": "Simplify the expression: 4x + 2 - 3x + 5",
+            "options": ["x + 7", "x - 3", "x + 3", "7"],
+            "answer": "x + 7"
+        },
+        {
+            "id": 20,
+            "question": "If 6(y - 2) = 24, what is the value of y?",
+            "options": ["4", "6", "8", "10"],
+            "answer": "6"
+        }
+    ]
+}

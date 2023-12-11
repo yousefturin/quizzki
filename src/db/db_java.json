@@ -1,0 +1,124 @@
+{
+    "questions": [
+        {
+            "id": 1,
+            "question": "What is the default value of the data type boolean in Java?",
+            "options": ["true", "false", "0", "1"],
+            "answer": "false"
+        },
+        {
+            "id": 2,
+            "question": "Which keyword is used to define a constant in Java?",
+            "options": ["var", "final", "const", "static"],
+            "answer": "final"
+        },
+        {
+            "id": 3,
+            "question": "What is the purpose of the 'break' statement in a switch statement?",
+            "options": ["To terminate the switch statement", "To skip the current iteration", "To exit the loop", "To continue to the next case"],
+            "answer": "To terminate the switch statement"
+        },
+        {
+            "id": 4,
+            "question": "How do you declare an array in Java?",
+            "options": ["int array[];", "array<int>;", "int[] array;", "Array array[];"],
+            "answer": "int[] array;"
+        },
+        {
+            "id": 5,
+            "question": "What is the result of the expression 5 / 2 in Java?",
+            "options": ["2.5", "2", "2.0", "2.25"],
+            "answer": "2"
+        },
+        {
+            "id": 6,
+            "question": "Which of the following is a primitive data type in Java?",
+            "options": ["String", "Integer", "Float", "boolean"],
+            "answer": "boolean"
+        },
+        {
+            "id": 7,
+            "question": "What is the purpose of the 'this' keyword in Java?",
+            "options": ["To create an instance of a class", "To refer to the current object", "To access a static method", "To initialize an object"],
+            "answer": "To refer to the current object"
+        },
+        {
+            "id": 8,
+            "question": "Which access modifier is used for a method that can be accessed from any class?",
+            "options": ["private", "protected", "public", "default"],
+            "answer": "public"
+        },
+        {
+            "id": 9,
+            "question": "What is the purpose of the 'super' keyword in Java?",
+            "options": ["To call the superclass constructor", "To create an instance of a class", "To access a static method", "To refer to the current object"],
+            "answer": "To call the superclass constructor"
+        },
+        {
+            "id": 10,
+            "question": "How do you convert a String to an int in Java?",
+            "options": ["int.valueOf(string)", "Integer.parseInt(string)", "string.toInt()", "parseInt(string)"],
+            "answer": "Integer.parseInt(string)"
+        },
+        {
+            "id": 11,
+            "question": "Which statement is used to exit a loop prematurely in Java?",
+            "options": ["return", "break", "continue", "exit"],
+            "answer": "break"
+        },
+        {
+            "id": 12,
+            "question": "What is the result of the expression 'Hello'.length() in Java?",
+            "options": ["5", "6", "10", "null"],
+            "answer": "5"
+        },
+        {
+            "id": 13,
+            "question": "Which Java keyword is used to implement multiple inheritance?",
+            "options": ["extends", "implements", "interface", "class"],
+            "answer": "implements"
+        },
+        {
+            "id": 14,
+            "question": "What is the purpose of the 'static' keyword in Java?",
+            "options": ["To create a constant", "To allocate memory", "To define a class variable", "To create an instance of a class"],
+            "answer": "To define a class variable"
+        },
+        {
+            "id": 15,
+            "question": "How do you round a floating-point number to the nearest integer in Java?",
+            "options": ["Math.round()", "Math.ceil()", "Math.floor()", "Math.int()"],
+            "answer": "Math.round()"
+        },
+        {
+            "id": 16,
+            "question": "Which of the following is not a valid identifier in Java?",
+            "options": ["_myVar", "$variable", "123variable", "variable123"],
+            "answer": "123variable"
+        },
+        {
+            "id": 17,
+            "question": "What is the purpose of the 'instanceof' operator in Java?",
+            "options": ["To check if an object is an instance of a particular class", "To compare two objects", "To create an instance of a class", "To access a static method"],
+            "answer": "To check if an object is an instance of a particular class"
+        },
+        {
+            "id": 18,
+            "question": "Which Java keyword is used to implement method overloading?",
+            "options": ["override", "overload", "method", "extends"],
+            "answer": "overload"
+        },
+        {
+            "id": 19,
+            "question": "What is the result of the expression 10 % 3 in Java?",
+            "options": ["1", "2", "3", "0"],
+            "answer": "1"
+        },
+        {
+            "id": 20,
+            "question": "What is the purpose of the 'try-catch' block in Java?",
+            "options": ["To declare variables", "To handle exceptions", "To create an instance of a class", "To define a method"],
+            "answer": "To handle exceptions"
+        }
+    ]
+}
