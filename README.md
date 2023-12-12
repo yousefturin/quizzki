@@ -1,4 +1,4 @@
-# Getting Started with Create React App
+# Getting Started with Quizzki React App
 This project will not work without the following steps:
 
 ## `npm install`
