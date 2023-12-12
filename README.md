@@ -3,7 +3,7 @@ This project will not work without the following steps:
 
 ## `npm install`
 
-First you will need to download the node models using the `npm install`
+First you will need to download the node JS using the `npm install` inside project directory
 
 
 ### `npm start`
