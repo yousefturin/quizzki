@@ -27,7 +27,7 @@
         {
             "id": 5,
             "question": "If a clock shows 3:15, what is the angle between the hour and minute hands?",
-            "options": ["45 degrees", "90 degrees", "105 degrees", "120 degrees"],
+            "options": ["45 degrees", "90.5 degrees", "7.5 degrees", "120 degrees"],
             "answer": "7.5 degrees"
         },
         {

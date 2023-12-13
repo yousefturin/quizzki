@@ -1,0 +1,124 @@
+{
+    "questions": [
+        {
+            "id": 1,
+            "question": "What is a primary key in a database?",
+            "options": ["A key that uniquely identifies each record in a table", "A key that is used for foreign key relationships", "A key that allows null values", "A key that is used for sorting records"],
+            "answer": "A key that uniquely identifies each record in a table"
+        },
+        {
+            "id": 2,
+            "question": "What is the purpose of an index in a database?",
+            "options": ["To sort records in a table", "To define primary key constraints", "To improve the speed of data retrieval", "To enforce referential integrity"],
+            "answer": "To improve the speed of data retrieval"
+        },
+        {
+            "id": 3,
+            "question": "Which SQL statement is used to retrieve data from a database?",
+            "options": ["SELECT", "UPDATE", "DELETE", "INSERT"],
+            "answer": "SELECT"
+        },
+        {
+            "id": 4,
+            "question": "What is the role of the WHERE clause in a SQL query?",
+            "options": ["To specify the columns to be retrieved", "To filter the rows based on a condition", "To join multiple tables", "To order the result set"],
+            "answer": "To filter the rows based on a condition"
+        },
+        {
+            "id": 5,
+            "question": "In a relational database, what is normalization?",
+            "options": ["Organizing data to reduce redundancy", "Adding redundancy to improve performance", "Combining tables into one for simplicity", "Ignoring data integrity constraints"],
+            "answer": "Organizing data to reduce redundancy"
+        },
+        {
+            "id": 6,
+            "question": "What is the purpose of the GROUP BY clause in SQL?",
+            "options": ["To filter rows based on a condition", "To sort the result set", "To group rows with the same values into summary rows", "To join tables"],
+            "answer": "To group rows with the same values into summary rows"
+        },
+        {
+            "id": 7,
+            "question": "What is a foreign key in a relational database?",
+            "options": ["A key that uniquely identifies each record in a table", "A key that is used for sorting records", "A key that links to the primary key in another table", "A key that allows null values"],
+            "answer": "A key that links to the primary key in another table"
+        },
+        {
+            "id": 8,
+            "question": "What is the purpose of the JOIN operation in SQL?",
+            "options": ["To filter rows based on a condition", "To combine rows from two or more tables", "To order the result set", "To update existing records"],
+            "answer": "To combine rows from two or more tables"
+        },
+        {
+            "id": 9,
+            "question": "What does ACID stand for in the context of database transactions?",
+            "options": ["Atomicity, Consistency, Isolation, Durability", "Accuracy, Completeness, Integrity, Dependability", "Agility, Compatibility, Integration, Durability", "Availability, Concurrency, Isolation, Dependability"],
+            "answer": "Atomicity, Consistency, Isolation, Durability"
+        },
+        {
+            "id": 10,
+            "question": "Which SQL statement is used to add data to a database?",
+            "options": ["SELECT", "UPDATE", "DELETE", "INSERT"],
+            "answer": "INSERT"
+        },
+        {
+            "id": 11,
+            "question": "What is the purpose of the ORDER BY clause in SQL?",
+            "options": ["To filter rows based on a condition", "To join multiple tables", "To order the result set", "To group rows with the same values into summary rows"],
+            "answer": "To order the result set"
+        },
+        {
+            "id": 12,
+            "question": "In a relational database, what is a view?",
+            "options": ["A virtual table based on the result of a SELECT query", "A physical table that stores data", "A summary of aggregated data", "An index on a column"],
+            "answer": "A virtual table based on the result of a SELECT query"
+        },
+        {
+            "id": 13,
+            "question": "What is the purpose of the COMMIT statement in database transactions?",
+            "options": ["To undo changes made in the transaction", "To permanently save changes made in the transaction", "To roll back the transaction to a previous state", "To delete records from the database"],
+            "answer": "To permanently save changes made in the transaction"
+        },
+        {
+            "id": 14,
+            "question": "What is the role of the HAVING clause in SQL?",
+            "options": ["To filter rows based on a condition", "To join tables", "To group rows with the same values into summary rows", "To filter grouped results based on a condition"],
+            "answer": "To filter grouped results based on a condition"
+        },
+        {
+            "id": 15,
+            "question": "What is the purpose of the DISTINCT keyword in a SELECT statement?",
+            "options": ["To filter rows based on a condition", "To return only unique values in a column", "To join multiple tables", "To order the result set"],
+            "answer": "To return only unique values in a column"
+        },
+        {
+            "id": 16,
+            "question": "What is the default sorting order in SQL's ORDER BY clause?",
+            "options": ["Ascending (ASC)", "Descending (DESC)", "Random", "No default order"],
+            "answer": "Ascending (ASC)"
+        },
+        {
+            "id": 17,
+            "question": "In database design, what is normalization?",
+            "options": ["Organizing data to reduce redundancy", "Adding redundancy to improve performance", "Combining tables into one for simplicity", "Ignoring data integrity constraints"],
+            "answer": "Organizing data to reduce redundancy"
+        },
+        {
+            "id": 18,
+            "question": "Which type of join returns all rows when there is a match in one of the tables?",
+            "options": ["INNER JOIN", "OUTER JOIN", "LEFT JOIN", "RIGHT JOIN"],
+            "answer": "OUTER JOIN"
+        },
+        {
+            "id": 19,
+            "question": "What is the purpose of the CASCADE option in a foreign key constraint?",
+            "options": ["To update the values in the referencing table when the referenced values change", "To delete the values in the referencing table when the referenced values change", "To add a new foreign key to the table", "To enforce unique constraints"],
+            "answer": "To update the values in the referencing table when the referenced values change"
+        },
+        {
+            "id": 20,
+            "question": "Which SQL clause is used to filter the results of a GROUP BY clause based on a condition?",
+            "options": ["HAVING", "WHERE", "FILTER", "CONDITION"],
+            "answer": "HAVING"
+        }
+    ]
+}

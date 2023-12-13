@@ -1,0 +1,144 @@
+{
+    "questions": [
+        {
+            "id": 1,
+            "question": "What is the basic function of the control unit in a computer?",
+            "options": ["Perform arithmetic calculations", "Manage memory storage", "Control the flow of instructions", "Handle input/output operations"],
+            "answer": "Control the flow of instructions"
+        },
+        {
+            "id": 2,
+            "question": "Which component is responsible for temporarily storing data that the CPU needs to access quickly?",
+            "options": ["Hard disk drive", "RAM (Random Access Memory)", "Cache memory", "Solid-state drive"],
+            "answer": "Cache memory"
+        },
+        {
+            "id": 3,
+            "question": "What does the acronym CPU stand for?",
+            "options": ["Central Processing Unit", "Computer Processing Unit", "Central Processor Unit", "Central Peripheral Unit"],
+            "answer": "Central Processing Unit"
+        },
+        {
+            "id": 4,
+            "question": "In computer architecture, what is the purpose of the ALU (Arithmetic Logic Unit)?",
+            "options": ["Manage memory storage", "Control the flow of instructions", "Perform arithmetic and logic operations", "Handle input/output operations"],
+            "answer": "Perform arithmetic and logic operations"
+        },
+        {
+            "id": 5,
+            "question": "Which type of memory is non-volatile and retains its data even when the power is turned off?",
+            "options": ["RAM (Random Access Memory)", "Cache memory", "ROM (Read-Only Memory)", "Virtual memory"],
+            "answer": "ROM (Read-Only Memory)"
+        },
+        {
+            "id": 6,
+            "question": "What is the purpose of the system clock in a computer?",
+            "options": ["Store user data", "Control input devices", "Synchronize operations and control the timing of the processor", "Handle output devices"],
+            "answer": "Synchronize operations and control the timing of the processor"
+        },
+        {
+            "id": 7,
+            "question": "Which storage device provides the fastest access to data?",
+            "options": ["Hard disk drive", "Solid-state drive", "CD-ROM", "DVD-ROM"],
+            "answer": "Solid-state drive"
+        },
+        {
+            "id": 8,
+            "question": "What is the purpose of the motherboard in a computer system?",
+            "options": ["Perform arithmetic calculations", "Manage memory storage", "Control the flow of instructions", "Serve as the main circuit board connecting components"],
+            "answer": "Serve as the main circuit board connecting components"
+        },
+        {
+            "id": 9,
+            "question": "What is the role of the GPU (Graphics Processing Unit) in a computer?",
+            "options": ["Manage memory storage", "Control the flow of instructions", "Perform complex graphics and parallel processing tasks", "Handle input/output operations"],
+            "answer": "Perform complex graphics and parallel processing tasks"
+        },
+        {
+            "id": 10,
+            "question": "Which component is responsible for converting digital data into analog signals for communication over telephone lines?",
+            "options": ["Network interface card", "Modem", "Router", "Switch"],
+            "answer": "Modem"
+        },
+        {
+            "id": 11,
+            "question": "In computer architecture, what is the role of the I/O (Input/Output) unit?",
+            "options": ["Perform arithmetic calculations", "Manage memory storage", "Control the flow of instructions", "Handle input and output operations between the CPU and external devices"],
+            "answer": "Handle input and output operations between the CPU and external devices"
+        },
+        {
+            "id": 12,
+            "question": "Which term refers to the number of bits processed by a computer's CPU in a single instruction?",
+            "options": ["Clock speed", "Word size", "Cache size", "Bus width"],
+            "answer": "Word size"
+        },
+        {
+            "id": 13,
+            "question": "What is the purpose of the BIOS (Basic Input/Output System) in a computer?",
+            "options": ["Control the flow of instructions", "Manage memory storage", "Perform arithmetic calculations", "Provide basic input/output functions and bootstrap the computer"],
+            "answer": "Provide basic input/output functions and bootstrap the computer"
+        },
+        {
+            "id": 14,
+            "question": "Which type of computer memory is volatile and loses its data when the power is turned off?",
+            "options": ["RAM (Random Access Memory)", "Cache memory", "ROM (Read-Only Memory)", "Virtual memory"],
+            "answer": "RAM (Random Access Memory)"
+        },
+        {
+            "id": 15,
+            "question": "What is the purpose of the power supply unit in a computer?",
+            "options": ["Perform arithmetic calculations", "Manage memory storage", "Convert electrical power from an outlet into usable power for the computer components", "Control the flow of instructions"],
+            "answer": "Convert electrical power from an outlet into usable power for the computer components"
+        },
+        {
+            "id": 16,
+            "question": "Which type of computer memory is used as a temporary storage for data that is actively being worked on by the CPU?",
+            "options": ["RAM (Random Access Memory)", "Cache memory", "ROM (Read-Only Memory)", "Virtual memory"],
+            "answer": "RAM (Random Access Memory)"
+        },
+        {
+            "id": 17,
+            "question": "What is the purpose of the heat sink and fan in a computer system?",
+            "options": [
+                "Perform arithmetic calculations",
+                "Manage memory storage",
+                "Control the flow of instructions",
+                "Dissipate heat generated by the CPU to prevent overheating"
+            ],
+            "answer": "Dissipate heat generated by the CPU to prevent overheating"
+        },
+        {
+            "id": 18,
+            "question": "In computer architecture, what does the term 'RAID' stand for?",
+            "options": [
+                "Random Access Integrated Drive",
+                "Redundant Array of Independent Disks",
+                "Read-Only Advanced Input/Output Disk",
+                "Remote Access and Integrated Data"
+            ],
+            "answer": "Redundant Array of Independent Disks"
+        },
+        {
+            "id": 19,
+            "question": "What is the purpose of the CMOS (Complementary Metal-Oxide-Semiconductor) battery in a computer?",
+            "options": [
+                "Executing arithmetic calculations",
+                "Providing backup power during outages",
+                "Storing BIOS settings and system clock information",
+                "Managing memory storage"
+            ],
+            "answer": "Storing BIOS settings and system clock information"
+        },
+        {
+            "id": 20,
+            "question": "Which component is responsible for managing the communication between the CPU, memory, and peripheral devices on a motherboard?",
+            "options": [
+                "Northbridge",
+                "Southbridge",
+                "ALU (Arithmetic Logic Unit)",
+                "GPU (Graphics Processing Unit)"
+            ],
+            "answer": "Northbridge"
+        }
+    ]
+}

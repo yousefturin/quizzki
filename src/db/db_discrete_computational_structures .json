@@ -1,0 +1,124 @@
+{
+    "questions": [
+        {
+            "id": 1,
+            "question": "What is the cardinality of an empty set?",
+            "options": ["0", "1", "Undefined", "Infinite"],
+            "answer": "0"
+        },
+        {
+            "id": 2,
+            "question": "How many edges does a complete graph with n vertices have?",
+            "options": ["n", "n(n-1)/2", "2n", "n^2"],
+            "answer": "n(n-1)/2"
+        },
+        {
+            "id": 3,
+            "question": "What is the result of 2^0?",
+            "options": ["0", "1", "2", "Undefined"],
+            "answer": "1"
+        },
+        {
+            "id": 4,
+            "question": "In combinatorics, what does n! (n factorial) represent?",
+            "options": ["The sum of integers from 1 to n", "The product of integers from 1 to n", "The quotient of n and its factorial", "The difference between n and its factorial"],
+            "answer": "The product of integers from 1 to n"
+        },
+        {
+            "id": 5,
+            "question": "What is the number of vertices in a cube?",
+            "options": ["4", "6", "8", "12"],
+            "answer": "8"
+        },
+        {
+            "id": 6,
+            "question": "What is the negation of the statement 'If it is raining, then the ground is wet'?",
+            "options": ["If it is not raining, then the ground is wet", "If it is raining, then the ground is not wet", "It is not raining and the ground is wet", "It is not raining and the ground is not wet"],
+            "answer": "It is not raining and the ground is not wet"
+        },
+        {
+            "id": 7,
+            "question": "How many bits are in a byte?",
+            "options": ["4", "8", "16", "32"],
+            "answer": "8"
+        },
+        {
+            "id": 8,
+            "question": "What is the binary representation of the decimal number 10?",
+            "options": ["1010", "1100", "1111", "1001"],
+            "answer": "1010"
+        },
+        {
+            "id": 9,
+            "question": "What is the result of the expression 3! + 4!?",
+            "options": ["48", "50", "52", "56"],
+            "answer": "52"
+        },
+        {
+            "id": 10,
+            "question": "In set theory, what does the intersection of two sets represent?",
+            "options": ["All elements common to both sets", "The union of two sets", "The complement of a set", "The power set of a set"],
+            "answer": "All elements common to both sets"
+        },
+        {
+            "id": 11,
+            "question": "What is the base case in recursive algorithms?",
+            "options": ["The case with the smallest input", "The case with the largest input", "The average case", "The worst-case scenario"],
+            "answer": "The case with the smallest input"
+        },
+        {
+            "id": 12,
+            "question": "In graph theory, what is the degree of a vertex?",
+            "options": ["The number of edges connected to the vertex", "The weight of the edges connected to the vertex", "The distance from the vertex to a reference point", "The number of vertices adjacent to the vertex"],
+            "answer": "The number of edges connected to the vertex"
+        },
+        {
+            "id": 13,
+            "question": "What is the value of log₂(8)?",
+            "options": ["2", "3", "4", "8"],
+            "answer": "3"
+        },
+        {
+            "id": 14,
+            "question": "What is the result of 5 mod 2?",
+            "options": ["0", "1", "2", "3"],
+            "answer": "1"
+        },
+        {
+            "id": 15,
+            "question": "What is the binary representation of the decimal number 25?",
+            "options": ["11001", "11101", "10101", "10011"],
+            "answer": "11001"
+        },
+        {
+            "id": 16,
+            "question": "How many edges does a tree with n vertices have?",
+            "options": ["n-1", "n", "2n", "n(n-1)/2"],
+            "answer": "n-1"
+        },
+        {
+            "id": 17,
+            "question": "What is the result of 2 + 2 × 2?",
+            "options": ["4", "6", "8", "10"],
+            "answer": "6"
+        },
+        {
+            "id": 18,
+            "question": "In logic, what does 'P → Q' represent?",
+            "options": ["P and Q are equivalent", "P implies Q", "P is exclusive or Q", "P is not equal to Q"],
+            "answer": "P implies Q"
+        },
+        {
+            "id": 19,
+            "question": "What is the formula for calculating the number of combinations (n choose k)?",
+            "options": ["n! / (k! * (n-k)!)","n! / k!", "(n-k)! / k!", "k! / (n-k)!"],
+            "answer": "n! / (k! * (n-k)!)"
+        },
+        {
+            "id": 20,
+            "question": "What is the sum of the first 100 positive integers?",
+            "options": ["5050", "5150", "5250", "5350"],
+            "answer": "5050"
+        }
+    ]
+}

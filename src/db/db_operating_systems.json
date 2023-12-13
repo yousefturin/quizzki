@@ -1,0 +1,124 @@
+{
+    "questions": [
+        {
+            "id": 1,
+            "question": "What is the primary purpose of an operating system?",
+            "options": ["Manage hardware resources", "Perform mathematical calculations", "Create graphical user interfaces", "Browse the internet"],
+            "answer": "Manage hardware resources"
+        },
+        {
+            "id": 2,
+            "question": "What is the kernel in an operating system?",
+            "options": ["The core part of the operating system that provides essential services", "A software application", "A graphical user interface", "A hardware component"],
+            "answer": "The core part of the operating system that provides essential services"
+        },
+        {
+            "id": 3,
+            "question": "Which scheduling algorithm is based on priority levels assigned to tasks?",
+            "options": ["Round Robin", "First-Come, First-Served", "Priority Scheduling", "Shortest Job Next"],
+            "answer": "Priority Scheduling"
+        },
+        {
+            "id": 4,
+            "question": "What is virtual memory in the context of operating systems?",
+            "options": ["Memory that is physically present in the system", "Memory used for cache purposes", "A memory management technique that provides an (illusion) of larger memory", "Memory reserved for virtual machines"],
+            "answer": "A memory management technique that provides an 'illusion' of larger memory"
+        },
+        {
+            "id": 5,
+            "question": "What is the purpose of the 'grep' command in Unix/Linux?",
+            "options": ["Search for files", "Copy files", "Search for a pattern in files", "Delete files"],
+            "answer": "Search for a pattern in files"
+        },
+        {
+            "id": 6,
+            "question": "What does the acronym RAID stand for in the context of disk storage?",
+            "options": ["Random Access and Integrated Disk", "Redundant Array of Independent Disks", "Read and Intercept Data", "Remote Access to Integrated Drives"],
+            "answer": "Redundant Array of Independent Disks"
+        },
+        {
+            "id": 7,
+            "question": "In the context of file systems, what is a 'inode'?",
+            "options": ["A folder", "A data block", "A record containing information about a file or directory", "A file extension"],
+            "answer": "A record containing information about a file or directory"
+        },
+        {
+            "id": 8,
+            "question": "What is the purpose of the 'chmod' command in Unix/Linux?",
+            "options": ["Change file ownership", "Change file permissions", "Create a new directory", "Concatenate files"],
+            "answer": "Change file permissions"
+        },
+        {
+            "id": 9,
+            "question": "Which file system is commonly used in Unix/Linux operating systems?",
+            "options": ["NTFS", "FAT32", "Ext4", "HFS+"],
+            "answer": "Ext4"
+        },
+        {
+            "id": 10,
+            "question": "What is the role of the 'swap space' in virtual memory management?",
+            "options": ["Store temporary files", "Store user data", "Extend the RAM capacity by using the hard disk", "Create backup copies of files"],
+            "answer": "Extend the RAM capacity by using the hard disk"
+        },
+        {
+            "id": 11,
+            "question": "What is the purpose of the 'ping' command in networking?",
+            "options": ["Transfer files between devices", "Check the connectivity to a remote host", "Browse the internet", "Send emails"],
+            "answer": "Check the connectivity to a remote host"
+        },
+        {
+            "id": 12,
+            "question": "What is a 'fork bomb' in the context of operating systems?",
+            "options": ["A malware that steals data", "A denial-of-service attack that creates a large number of processes", "A file system corruption", "A type of computer virus"],
+            "answer": "A denial-of-service attack that creates a large number of processes"
+        },
+        {
+            "id": 13,
+            "question": "Which process scheduling algorithm gives each process a fixed time slot?",
+            "options": ["Round Robin", "First-Come, First-Served", "Priority Scheduling", "Shortest Job Next"],
+            "answer": "Round Robin"
+        },
+        {
+            "id": 14,
+            "question": "What is a 'shell' in the context of operating systems?",
+            "options": ["A protective layer for the hardware", "A user interface for accessing operating system services", "A hardware component", "A file compression utility"],
+            "answer": "A user interface for accessing operating system services"
+        },
+        {
+            "id": 15,
+            "question": "Which operating system is known for its open-source nature and use of the Linux kernel?",
+            "options": ["Windows", "macOS", "Linux", "Unix"],
+            "answer": "Linux"
+        },
+        {
+            "id": 16,
+            "question": "What is the purpose of the 'fdisk' command in Unix/Linux?",
+            "options": ["Format a disk", "Defragment a disk", "Partition a disk", "Copy files between disks"],
+            "answer": "Partition a disk"
+        },
+        {
+            "id": 17,
+            "question": "In the context of process synchronization, what is a 'mutex'?",
+            "options": ["A programming language", "A type of file system", "A synchronization primitive to control access to shared resources", "A network protocol"],
+            "answer": "A synchronization primitive to control access to shared resources"
+        },
+        {
+            "id": 18,
+            "question": "What is the purpose of the 'grep' command in Unix/Linux?",
+            "options": ["Search for files", "Copy files", "Search for a pattern in files", "Delete files"],
+            "answer": "Search for a pattern in files"
+        },
+        {
+            "id": 19,
+            "question": "What is a 'context switch' in the context of operating systems?",
+            "options": ["A hardware component", "A type of malware", "A process of changing from one task to another", "A network protocol"],
+            "answer": "A process of changing from one task to another"
+        },
+        {
+            "id": 20,
+            "question": "What is the purpose of the 'kill' command in Unix/Linux?",
+            "options": ["Turn off the computer", "Terminate a process", "Remove a file", "Create a backup of files"],
+            "answer": "Terminate a process"
+        }
+    ]
+}
