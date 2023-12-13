@@ -49,6 +49,14 @@ const QuizLanding = () => {
         },
         {
             id: 6,
+            name: "Discrete Structures",
+            fileLocation: "db_discrete_computational_structures.json",
+            category: "science",
+            text: "Master algebraic equations and structures for versatile problem-solving.",
+            src:"images/image_card_discrete_structures_1200px.png"
+        },
+        {
+            id: 7,
             name: "Physics",
             fileLocation: "db_physics.json",
             category: "science",
@@ -56,7 +64,7 @@ const QuizLanding = () => {
             src:"images/image_card_physics_1200px.png"
         },
         {
-            id: 7,
+            id: 8,
             name: "Intelligence Quotient",
             fileLocation: "db_iq.json",
             category: "science",
@@ -64,7 +72,7 @@ const QuizLanding = () => {
             src:"images/image_card_iq_1200px.png"
         },
         {
-            id: 8,
+            id: 9,
             name: "C Programming Language",
             fileLocation: "db_c.json",
             category: "coding C family",
@@ -72,7 +80,7 @@ const QuizLanding = () => {
             src:"images/image_card_c_1200px.png"
         },
         {
-            id: 9,
+            id: 10,
             name: "C++ Programming Language",
             fileLocation: "db_cpp.json",
             category: "coding C family",
@@ -80,7 +88,7 @@ const QuizLanding = () => {
             src:"images/image_card_cpp_1200px.png"
         },
         {
-            id: 10,
+            id: 11,
             name: "C# Programming Language",
             fileLocation: "db_cSharp.json",
             category: "coding C family",
@@ -88,7 +96,7 @@ const QuizLanding = () => {
             src:"images/image_card_cSharp_1200px.png"
         },
         {
-            id: 11,
+            id: 12,
             name: "Java Programming Language",
             fileLocation: "db_java.json",
             category: "coding",
@@ -96,7 +104,7 @@ const QuizLanding = () => {
             src:"images/image_card_java_1200px.png"
         },
         {
-            id: 12,
+            id: 13,
             name: "JavaScript Programming Language",
             fileLocation: "db_javaScript.json",
             category: "coding",
@@ -104,7 +112,7 @@ const QuizLanding = () => {
             src:"images/image_card_javaScript_1200px.png"
         },
         {
-            id: 13,
+            id: 14,
             name: "Python Programming Language",
             fileLocation: "db_python.json",
             category: "coding",
@@ -112,7 +120,7 @@ const QuizLanding = () => {
             src:"images/image_card_python_1200px.png"
         },
         {
-            id: 14,
+            id: 15,
             name: "R Programming Language",
             fileLocation: "db_r.json",
             category: "coding",
@@ -120,7 +128,7 @@ const QuizLanding = () => {
             src:"images/image_card_python_1200px.png"
         },
         {
-            id: 15,
+            id: 16,
             name: "Cryptology",
             fileLocation: "db_cryptology.json",
             category: "Security",
@@ -128,12 +136,36 @@ const QuizLanding = () => {
             src:"images/image_card_cryptology_1200px.png"
         },
         {
-            id: 16,
+            id: 17,
             name: "Cyber Security",
             fileLocation: "db_cyber_security.json",
             category: "Security",
             text: "Experience simplicity and readability of Python for versatile application development.",
             src:"images/image_card_cyberSecurity_1200px.png"
+        },
+        {
+            id: 18,
+            name: "Computer Organisation",
+            fileLocation: "db_computer_organisation.json",
+            category: "Internal Systems",
+            text: "Experience simplicity and readability of Python for versatile application development.",
+            src:"images/image_card_computer_organization-1200px.png"
+        },
+        {
+            id: 19,
+            name: "Operating Systems",
+            fileLocation: "db_operating_systems.json",
+            category: "Internal Systems",
+            text: "Experience simplicity and readability of Python for versatile application development.",
+            src:"images/image_card_operating_systems_1200px.png"
+        },
+        {
+            id: 20,
+            name: "Database",
+            fileLocation: "db_database.json",
+            category: "Internal Systems",
+            text: "Experience simplicity and readability of Python for versatile application development.",
+            src:"images/image_card_database_1200px.png"
         },
     ];
 
@@ -148,6 +180,7 @@ const QuizLanding = () => {
 
     return (
         <>
+        <div className="container" style={{backgroundColor:"#242424"}}>
             <div className="cards">
                 <div className="cards__container">
                     <div className="cards__wrapper">
@@ -168,6 +201,7 @@ const QuizLanding = () => {
                         ))}
                     </div>
                 </div>
+            </div>
             </div>
         </>
     );
