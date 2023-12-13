@@ -30,9 +30,9 @@ function Footer() {
                     </form>
                 </div>
             </section>
-            <div class="footer-links">
+            <div className="footer-links">
                 <div className="footer-link-wrapper">
-                    <div class="footer-link-items">
+                    <div className="footer-link-items">
                         <h2>Company</h2>
                         <Link to="/company/about-us">About Us</Link>
                         <Link to="/company/legal">Legal</Link>
@@ -40,7 +40,7 @@ function Footer() {
                         <Link to="/">Terms & Conditions</Link>
                         <Link to="/">Terms of Service</Link>
                     </div>
-                    <div class="footer-link-items">
+                    <div className="footer-link-items">
                         <h2>Contact Us</h2>
                         <Link to="/">Contact</Link>
                         <Link to="/">Support</Link>
@@ -49,7 +49,7 @@ function Footer() {
                     </div>
                 </div>
                 <div className="footer-link-wrapper">
-                    <div class="footer-link-items">
+                    <div className="footer-link-items">
                         <h2>Social Media</h2>
                         <Link
                             to="https://www.instagram.com/yusefturin/"
@@ -94,44 +94,44 @@ function Footer() {
                     </small>
                     <div className="social-icons">
                         <Link
-                            class="social-icon-link facebook"
+                            className="social-icon-link facebook"
                             to="https://www.facebook.com/"
                             target="_blank"
                             aria-label="Facebook"
                         >
-                            <i class="fab fa-facebook-f" />
+                            <i className="fab fa-facebook-f" />
                         </Link>
                         <Link
-                            class="social-icon-link instagram"
+                            className="social-icon-link instagram"
                             to="https://www.instagram.com/yusefturin/"
                             target="_blank"
                             aria-label="Instagram"
                         >
-                            <i class="fab fa-instagram" />
+                            <i className="fab fa-instagram" />
                         </Link>
                         <Link
-                            class="social-icon-link youtube"
+                            className="social-icon-link youtube"
                             to="https://www.youtube.com/"
                             target="_blank"
                             aria-label="Youtube"
                         >
-                            <i class="fab fa-youtube" />
+                            <i className="fab fa-youtube" />
                         </Link>
                         <Link
-                            class="social-icon-link twitter"
+                            className="social-icon-link twitter"
                             to="https://twitter.com/yusefturin"
                             target="_blank"
                             aria-label="Twitter"
                         >
-                            <i class="fab fa-twitter" />
+                            <i className="fab fa-twitter" />
                         </Link>
                         <Link
-                            class="social-icon-link twitter"
+                            className="social-icon-link twitter"
                             to="https://www.linkedin.com/in/yusef-rayyan-j1999/"
                             target="_blank"
                             aria-label="LinkedIn"
                         >
-                            <i class="fab fa-linkedin" />
+                            <i className="fab fa-linkedin" />
                         </Link>
                     </div>
                 </div>

@@ -7,8 +7,8 @@ import "./DisplayScreen.css";
 function DisplayScreen() {
     return (
         <div className="display-container">
-            <div class="gradient-background">
-                <div class="gradient"></div>
+            <div className="gradient-background">
+                <div className="gradient"></div>
             </div>
 
             <h1> Quizzki</h1>
@@ -30,7 +30,7 @@ function DisplayScreen() {
                         buttonSize="btn--large"
                     >
                         READ MORE
-                        <i class="far fa-arrow-alt-circle-right" />
+                        <i className="far fa-arrow-alt-circle-right" />
                     </REButton>
                 </Link>
             </div>

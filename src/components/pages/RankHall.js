@@ -24,8 +24,8 @@ export default function RankHall() {
   return (
     <>
       <div className="display-container">
-      <div class="gradient-background">
-                <div class="gradient"></div>
+      <div className="gradient-background">
+                <div className="gradient"></div>
             </div>
         <h1 className="info-display-exception">Rank Hall</h1>
         <div className='user-table-wrapper'>
