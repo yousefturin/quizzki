@@ -42,7 +42,7 @@ export default function ForgotPassword() {
                                 >
                                     Password Reset
                                 </h2>
-                                {message && <Alert variant="success">{message}</Alert>}
+                                {message && <Alert className="alert-success-signup">{message}</Alert>}
                                 {error && (
                                     <Alert className="alert-error-signup">
                                         <p>{error}</p>
@@ -76,7 +76,7 @@ export default function ForgotPassword() {
                             </Card.Body>
                         </Card>
                         <div
-                            style={{ color: "#fefffe" }}
+                            style={{ color: "var(--primary)" }}
                             className="under-card-text-signup"
                         >
                             Need an account?{" "}
