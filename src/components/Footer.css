@@ -15,7 +15,7 @@
     text-align: center;
     margin-bottom: 24px;
     padding: 24px;
-    color: #fefffe;
+    color: var(--primary);
 }
 
 .footer-subscription>p {
@@ -41,7 +41,7 @@
     border: none;
     font-size: 18px;
     margin-bottom: 16px;
-    border: 1px solid #fefffe;
+    border: 1px solid var(--primary);
 }
 
 .footer-links {
@@ -70,11 +70,11 @@
 }
 
 .footer-link-items>h2 {
-    color: #fefffe;
+    color: var(--primary);
 }
 
 .footer-link-items a {
-    color: #fefffe;
+    color: var(--primary);
     text-decoration: none;
     margin-bottom: 8px;
 }
@@ -95,7 +95,7 @@
 /* Social Icons */
 
 .social-icon-link {
-    color: #fefffe;
+    color: var(--primary);
     font-size: 24px;
 }
 
@@ -122,7 +122,7 @@
 }
 
 .social-logo {
-    color: #fefffe;
+    color: var(--primary);
     justify-self: start;
     margin-left: 20px;
     text-decoration: none;
@@ -134,7 +134,7 @@
 }
 
 .website-rights {
-    color: #fefffe;
+    color: var(--primary);
     margin-bottom: 16px;
 }
 

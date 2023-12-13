@@ -19,7 +19,7 @@
   
   .btn--outline {
     background-color: transparent !important;
-    color: #fefffe !important;
+    color: var(--primary) !important;
     padding: 8px 20px !important;
     border: 1px solid var(--primary) !important;
     transition: all 0.3s ease-out !important;
@@ -38,7 +38,7 @@
   .btn--large:hover,
   .btn--medium:hover {
     transition: all 0.3s ease-out!important;
-    background: #fefffe!important;
+    background: var(--primary)!important;
     color: #242424!important;
     transition: 250ms!important;
   }

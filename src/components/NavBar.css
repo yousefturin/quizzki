@@ -20,7 +20,7 @@
 }
 
 .navbarCST-logo {
-  color: #fefffe;
+  color: var(--primary);
   justify-self: start;
   margin-left: 2rem;
   cursor: pointer;
@@ -62,7 +62,7 @@
 }
 
 .nav-user-info-item-container {
-  color: #fefffe;
+  color: var(--primary);
   display: flex;
   align-items: center;
   text-decoration: none;
@@ -166,7 +166,7 @@ ul {
 }
 
 .nav-links {
-  color: #fefffe;
+  color: var(--primary);
   display: flex;
   align-items: center;
   text-decoration: none;
@@ -185,7 +185,7 @@ ul {
 }
 
 .fa-bars {
-  color: #fefffe;
+  color: var(--primary);
 }
 
 .nav-links-mobile {
@@ -279,7 +279,7 @@ ul {
   }
 
   .fa-times {
-    color: #fefffe;
+    color: var(--primary);
     font-size: 2rem;
   }
 
@@ -292,9 +292,9 @@ ul {
     text-decoration: none;
     font-size: 1.5rem;
     background-color: transparent;
-    color: #fefffe;
+    color: var(--primary);
     padding: 14px 20px;
-    border: 1px solid #fefffe;
+    border: 1px solid var(--primary);
     transition: all 0.3s ease-out;
   }
 
@@ -316,7 +316,7 @@ ul {
   }
 
   .nav-user-info-item-container {
-    color: #fefffe;
+    color: var(--primary);
     display: flex;
     align-items: center;
     text-decoration: none;
