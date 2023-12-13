@@ -112,7 +112,25 @@ body::-webkit-scrollbar-track {
   padding: 1rem;
 }
 
-.alert-error-signup p {
+.alert-success-signup{
+  background-color: #c4e5cd;
+  /* margin-block: 1rem;
+  padding: 1rem;
+  border-radius: 0.2rem; */
+  width: 100%;
+  outline: solid 1px #aec2aa8b;
+  min-height: 70px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 5px;
+  box-shadow: 0 0 0 0.1rem rgba(172, 194, 170, 0.25) !important;
+  overflow: hidden;
+  /* Ensures that any content overflowing the box is hidden */
+  padding: 1rem;
+}
+
+.alert-error-signup p,.alert-success-signup p  {
   white-space: wrap;
   /* Prevents text from wrapping to the next line */
   overflow: hidden;
@@ -129,7 +147,7 @@ body::-webkit-scrollbar-track {
   width: 100%;
   margin-top: 2rem;
   height: 3rem;
-  color: #fefffe;
+  color: var(--primary);
   background-color: #663399;
   transition: all 0.5s ease;
   font-size: 15px;
@@ -153,7 +171,7 @@ body::-webkit-scrollbar-track {
 .btn-form-submit-second:hover,
 .btn-form-submit-second:focus {
   background-color: #c9c0dc;
-  color: #fefffe;
+  color: var(--primary);
 }
 
 .link-text-display-signup {
@@ -263,7 +281,7 @@ body::-webkit-scrollbar-track {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  height: 50vh;
+  height: 60vh;
 }
 
 .questions-grid {
@@ -274,7 +292,7 @@ body::-webkit-scrollbar-track {
   grid-template-columns: 1fr 1fr;
   grid-template-rows: 1fr 1fr;
   gap: 10px;
-  height: 114px;
+  /* height: 114px; */
   margin-top: 3rem;
   margin-bottom: 3rem !important;
   list-style: none !important;
@@ -284,7 +302,7 @@ body::-webkit-scrollbar-track {
   width: 100%;
   margin-top: 2rem;
   height: 3rem;
-  color: #fefffe;
+  color: var(--primary);
   background-color: #663399;
   transition: all 0.5s ease;
   /* font-size: 15px; */
@@ -297,7 +315,22 @@ body::-webkit-scrollbar-track {
 .btn-question-submit:focus {
   background-color: #522a7a;
 }
+.btn-link-secondary{
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  margin-top: 1rem;
+  font-size: 0.8rem;
+  text-decoration: none;
+  color: #663399;
+  transition: all 0.5s ease;
+}
 
+.btn-link-secondary:hover,
+.btn-link-secondary:focus {
+  text-decoration: none;
+  color: #522a7a;
+}
 /* Rank Hall screen */
 .user-table-wrapper {
   width: 100%;
@@ -449,6 +482,9 @@ body::-webkit-scrollbar-track {
   .container-question-wrapper h4 {
     font-size: 18px;
   }
+  .btn-question-submit {
+    margin-top: 0rem;
+  }
 }
 
 @media screen and (max-width: 768px) {
@@ -458,16 +494,16 @@ body::-webkit-scrollbar-track {
 
   .questions-grid {
     justify-items: stretch;
-    justify-content: center;
+    justify-content: flex-end;
     align-content: center;
     display: flex;
     flex-direction: column;
     gap: 10px;
-    height: 120px;
-    margin-top: 3rem;
-    margin-bottom: 3rem !important;
+    height: 100%;
+    margin-top: 0rem;
+    margin-bottom: 0rem !important;
     list-style: none !important;
-    padding-top: 3rem;
+    padding-top: 0rem;
   }
 
   .card-body-question {
