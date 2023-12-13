@@ -231,7 +231,7 @@ function Navbar() {
               <li>
                 <div className="menu-active-line-splitter">
                   <hr style={{ width: "40%", height: "2px" }} />
-                  <h3 style={{ color: "#fefffe" }}>Or</h3>
+                  <h3 style={{ color: "var(--primary)" }}>Or</h3>
                   <hr style={{ width: "40%", height: "2px" }} />
                 </div>
               </li>

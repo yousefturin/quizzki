@@ -121,7 +121,7 @@ export default function SignUp() {
                             </Card.Body>
                         </Card>
                         <div
-                            style={{ color: "#fefffe" }}
+                            style={{ color: "var(--primary)" }}
                             className="under-card-text-signup"
                         >
                             Already have an account?{" "}

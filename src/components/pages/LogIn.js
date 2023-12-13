@@ -106,7 +106,7 @@ export default function LogIn() {
                             </Card.Body>
                         </Card>
                         <div
-                            style={{ color: "#fefffe" }}
+                            style={{ color: "var(--primary)" }}
                             className="under-card-text-signup"
                         >
                             Need an account?{" "}

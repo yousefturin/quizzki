@@ -197,7 +197,7 @@ export default function Profile() {
               </Card.Body>
             </Card>
             <div
-              style={{ color: "#fefffe" }}
+              style={{ color: "var(--primary)" }}
               className="under-card-text-signup"
             >
               <Link className="link-text-display-signup" to="/">
