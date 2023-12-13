@@ -187,10 +187,8 @@ export default function QuizTest() {
   //#region asynchronous get new Question after component mounts
   // Effect to get a random question when the rendered and inserted into the DOM for first time.
   useEffect(() => {
-    if (questionsData.questions) {
     console.log("Component mounted");
     getRandomQuestion();
-    }
   }, []);
   //#endregion
 
@@ -232,7 +230,7 @@ export default function QuizTest() {
         <div className="container-question-wrapper">
           <Container
             className="container-question-display"
-            style={{ minHeight: "100vh" }}
+            style={{ minHeight: "92vh" }}
           >
             <div className="card-question-wrapper">
               <Card
@@ -273,7 +271,7 @@ export default function QuizTest() {
                     <hr />
                     <Card.Body className="card-body-question">
                       <div className="question-wrapper">
-                        <h3>{currentQuestion.question}</h3>
+                        <h3 style={{fontSize:"1rem"}}>{currentQuestion.question}</h3>
                       </div>
 
                       <ul className="questions-grid">
@@ -319,7 +317,7 @@ export default function QuizTest() {
         <div className="container-question-wrapper">
           <Container
             className="container-question-display"
-            style={{ minHeight: "100vh" }}
+            style={{ minHeight: "92vh" }}
           >
             <div className="card-question-wrapper">
               <Card>
@@ -344,6 +342,9 @@ export default function QuizTest() {
                   >
                     Start Game
                   </Button>
+                  <Link to="/information/how-to-play" className="btn-link-secondary">
+                  Read Rules
+                </Link>
                 </Card.Body>
               </Card>
             </div>
@@ -355,7 +356,7 @@ export default function QuizTest() {
         <div className="container-question-wrapper">
           <Container
             className="container-question-display"
-            style={{ minHeight: "100vh" }}
+            style={{ minHeight: "92vh" }}
           >
             <div className="card-question-wrapper">
               <Card>
