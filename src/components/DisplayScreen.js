@@ -26,7 +26,7 @@ function DisplayScreen() {
                 <Link to="/information/how-to-play" className="btn-mobile">
                     <REButton
                         className="btns"
-                        buttonStyle="btn--primary"
+                        buttonStyle="btn--primaryBg"
                         buttonSize="btn--large"
                     >
                         READ MORE
