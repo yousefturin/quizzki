@@ -2,6 +2,7 @@
 
 import CardItem from "../CardItem";
 import "../Cards.css";
+import Footer from "../Footer";
 
 const QuizLanding = () => {
 
@@ -180,7 +181,7 @@ const QuizLanding = () => {
 
     return (
         <>
-        <div className="container" style={{backgroundColor:"#242424"}}>
+        <div className="container" style={{backgroundColor:"var(--primaryDarkBg)"}}>
             <div className="cards">
                 <div className="cards__container">
                     <div className="cards__wrapper">
@@ -203,6 +204,7 @@ const QuizLanding = () => {
                 </div>
             </div>
             </div>
+            <Footer />
         </>
     );
 };
