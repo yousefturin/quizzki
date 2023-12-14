@@ -3,6 +3,7 @@ import { Card, Form, Container, Button, Alert } from "react-bootstrap";
 import { useAuth } from "../../contexts/AuthContext";
 import { Link, useNavigate } from "react-router-dom";
 import "../App.css";
+import { useNavigation } from "../../contexts/NavigationContext";
 
 export default function SignUp() {
     const NameRef = useRef();
@@ -13,6 +14,7 @@ export default function SignUp() {
     const [error, setError] = useState("");
     const [loading, setLoading] = useState(false);
     const navigate = useNavigate();
+    const { redirectPath } = useNavigation();
     // const [avatarRef, setAvatarRef] = useState(null);
 
     async function handleSubmit(e) {
@@ -33,7 +35,12 @@ export default function SignUp() {
                 NameRef.current.value,
                 randomSeed
             );
-            navigate("/");
+            if (redirectPath){
+                navigate(redirectPath);
+            }else{
+                navigate("/");
+            }
+            
         } catch (error) {
             if (error.message.includes("email address is already in use")) {
                 setError(
@@ -121,7 +128,7 @@ export default function SignUp() {
                             </Card.Body>
                         </Card>
                         <div
-                            style={{ color: "var(--primary)" }}
+                            style={{ color: "var(--primaryBg)" }}
                             className="under-card-text-signup"
                         >
                             Already have an account?{" "}
