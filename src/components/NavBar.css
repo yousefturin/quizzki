@@ -1,10 +1,10 @@
 .navbarCST {
-  background: linear-gradient(90deg, rgb(28, 27, 27) 0%, rgb(26, 23, 23) 100%);
+  background: var( --navBg);
   height: 80px;
   display: flex;
   justify-content: center;
   align-items: center;
-  font-size: 1.2rem;
+  font-size: var(--fontXMedium);
   position: sticky;
   top: 0;
   z-index: 999;
@@ -16,23 +16,23 @@
   align-items: center;
   height: 80px;
   max-width: 1500px;
-  /* background-color: #242424 ; */
+  /* background-color: var(--primaryDarkBg) ; */
 }
 
 .navbarCST-logo {
-  color: var(--primary);
+  color: var(--primaryBg);
   justify-self: start;
   margin-left: 2rem;
   cursor: pointer;
   text-decoration: none;
-  font-size: 2rem;
+  font-size: var(--fontXMax);
   display: flex;
   align-items: center;
 }
 
 .fa-codepen {
   margin-left: 0.5rem;
-  font-size: 1.8rem;
+  font-size: var(--fontXXMax);
 }
 
 .nav-menu {
@@ -62,7 +62,7 @@
 }
 
 .nav-user-info-item-container {
-  color: var(--primary);
+  color: var(--primaryBg);
   display: flex;
   align-items: center;
   text-decoration: none;
@@ -88,11 +88,7 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  background: linear-gradient(
-    90deg,
-    rgb(107, 106, 106) 0%,
-    rgb(111, 106, 106) 100%
-  );
+  background: var( --navUserBoxBg);
 }
 
 .nav-user-name-email-display-container-wrapper {
@@ -105,11 +101,7 @@
   padding: 1rem;
   gap: 0.5rem;
   border-radius: 2px;
-  background: linear-gradient(
-    90deg,
-    rgb(107, 106, 106) 0%,
-    rgb(111, 106, 106) 100%
-  );
+  background: var( --navUserBoxBg);
 }
 .nav-user-name-email-display-container-wrapper.active {
   width: 80%;
@@ -121,26 +113,22 @@
   padding: 1rem;
   gap: 0.5rem;
   border-radius: 2px;
-  background: linear-gradient(
-    90deg,
-    rgb(107, 106, 106) 0%,
-    rgb(111, 106, 106) 100%
-  );
+  background: var( --navUserBoxBg);
 }
 .horizontal-line-separator {
   height: 100%;
 }
 
 .nav-user-name-display-container {
-  font-size: 21px;
+  font-size: var(--fontMedium);
   font-weight: 700;
   text-align: left;
 }
 
 .nav-user-email-display-container {
-  font-size: 11px;
+  font-size: var(--fontXXSmall);
   font-weight: 400;
-  color: #a8a8a8;
+  color: var( --navBox);
 }
 
 .image-size-controller {
@@ -166,7 +154,7 @@ ul {
 }
 
 .nav-links {
-  color: var(--primary);
+  color: var(--primaryBg);
   display: flex;
   align-items: center;
   text-decoration: none;
@@ -180,12 +168,12 @@ ul {
 }
 
 .nav-links:hover {
-  border-bottom: 4px solid rebeccapurple;
+  border-bottom: 4px solid var( --primaryBtn);
   transition: all 0.2s ease-out;
 }
 
 .fa-bars {
-  color: var(--primary);
+  color: var(--primaryBg);
 }
 
 .nav-links-mobile {
@@ -202,13 +190,13 @@ ul {
   }
 
   .nav-user-name-display-container {
-    font-size: 18px;
+    font-size: var(--fontXMedium);
   }
   .nav-user-email-display-container {
-    font-size: 10px;
+    font-size: var(--fontXXSmall);
   }
   .nav-menu {
-    font-size: 18px;
+    font-size: var(--fontXMedium);
   }
 }
 @media screen and (max-width: 1155px) {
@@ -217,7 +205,7 @@ ul {
     transition: all 1s ease;
   }
   .nav-user-name-display-container {
-    font-size: 18px;
+    font-size: var(--fontXMedium);
   }
 }
 
@@ -256,7 +244,7 @@ ul {
 
   .nav-links:hover {
     background-color: #898989;
-    color: #242424;
+    color: var(--primaryDarkBg);
     border-radius: 0;
   }
 
@@ -274,13 +262,13 @@ ul {
     top: 0;
     right: 0;
     transform: translate(-100%, 60%);
-    font-size: 1.8rem;
+    font-size: var(--fontXXMax);
     cursor: pointer;
   }
 
   .fa-times {
-    color: var(--primary);
-    font-size: 2rem;
+    color: var(--primaryBg);
+    font-size: var(--fontXMax);
   }
 
   .nav-links-mobile {
@@ -290,17 +278,17 @@ ul {
     border-radius: 4px;
     width: 80%;
     text-decoration: none;
-    font-size: 1.5rem;
+    font-size: var(--fontXLarge);
     background-color: transparent;
-    color: var(--primary);
+    color: var(--primaryBg);
     padding: 14px 20px;
-    border: 1px solid var(--primary);
+    border: 1px solid var(--primaryBg);
     transition: all 0.3s ease-out;
   }
 
   .nav-links-mobile:hover {
-    background: rebeccapurple;
-    color: #242424;
+    background: var( --primaryBtnFocus);
+    color: var(--primaryDarkBg);
     transition: 250ms;
   }
 
@@ -316,7 +304,7 @@ ul {
   }
 
   .nav-user-info-item-container {
-    color: var(--primary);
+    color: var(--primaryBg);
     display: flex;
     align-items: center;
     text-decoration: none;
@@ -389,14 +377,14 @@ ul {
   }
 
   .nav-user-name-display-container {
-    font-size: 28px;
+    font-size: var(--fontLarge);
     font-weight: 700;
   }
 
   .nav-user-email-display-container {
-    font-size: 14px;
+    font-size: var(--fontXSmall);
     font-weight: 400;
-    color: #a8a8a8;
+    color: var( --navBox);
   }
 
   .nav-menu-line-splitter {
