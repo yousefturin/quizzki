@@ -1,5 +1,5 @@
 .footer-container {
-    background-color: #242424;
+    background-color: var(--primaryDarkBg);
     padding: 4rem 0 2rem 0;
     display: flex;
     flex-direction: column;
@@ -15,7 +15,7 @@
     text-align: center;
     margin-bottom: 24px;
     padding: 24px;
-    color: var(--primary);
+    color: var(--primaryBg);
 }
 
 .footer-subscription>p {
@@ -25,12 +25,12 @@
 
 .footer-subscription-heading {
     margin-top: 24px;
-    font-size: 24px;
+    font-size: var(--fontXLarge);
 }
 
 .footer-subscription-text {
     margin-bottom: 24px;
-    font-size: 20px;
+    font-size: var(--fontMedium);
 }
 
 .footer-input {
@@ -39,9 +39,9 @@
     margin-right: 10px;
     outline: none;
     border: none;
-    font-size: 18px;
+    font-size: var(--fontXMedium);
     margin-bottom: 16px;
-    border: 1px solid var(--primary);
+    border: 1px solid var(--primaryBg);
 }
 
 .footer-links {
@@ -70,17 +70,17 @@
 }
 
 .footer-link-items>h2 {
-    color: var(--primary);
+    color: var(--primaryBg);
 }
 
 .footer-link-items a {
-    color: var(--primary);
+    color: var(--primaryBg);
     text-decoration: none;
     margin-bottom: 8px;
 }
 
 .footer-link-items a:hover {
-    color: #dadada;
+    color: var( --footerFocus);
     transition: 0.3 ease-out;
 }
 
@@ -89,14 +89,14 @@
 }
 
 .footer-input::placeholder {
-    color: #b1b1b1;
+    color: var( --footerPlaceHolder);
 }
 
 /* Social Icons */
 
 .social-icon-link {
-    color: var(--primary);
-    font-size: 24px;
+    color: var(--primaryBg);
+    font-size: var(--fontXLarge);
 }
 
 .social-media {
@@ -122,19 +122,19 @@
 }
 
 .social-logo {
-    color: var(--primary);
+    color: var(--primaryBg);
     justify-self: start;
     margin-left: 20px;
     text-decoration: none;
     cursor: pointer;
-    font-size: 2rem;
+    font-size: var(--fontXMax);
     display: flex;
     align-self: center;
     margin-bottom: 16px;
 }
 
 .website-rights {
-    color: var(--primary);
+    color: var(--primaryBg);
     margin-bottom: 16px;
 }
 
