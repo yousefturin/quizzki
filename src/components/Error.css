@@ -52,9 +52,9 @@
   justify-self: center;
   width: 50%;
   text-align: center;
-  color: #fff !important;
+  color: #fefffe !important;
   padding: 10px 20px;
-  background: #663399;
+  background: var( --primaryBtn);
   margin: 20px 0;
   display: inline-block;
   text-decoration: none;
@@ -62,7 +62,7 @@
 }
 .link-404:hover ,
 .link-404:focus {
-  background-color: #522a7a;
+  background-color: var( --primaryBtnFocus);
 }
 @media screen and (max-width: 960px) {
   .page-404 {
