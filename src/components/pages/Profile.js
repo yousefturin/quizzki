@@ -187,7 +187,7 @@ export default function Profile() {
                     className="btn-form-submit"
                     type="submit"
                     style={{
-                        backgroundColor:!isFormChanged?"gray": "#663399",
+                        backgroundColor:!isFormChanged?"gray": "var( --primaryBtn)",
                     }}
                   >
                     {" "}
@@ -197,7 +197,7 @@ export default function Profile() {
               </Card.Body>
             </Card>
             <div
-              style={{ color: "var(--primary)" }}
+              style={{ color: "var(--primaryBg)" }}
               className="under-card-text-signup"
             >
               <Link className="link-text-display-signup" to="/">
