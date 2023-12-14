@@ -29,16 +29,16 @@
     flex: 1;
     margin: 0 1rem;
     border-radius: 10px;
-    background-color: var(--primary);
+    background-color: var(--primaryBg);
   }
   
   .cards__item__link {
     display: flex;
     flex-flow: column;
     width: 100%;
-    box-shadow: 0 6px 20px rgba(201,192,220, 0.384);
-    -webkit-filter: drop-shadow(0 6px 20px rgba(56, 125, 255, 0.017));
-    filter: drop-shadow(0 6px 20px rgba(56, 125, 255, 0.017));
+    box-shadow: 0 6px 20px var( --cardBoxShadow);
+    -webkit-filter: var( --cardFilterShadow);
+    filter: var( --cardFilterShadow);
     border-radius: 10px;
     overflow: hidden;
     text-decoration: none;
@@ -63,10 +63,10 @@
     margin-left: 10px;
     padding: 6px 8px;
     max-width: calc((100%) - 60px);
-    font-size: 12px;
+    font-size: var(--fontXSmall);
     font-weight: 700;
-    color: #fff;
-    background: linear-gradient( 90deg, rgb(107, 106, 106) 0%, rgb(111, 106, 106) 100% );;
+    color: #fefffe;
+    background: var( --cardAfterBg);
     box-sizing: border-box;
   }
   
@@ -94,8 +94,8 @@
   }
   
   .cards__item__text {
-    color: #252e48;
-    font-size: 18px;
+    color: var( --cardText);
+    font-size: var(--fontXMedium);
     line-height: 24px;
   }
   
