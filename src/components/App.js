@@ -18,11 +18,14 @@ import UserPrivateRoute from "./UserPrivateRoute";
 import Error from "./pages/Error";
 import QuizLanding from "./pages/QuizLanding";
 import { QuizProvider } from "../contexts/QuizContext";
+import UserScorePage from "./pages/UserScorePage";
+import { NavigationProvider } from "../contexts/NavigationContext";
 
 function App() {
   return (
     <>
       <Router>
+      <NavigationProvider>
         <AuthProvider>
         <QuizProvider>
           <NavBar />
@@ -66,7 +69,8 @@ function App() {
               path="/users/:uid"
               element={<UserPrivateRoute element={<Profile />} />}
             />
-
+            {/* In react the queryParams data is handled in a different way so it needs to be as (*) */}
+            <Route path="/records/score/*" element={<UserScorePage />} />
             <Route path="/sign-up" element={<SignUp />} />
             <Route path="/log-in" element={<LogIn />} />
             <Route path="/reset-password" element={<ForgotPassword />} />
@@ -76,6 +80,7 @@ function App() {
           </Routes>
           </QuizProvider>
         </AuthProvider>
+         </NavigationProvider>
       </Router>
     </>
   );
