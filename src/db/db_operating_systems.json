@@ -21,7 +21,7 @@
         {
             "id": 4,
             "question": "What is virtual memory in the context of operating systems?",
-            "options": ["Memory that is physically present in the system", "Memory used for cache purposes", "A memory management technique that provides an (illusion) of larger memory", "Memory reserved for virtual machines"],
+            "options": ["A memory management technique that provides an 'illusion' of larger memory", "Memory used for cache purposes", "A memory management technique that provides an (illusion) of larger memory", "Memory reserved for virtual machines"],
             "answer": "A memory management technique that provides an 'illusion' of larger memory"
         },
         {
