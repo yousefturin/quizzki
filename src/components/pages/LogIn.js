@@ -3,6 +3,7 @@ import { Card, Form, Container, Button, Alert } from "react-bootstrap";
 import { useAuth } from "../../contexts/AuthContext";
 import { Link, useNavigate } from "react-router-dom";
 import "../App.css";
+import { useNavigation } from "../../contexts/NavigationContext";
 
 export default function LogIn() {
     const emailRef = useRef();
@@ -11,14 +12,22 @@ export default function LogIn() {
     const [error, setError] = useState("");
     const [loading, setLoading] = useState(false);
     const navigate = useNavigate();
-
+    const { redirectPath } = useNavigation();
     async function handleSubmit(e) {
         e.preventDefault();
         try {
             setError("");
             setLoading(true);
             await login(emailRef.current.value, passwordRef.current.value);
-            navigate("/");
+            console.log("user is logging")
+            if (redirectPath){
+                console.log("user is logging waiting to redirect")
+                console.log(redirectPath)
+                navigate(redirectPath);
+            }else{
+                navigate("/");
+            }
+            
         } catch (error) {
             // Handle specific error cases and provide meaningful error messages
             if (error.code === "auth/invalid-login-credentials") {
@@ -106,7 +115,7 @@ export default function LogIn() {
                             </Card.Body>
                         </Card>
                         <div
-                            style={{ color: "var(--primary)" }}
+                            style={{ color: "var(--primaryBg)" }}
                             className="under-card-text-signup"
                         >
                             Need an account?{" "}
