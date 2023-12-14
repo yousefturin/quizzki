@@ -1,3 +1,70 @@
+:root {
+  --primaryBg: #fefffe;
+  --secondaryBg:#fefffe66;
+  --primaryDarkBg: #242424;
+
+  --motionBg:#1c1c1c;
+  --motionBgImage:linear-gradient(hsl(343, 100%, 37%), hsl(270, 50%, 40%));
+  --shadowDisplay :rgba(255, 255, 255, 0.7);
+
+  --cardBoxShadow:  rgba(201,192,220, 0.384);
+  --cardFilterShadow:drop-shadow(0 6px 20px rgba(56, 125, 255, 0.017));
+  --cardAfterBg:linear-gradient( 90deg, rgb(107, 106, 106) 0%, rgb(111, 106, 106) 100% );
+  --cardText:#252e48;
+
+
+  --footerFocus:#dadada;
+  --footerPlaceHolder: #b1b1b1;
+
+
+  --navBg:linear-gradient(90deg, rgb(28, 27, 27) 0%, rgb(26, 23, 23) 100%);
+  --navUserBoxBg:linear-gradient(
+    90deg,
+    rgb(107, 106, 106) 0%,
+    rgb(111, 106, 106) 100%
+  );
+  --navBox:#a8a8a8;
+  
+  --primaryBtn:#663399;
+  --primaryBtnFocus:#522a7a;
+  --primaryBtnShadowDark:rgba(102, 51, 153, 0.25) ;
+
+  --secondaryBtn:#c9c0dc;
+  --secondaryBtnShadowLighter:rgba(194, 194, 194, 0.25) ;
+
+  --successBg:#c4e5cd ;
+  --successOutline:#aec2aa8b ;
+  --successShadow: rgba(172, 194, 170, 0.25) ;
+
+  --errorBg:#f5d7da ;
+  --errorOutline:#c2aaac8b ;
+  --errorShadow: rgba(194, 170, 172, 0.25)  ;
+
+  --tableBg:#f2f2f258 ;
+  --tableFocus:#e5e5e5;
+  --tableBorder:#ddd;
+
+
+  --fontXXSmall: 0.625rem; /*  10px */
+  --fontXSmall: 0.75rem; /*  12px */
+  --fontSmall: 1rem; /*  16px */
+  --fontXXMedium: 1.0625rem; /*  17px */
+  --fontXMedium: 1.125rem; /*  18px */
+  --fontMedium: 1.25rem; /*  20px */
+  --fontXXLarge: 1.375rem; /*  22px */
+  --fontXLarge: 1.5rem; /*  24px */
+  --fontLarge: 1.625rem; /*  26px */
+  --fontXXMax: 1.875rem; /*  30px */
+  --fontXMax: 2rem; /*  32px */
+  --fontMax:2.125rem; /*  34px */
+  --fontDisplaySmall: 3.125rem; /*  50px */
+  --fontDisplayMedium:4.375rem; /*  70px */
+  --fontDisplayLarge: 6.25rem; /*  100px */
+
+
+}
+
+
 * {
   box-sizing: border-box;
   margin: 0;
@@ -34,6 +101,13 @@ body::-webkit-scrollbar-track {
   margin-block: 3rem;
   margin-top: 4rem;
 }
+.image-winner-controller {
+  width: 400px !important;
+  height: 400px !important;
+  /* margin: 20px; */
+  margin-block: 2rem;
+  margin-top: 3rem;
+}
 .image-login-controller{
   width: 180px !important;
   height: 180px !important;
@@ -45,7 +119,7 @@ body::-webkit-scrollbar-track {
 /* sign up && login && forgot password screens */
 
 .container-signup-wrapper {
-  background-color: #242424;
+  background-color: var(--primaryDarkBg);
 }
 
 .card {
@@ -55,12 +129,12 @@ body::-webkit-scrollbar-track {
   border-radius: 5px;
   margin: 1rem auto;
   padding: 2rem;
-  padding-inline: 3rem;
+  /* padding-inline: 3rem; */
 }
 
 .form-control:focus {
-  border-color: #663399 !important;
-  box-shadow: 0 0 0 0.2rem rgba(102, 51, 153, 0.25) !important;
+  border-color: var( --primaryBtn) !important;
+  box-shadow: 0 0 0 0.2rem var( --primaryBtnShadow) !important;
 }
 
 .container-signup-display {
@@ -87,7 +161,7 @@ body::-webkit-scrollbar-track {
 
 .form-control {
   border: none;
-  box-shadow: 0 0 0 0.1rem rgba(194, 194, 194, 0.25) !important;
+  box-shadow: 0 0 0 0.1rem var(--secondaryBtnShadowLighter) !important;
   outline: none;
   border-radius: 5px;
   height: 40px;
@@ -99,32 +173,32 @@ body::-webkit-scrollbar-track {
 
 .alert-error-signup {
   width: 100%;
-  background-color: #f5d7da;
-  outline: solid 1px #c2aaac8b;
+  background-color: var( --errorBg);
+  outline: solid 1px var( --errorOutline);
   min-height: 70px;
   display: flex;
   justify-content: center;
   align-items: center;
   border-radius: 5px;
-  box-shadow: 0 0 0 0.1rem rgba(194, 170, 172, 0.25) !important;
+  box-shadow: 0 0 0 0.1rem var( --errorShadow)!important;
   overflow: hidden;
   /* Ensures that any content overflowing the box is hidden */
   padding: 1rem;
 }
 
 .alert-success-signup{
-  background-color: #c4e5cd;
+  background-color: var( --successBg);
   /* margin-block: 1rem;
   padding: 1rem;
   border-radius: 0.2rem; */
   width: 100%;
-  outline: solid 1px #aec2aa8b;
+  outline: solid 1px var( --successOutline);
   min-height: 70px;
   display: flex;
   justify-content: center;
   align-items: center;
   border-radius: 5px;
-  box-shadow: 0 0 0 0.1rem rgba(172, 194, 170, 0.25) !important;
+  box-shadow: 0 0 0 0.1rem var( --successShadow) !important;
   overflow: hidden;
   /* Ensures that any content overflowing the box is hidden */
   padding: 1rem;
@@ -147,43 +221,43 @@ body::-webkit-scrollbar-track {
   width: 100%;
   margin-top: 2rem;
   height: 3rem;
-  color: var(--primary);
-  background-color: #663399;
+  color: var(--primaryBg);
+  background-color: var( --primaryBtn);
   transition: all 0.5s ease;
-  font-size: 15px;
+  font-size: var(--fontSmall);
 }
 
 .btn-form-submit:hover,
 .btn-form-submit:focus {
-  background-color: #522a7a;
+  background-color: var( --primaryBtnFocus);
 }
 .btn-form-submit-second {
   width: 100%;
   margin-top: 0.5rem;
   height: 3rem;
-  color: #c9c0dc;
+  color: var( --secondaryBtn);
   background-color: transparent;
   transition: all 0.5s ease;
-  font-size: 15px;
-  border: 2px solid #c9c0dc !important;
+  font-size: var(--fontSmall);
+  border: 2px solid var( --secondaryBtn) !important;
 }
 
 .btn-form-submit-second:hover,
 .btn-form-submit-second:focus {
-  background-color: #c9c0dc;
-  color: var(--primary);
+  background-color: var( --secondaryBtn);
+  color: var(--primaryBg);
 }
 
 .link-text-display-signup {
   text-decoration: none;
-  color: #663399;
+  color: var( --primaryBtn);
   transition: all 0.5s ease;
 }
 
 .link-text-display-signup:hover,
 .link-text-display-signup:focus {
   text-decoration: none;
-  color: #522a7a;
+  color: var( --primaryBtnFocus);
 }
 
 .bottom-text-signup {
@@ -221,7 +295,7 @@ body::-webkit-scrollbar-track {
   width: 50px;
   height: 50px;
   border-radius: 50%;
-  background-color: #c9c0dc;
+  background-color: var( --secondaryBtn);
 
 }
 
@@ -232,7 +306,7 @@ body::-webkit-scrollbar-track {
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  font-size: 1em;
+  font-size: var(--fontSmall);
 }
 
 .container-question-wrapper {
@@ -246,10 +320,10 @@ body::-webkit-scrollbar-track {
   justify-content: center;
 }
 .container-question-wrapper h1 {
-  font-size: 34px;
+  font-size: var(--fontMax);
 }
 .container-question-wrapper h4 {
-  font-size: 20px;
+  font-size: var(--fontMedium);
 }
 
 
@@ -272,9 +346,20 @@ body::-webkit-scrollbar-track {
   justify-content: center;
   align-items: center;
   margin: 2rem auto;
-  background-color: #fefffe66;
+  background-color: var(--secondaryBg);
   padding: 2rem;
   border-radius: 5px;
+}
+.question-wrapper-gameOver {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  /* margin: 2rem auto; */
+  background-color: var(--secondaryBg);
+  padding: 1rem;
+  border-radius: 5px;
+  margin-bottom: 1rem;
 }
 
 .card-body-question {
@@ -282,6 +367,11 @@ body::-webkit-scrollbar-track {
   flex-direction: column;
   justify-content: center;
   height: 60vh;
+}
+.card-body-question-gameOver {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
 }
 
 .questions-grid {
@@ -302,10 +392,10 @@ body::-webkit-scrollbar-track {
   width: 100%;
   margin-top: 2rem;
   height: 3rem;
-  color: var(--primary);
-  background-color: #663399;
+  color: var(--primaryBg);
+  background-color: var( --primaryBtn);
   transition: all 0.5s ease;
-  /* font-size: 15px; */
+  /* font-size: var(--fontSmall); */
   display: flex;
   align-items: center;
   justify-content: flex-start;
@@ -313,23 +403,23 @@ body::-webkit-scrollbar-track {
 
 .btn-question-submit:hover,
 .btn-question-submit:focus {
-  background-color: #522a7a;
+  background-color: var( --primaryBtnFocus);
 }
 .btn-link-secondary{
   width: 100%;
   display: flex;
   justify-content: center;
   margin-top: 1rem;
-  font-size: 0.8rem;
+  font-size: var(--fontXSmall);
   text-decoration: none;
-  color: #663399;
+  color: var( --primaryBtn);
   transition: all 0.5s ease;
 }
 
 .btn-link-secondary:hover,
 .btn-link-secondary:focus {
   text-decoration: none;
-  color: #522a7a;
+  color: var( --primaryBtnFocus);
 }
 /* Rank Hall screen */
 .user-table-wrapper {
@@ -350,14 +440,14 @@ body::-webkit-scrollbar-track {
 
 .user-table th,
 .user-table td {
-  border: 1px solid #ddd;
+  border: 1px solid var( --tableBorder);
   padding: 8px;
   text-align: left;
-  background-color: #f2f2f258;
+  background-color: var( --tableBg);
 }
 
 .user-table tbody tr:hover {
-  background-color: #e5e5e5;
+  background-color: var( --tableFocus);
 }
 
 /* About-us Screen */
@@ -377,13 +467,13 @@ body::-webkit-scrollbar-track {
   display: flex;
   flex-flow: column;
   align-items: center;
-  background-color: #c9c0dc;
+  background-color: var( --secondaryBtn);
 
 }
 
 .intro-container p {
   padding: 1rem 0;
-  font-size: 21px;
+  font-size: var(--fontMedium);
   text-decoration: none;
   text-align: left;
   letter-spacing: 0.1cqb;
@@ -393,7 +483,7 @@ body::-webkit-scrollbar-track {
 
 .intro-container h2 {
   /* padding: 1rem 0; */
-  font-size: 24px;
+  font-size: var(--fontXLarge);
   text-decoration: none;
   text-align: left;
   align-self: flex-start;
@@ -402,7 +492,7 @@ body::-webkit-scrollbar-track {
 
 .intro-container h3 {
   /* padding: 1rem 0; */
-  font-size: 20px;
+  font-size: var(--fontMedium);
   text-decoration: none;
   text-align: left;
   align-self: flex-start;
@@ -412,7 +502,7 @@ body::-webkit-scrollbar-track {
 .intro-container ul {
   padding: 1rem 0;
   list-style: none !important;
-  font-size: 21px;
+  font-size: var(--fontMedium);
   text-decoration: none;
   text-align: left;
   letter-spacing: 0.1cqb;
@@ -447,25 +537,32 @@ body::-webkit-scrollbar-track {
   }
 
   .intro-container p {
-    font-size: 18px;
+    font-size: var(--fontXMedium);
   }
 
   .intro-container ul {
-    font-size: 18px;
+    font-size: var(--fontXMedium);
   }
 
   .intro-container h2 {
-    font-size: 20px;
+    font-size: var(--fontMedium);
   }
 
   .intro-container h3 {
-    font-size: 18px;
+    font-size: var(--fontXMedium);
   }
 
   .image-Rules-controller {
     width: 250px !important;
     height: 250px !important;
     margin: 20px;
+    margin-block: 2rem;
+    margin-top: 3rem;
+  }
+  .image-winner-controller {
+    width: 400px !important;
+    height: 400px !important;
+    /* margin: 20px; */
     margin-block: 2rem;
     margin-top: 3rem;
   }
@@ -477,10 +574,10 @@ body::-webkit-scrollbar-track {
     margin-top: 3rem;
   }
   .container-question-wrapper h1 {
-    font-size: 26px;
+    font-size: var(--fontLarge);
   }
   .container-question-wrapper h4 {
-    font-size: 18px;
+    font-size: var(--fontXMedium);
   }
   .btn-question-submit {
     margin-top: 0rem;
@@ -510,6 +607,9 @@ body::-webkit-scrollbar-track {
     justify-content: flex-start;
     height: 60vh;
   }
+  .card-body-question-gameOver{
+    justify-content: flex-start;
+  }
 
   .card-question-wrapper {
     max-width: 400px;
@@ -522,19 +622,19 @@ body::-webkit-scrollbar-track {
   }
 
   .intro-container p {
-    font-size: 16px;
+    font-size: var(--fontSmall);
   }
 
   .intro-container ul {
-    font-size: 16px;
+    font-size: var(--fontSmall);
   }
 
   .intro-container h2 {
-    font-size: 18px;
+    font-size: var(--fontXMedium);
   }
 
   .intro-container h3 {
-    font-size: 17px;
+    font-size: var(--fontXXMedium);
   }
 
   .image-Rules-controller {
@@ -544,6 +644,13 @@ body::-webkit-scrollbar-track {
     margin-block: 1rem;
     margin-top: 2rem;
   }
+  .image-winner-controller {
+    width: 300px !important;
+    height: 300px !important;
+    /* margin: 20px; */
+    margin-block: 2rem;
+    margin-top: 3rem;
+  }
   .image-login-controller{
     width: 120px !important;
     height: 120px !important;
@@ -552,9 +659,9 @@ body::-webkit-scrollbar-track {
     margin-top: 2rem;
   }
   .container-question-wrapper h1 {
-    font-size: 22px;
+    font-size: var(--fontXXLarge);
   }
   .container-question-wrapper h4 {
-    font-size: 16px;
+    font-size: var(--fontSmall);
   }
 }
