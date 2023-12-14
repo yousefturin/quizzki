@@ -76,7 +76,7 @@ export default function ForgotPassword() {
                             </Card.Body>
                         </Card>
                         <div
-                            style={{ color: "var(--primary)" }}
+                            style={{ color: "var(--primaryBg)" }}
                             className="under-card-text-signup"
                         >
                             Need an account?{" "}
