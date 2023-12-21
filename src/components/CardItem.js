@@ -22,6 +22,7 @@ function CardItem(props) {
               src={props.src}
               alt="Affine Encryption"
               className="cards__item__img"
+              loading="lazy"
             />
           </figure>
           <div className="cards__item__info">
