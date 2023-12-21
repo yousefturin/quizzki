@@ -11,12 +11,16 @@ import "../App.css";
 import { Link, useParams } from "react-router-dom";
 import CryptoJS from "crypto-js";
 import { useNavigation } from "../../contexts/NavigationContext";
+import { useButtonState } from "../../contexts/ButtonStateContext";
+import ShareButton from "../ShareButton";
 
 export default function QuizTest() {
   const { idTest } = useParams();
   const { selectedCard } = useQuiz();
   const [questionsData, setQuestionsData] = useState([]);
   const { redirectPath, clearNavigation } = useNavigation();
+
+  const { setButtonState } = useButtonState();
 
   // dynamically importing the location of database for questions
   useEffect(() => {
@@ -57,6 +61,7 @@ export default function QuizTest() {
   const { currentUser } = useAuth();
   const { displayName, email } = currentUser || {};
 
+  const [urlSpan, setUrlSpan] = useState(null);
   // Variable to store the question timer
   let questionTimer;
 
@@ -185,7 +190,9 @@ export default function QuizTest() {
     setGameStarted(true); // Set gameStarted to true to restart the timer
   };
   //#endregion
-
+  const handleReadRulesButton = () => {
+    setButtonState(true);
+  };
   //#region asynchronous get new Question after component mounts
   // Effect to get a random question when the rendered and inserted into the DOM for first time.
   useEffect(() => {
@@ -256,15 +263,30 @@ export default function QuizTest() {
     const encryptedDisplayName = encryptData(displayName.toString());
     const encryptedScore = encryptData(score.toString());
     const encryptedIdTest = encryptData(idTest.toString());
-
+    const root = window.location.origin;
     const queryParams = `?displayName=${encodeURIComponent(
       encryptedDisplayName
     )}&score=${encodeURIComponent(encryptedScore)}&idTest=${encodeURIComponent(
       encryptedIdTest
     )}`;
-    const url = `/records/score/${queryParams}`;
+    const url = `${root}/records/score/${queryParams}`;
+    setUrlSpan(url);
     console.log(url);
   };
+  const [showContainer, setShowContainer] = useState(false);
+  const handleShareContainer = () => {
+    setShowContainer(!showContainer);
+  };
+  const handleCopyText = () => {
+    try {
+      navigator.clipboard.writeText(urlSpan);
+      console.log("Text copied to clipboard");
+    } catch (err) {
+      console.error("Unable to copy text to clipboard", err);
+    }
+  };
+
+
 
   if (gameOver) {
     return (
@@ -298,22 +320,42 @@ export default function QuizTest() {
                       Your final score is <strong>{score}</strong>.
                     </p>
                   </div>
-          
+
                   <Button onClick={restartGame} className="btn-form-submit">
                     Restart Game
                   </Button>
-                  <Link to="/quiz-test" className="btn-mobile">
-                    <Button className="btn-form-submit-second">
-                      Back to main
+                  <div
+                    className="btn-mobile"
+                    style={{
+                      display: "flex",
+                      gap: "5px",
+                      textDecoration: "none",
+                    }}
+                  >
+                    <Link to="/quiz-test" style={{ flex: "4" }}>
+                      <Button className="btn-form-submit-second">
+                        <i class="fas fa-arrow-circle-left"></i> Back
+                      </Button>
+                    </Link>
+                    {/* Need to find a new state for removing the share when cheating,
+                    now if i answered incorrectly and then opened a tab it will hide the share as well */}
+                    {!tabOpened  &&
+                      <Button
+                      onClick={handleShareContainer}
+                      className="btn-form-submit-second"
+                      style={{ flex: "0.5" }}
+                    >
+                      <i class="fas fa-share-alt-square"></i>
                     </Button>
-                  </Link>
+                    }
+                  </div>
                 </Card.Body>
                 {isCorrect === false && (
                   <>
                     <hr />
                     <Card.Body className="card-body-question-gameOver">
                       <div className="question-wrapper-gameOver">
-                        <h3 style={{ fontSize: "1rem",color:"#4b4b4b" }}>
+                        <h3 style={{ fontSize: "1rem", color: "#4b4b4b" }}>
                           {currentQuestion.question}
                         </h3>
                       </div>
@@ -336,7 +378,7 @@ export default function QuizTest() {
                                   option === currentQuestion.answer
                                     ? "white"
                                     : "#676666",
-                                cursor:"default",
+                                cursor: "default",
                               }}
                             >
                               {option}
@@ -349,6 +391,70 @@ export default function QuizTest() {
                 )}
               </Card>
             </div>
+            {showContainer && (
+              <div className="share-container-backdrop">
+                <div
+                  className="share-container-backdrop-trigger"
+                  onClick={handleShareContainer}
+                ></div>
+                <div className="share-container-disable">
+                  <div className="wrapper-share-container">
+                    <Button
+                      onClick={handleShareContainer}
+                      className="btn-form-submit-second"
+                      style={{
+                        width: "2rem",
+                        marginTop: "0rem",
+                        fontSize: "var(--fontXSmall)",
+                        height: "2rem",
+                        border: "2px none",
+                        padding: "0",
+                      }}
+                    >
+                      <i class="fas fa-times-circle"></i>
+                    </Button>
+                    <h4 style={{ width: "100%" }}>Share</h4>
+                  </div>
+                  <hr
+                    style={{ borderColor: "#dfdede", borderTop: "1px #dfdede" }}
+                  />
+                  <div className="social-card-container">
+                    <div className="social-card-wrapper">
+                      <ShareButton platform="facebook" url={urlSpan} iconPath="/images/image-social-share-facebook.svg"  />
+                      <ShareButton platform="twitter" url={urlSpan} iconPath="/images/image-social-share-twitter.svg"  />
+                      <ShareButton platform="linkedIn" url={urlSpan} iconPath="/images/image-social-share-linkedIn.svg"  />
+                      <ShareButton platform="vk" url={urlSpan} iconPath="/images/image-social-share-vk.svg"  />
+                      <ShareButton platform="reddit" url={urlSpan} iconPath="/images/image-social-share-reddit.svg"  />
+                    </div>
+                  </div>
+                  <div className="share-url-holder">
+                    <span
+                      style={{
+                        flex: "1",
+                        overflow: "hidden",
+                        textOverflow: "ellipsis",
+                      }}
+                    >
+                      {urlSpan}
+                    </span>
+                    <Button
+                      onClick={handleCopyText}
+                      className="btn-form-submit-second"
+                      style={{
+                        width: "3rem",
+                        marginTop: "0rem",
+                        fontSize: "var(--fontXSmall)",
+                        height: "2rem",
+                        border: "4px none",
+                        padding: "0",
+                      }}
+                    >
+                      Copy
+                    </Button>
+                  </div>
+                </div>
+              </div>
+            )}
           </Container>
         </div>
         <Footer />
@@ -396,6 +502,7 @@ export default function QuizTest() {
                     Start Game
                   </Button>
                   <Link
+                    onClick={handleReadRulesButton}
                     to="/information/how-to-play"
                     className="btn-link-secondary"
                   >
