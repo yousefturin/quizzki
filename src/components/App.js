@@ -20,67 +20,75 @@ import QuizLanding from "./pages/QuizLanding";
 import { QuizProvider } from "../contexts/QuizContext";
 import UserScorePage from "./pages/UserScorePage";
 import { NavigationProvider } from "../contexts/NavigationContext";
+import { ButtonStateProvider } from "../contexts/ButtonStateContext";
+import { RedirectProvider } from "../contexts/RedirectContext";
+import SecureUserScorePage from "./pages/SecureUserScorePage";
 
 function App() {
   return (
     <>
       <Router>
-      <NavigationProvider>
-        <AuthProvider>
-        <QuizProvider>
-          <NavBar />
-          <Routes>
-            <Route path="/" exact element={<Home />} />
-            <Route
-              path="/rank-hall"
-              element={
-                <PrivateRoute>
-                  <RankHall />
-                </PrivateRoute>
-              }
-            />
-            <Route
-              path="/quiz-test/:idTest"
-              element={
-                <PrivateRoute>
-                  <QuizTest />
-                </PrivateRoute>
-              }
-            />
-            <Route
-              path="/information/how-to-play"
-              element={
-                <PrivateRoute>
-                  <GameRules />
-                </PrivateRoute>
-              }
-            />
-            <Route
-              path="/quiz-test"
-              element={
-                <PrivateRoute>
-                  <QuizLanding />
-                </PrivateRoute>
-              }
-            />
-            
-            {/* No need for both PrivateRoute and UserPrivateRoute at the same time for the user page */}
-            <Route
-              path="/users/:uid"
-              element={<UserPrivateRoute element={<Profile />} />}
-            />
-            {/* In react the queryParams data is handled in a different way so it needs to be as (*) */}
-            <Route path="/records/score/*" element={<UserScorePage />} />
-            <Route path="/sign-up" element={<SignUp />} />
-            <Route path="/log-in" element={<LogIn />} />
-            <Route path="/reset-password" element={<ForgotPassword />} />
-            <Route path="/company/about-us" element={<AboutUs />} />
-            <Route path="/company/legal" element={<Legal />} />
-            <Route path="/error" element={<Error />} />
-          </Routes>
-          </QuizProvider>
-        </AuthProvider>
-         </NavigationProvider>
+      <RedirectProvider>
+      <ButtonStateProvider>
+        <NavigationProvider>
+          <AuthProvider>
+            <QuizProvider>
+              <NavBar />
+              <Routes>
+                <Route path="/" exact element={<Home />} />
+                <Route
+                  path="/rank-hall"
+                  element={
+                    <PrivateRoute>
+                      <RankHall />
+                    </PrivateRoute>
+                  }
+                />
+                <Route
+                  path="/quiz-test/:idTest"
+                  element={
+                    <PrivateRoute>
+                      <QuizTest />
+                    </PrivateRoute>
+                  }
+                />
+                <Route
+                  path="/information/how-to-play"
+                  element={
+                    <PrivateRoute>
+                      <GameRules />
+                    </PrivateRoute>
+                  }
+                />
+                <Route
+                  path="/quiz-test"
+                  element={
+                    <PrivateRoute>
+                      <QuizLanding />
+                    </PrivateRoute>
+                  }
+                />
+
+                {/* No need for both PrivateRoute and UserPrivateRoute at the same time for the user page */}
+                <Route
+                  path="/users/:uid"
+                  element={<UserPrivateRoute element={<Profile />} />}
+                />
+                {/* In react the queryParams data is handled in a different way so it needs to be as (*) */}
+                <Route path="/records/score/*" element={<UserScorePage />} />
+                <Route path="/users/record/test/:idHash" element={<SecureUserScorePage />} />
+                <Route path="/sign-up" element={<SignUp />} />
+                <Route path="/log-in" element={<LogIn />} />
+                <Route path="/reset-password" element={<ForgotPassword />} />
+                <Route path="/company/about-us" element={<AboutUs />} />
+                <Route path="/company/legal" element={<Legal />} />
+                <Route path="/error" element={<Error />} />
+              </Routes>
+            </QuizProvider>
+          </AuthProvider>
+        </NavigationProvider>
+        </ButtonStateProvider>
+        </RedirectProvider>
       </Router>
     </>
   );
