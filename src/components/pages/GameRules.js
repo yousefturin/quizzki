@@ -1,10 +1,26 @@
 import React from "react";
 import Footer from "../Footer";
 import "../App.css";
+import { Button } from "react-bootstrap";
+import { useNavigate } from "react-router-dom";
+import { useQuiz } from "../../contexts/QuizContext";
+import { useButtonState } from "../../contexts/ButtonStateContext";
 
 export default function GameRules() {
+
+  const { selectedCard } = useQuiz();
+  const navigate = useNavigate();
+  const { isClicked, clearButtonState } = useButtonState();
+
+  const handleButtonReadRulesToStart = ()=>{
+    console.log(selectedCard.name)
+    navigate(`/quiz-test/${selectedCard.name}`);
+    clearButtonState();
+  }
+
   return (
-    <><div className="intro-container-wrapper">
+    <>
+    <div className="intro-container-wrapper">
 
       <div className="intro-container">
         <h1>Game Rules</h1>
@@ -102,9 +118,19 @@ export default function GameRules() {
           environment for all participants. Let's maintain the spirit of
           friendly competition and uphold the principles of fair play.
         </p>
+        {isClicked&&
+        <Button
+                    onClick={handleButtonReadRulesToStart}
+                    className="btn-form-submit"
+                  >
+                    Start Game
+                    <i className="far fa-arrow-alt-circle-right" />
+                  </Button>
+                }
       </div>
       </div>
       <Footer />
     </>
   );
+
 }
