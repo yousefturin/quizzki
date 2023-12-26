@@ -52,7 +52,7 @@ export default function QuizTest() {
   const [gameStarted, setGameStarted] = useState(false); // State to track if the game has started
 
   // Time-related state variables
-  const [remainingTime, setRemainingTime] = useState(3000000000); // Remaining time for each question
+  const [remainingTime, setRemainingTime] = useState(30); // Remaining time for each question
   const [score, setScore] = useState(0); // User's score
   const [timeUp, setTimeUp] = useState(false); // State variable to track the cause of game over
   const [tabOpened, setTabOpened] = useState(false); // State variable to track if the user onend a tab in teh browser
@@ -109,7 +109,7 @@ export default function QuizTest() {
       setCurrentQuestion(randomQuestion);
       setUserAnswer(null);
       setIsCorrect(null);
-      setRemainingTime(30000000);
+      setRemainingTime(30);
 
       // Add the used question ID to the list    ***The number of added id is getting to more 6 zeros which may have effect on performance
       setUsedQuestionIds((prevIds) => [...prevIds, randomQuestion.id]);
@@ -337,9 +337,7 @@ export default function QuizTest() {
                         <i class="fas fa-arrow-circle-left"></i> Back
                       </Button>
                     </Link>
-                    {/* Need to find a new state for removing the share when cheating,
-                    now if i answered incorrectly and then opened a tab it will hide the share as well */}
-                    {!tabOpened  &&
+                    {(isCorrect === false   || timeUp) &&
                       <Button
                       onClick={handleShareContainer}
                       className="btn-form-submit-second"
@@ -350,7 +348,7 @@ export default function QuizTest() {
                     }
                   </div>
                 </Card.Body>
-                {isCorrect === false && (
+                {(isCorrect === false   || timeUp) && (
                   <>
                     <hr />
                     <Card.Body className="card-body-question-gameOver">
