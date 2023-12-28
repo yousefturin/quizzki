@@ -1,4 +1,6 @@
-
+/*======================
+    DisplayScreen component
+=======================*/
 
 /* video {
     object-fit: cover;
@@ -46,7 +48,6 @@
     --size: 450px;
     --speed: 20s;
     --easing: cubic-bezier(0.8, 0.2, 0.2, 0.8);
-
     transform: translate(-50%, -50%);
     z-index: -1; 
     width: var(--size);
