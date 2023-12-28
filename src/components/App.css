@@ -495,6 +495,10 @@ body::-webkit-scrollbar-track {
   padding-block: 0.5rem;
   align-items: center;
 }
+.social-card-container{
+  display: flex;
+  justify-content: center;
+}
 .social-card-wrapper {
   display: flex;
   justify-content: center;
