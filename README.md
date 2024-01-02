@@ -1,4 +1,4 @@
-# Getting Started with Create React App
+# Getting Started
 This project will not work without the following steps:
 
 ## `npm install`
@@ -23,6 +23,8 @@ The page will reload when you make changes.\
 You may also see any lint errors in the console.
 
 
+# Display pictures
+![image](https://github.com/yousefturin/quizzki/assets/94796673/85f936cf-4426-4b6b-97a7-0108d0959100)
 
 
 
