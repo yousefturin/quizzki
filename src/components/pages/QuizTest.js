@@ -15,14 +15,22 @@ import { useButtonState } from "../../contexts/ButtonStateContext";
 import ShareButton from "../ShareButton";
 
 export default function QuizTest() {
+
   const { idTest } = useParams();
-  const { selectedCard } = useQuiz();
+  const { selectedCard } = useQuiz(); // (modularization design)
+  const { redirectPath, clearNavigation } = useNavigation(); // (modularization design)
+  const { setButtonState } = useButtonState(); // (modularization design)
+
+  // Accessing current user information using the useAuth hook
+  const { currentUser } = useAuth(); // (modularization design)
+  const { displayName, email } = currentUser || {};
+
   const [questionsData, setQuestionsData] = useState([]);
-  const { redirectPath, clearNavigation } = useNavigation();
 
-  const { setButtonState } = useButtonState();
+  const isPageVisible = usePageVisibility(); // (modularization design)
 
-  // dynamically importing the location of database for questions
+  //#region dynamically importing
+  // dynamically importing the location of database for questions (Module Pattern)(lifecycle events)
   useEffect(() => {
     const fetchQuestionsData = async () => {
       if (selectedCard?.fileLocation) {
@@ -41,8 +49,9 @@ export default function QuizTest() {
 
     fetchQuestionsData();
   }, [selectedCard]);
+  //#endregion
 
-  // State variables to manage game state and user progress
+  // State variables to manage game state and user progress (State Management)
   const [currentQuestion, setCurrentQuestion] = useState(null);
   const [usedQuestionIds, setUsedQuestionIds] = useState([]);
   const [userAnswer, setUserAnswer] = useState(null);
@@ -50,24 +59,21 @@ export default function QuizTest() {
   const [isCorrect, setIsCorrect] = useState(null); // State to track if user's answer is correct
   const [gameOver, setGameOver] = useState(false); // State to track if the game is over
   const [gameStarted, setGameStarted] = useState(false); // State to track if the game has started
+  const [urlSpan, setUrlSpan] = useState(null);
+  const [showContainer, setShowContainer] = useState(false);
+  const [tabOpened, setTabOpened] = useState(false); // State variable to track if the user onend a tab in teh browser
 
   // Time-related state variables
   const [remainingTime, setRemainingTime] = useState(30); // Remaining time for each question
   const [score, setScore] = useState(0); // User's score
   const [timeUp, setTimeUp] = useState(false); // State variable to track the cause of game over
-  const [tabOpened, setTabOpened] = useState(false); // State variable to track if the user onend a tab in teh browser
 
-  // Accessing current user information using the useAuth hook
-  const { currentUser } = useAuth();
-  const { displayName, email } = currentUser || {};
-
-  const [urlSpan, setUrlSpan] = useState(null);
   // Variable to store the question timer
   let questionTimer;
 
-  const isPageVisible = usePageVisibility();
 
-  // Effect to check if the user playing the view port on the background
+  //#region asynchronous tasks and lifecycle events for the tab open in browser
+  // Effect to check if the user playing the view port on the background (Observer Pattern)(lifecycle events)
   useEffect(() => {
     const handleVisibilityChange = () => {
       if (!isPageVisible && gameStarted) {
@@ -84,6 +90,7 @@ export default function QuizTest() {
       document.removeEventListener("visibilitychange", handleVisibilityChange);
     };
   }, [isPageVisible]);
+  //#endregion
 
   //#region getRandomQuestion
   // Function to get a random question and reset relevant states
@@ -118,7 +125,7 @@ export default function QuizTest() {
   //#endregion
 
   //#region asynchronous start timer instant
-  // Effect to start the question timer when the game has started or restarted
+  // Effect to start the question timer when the game has started or restarted (lifecycle events)
   useEffect(() => {
     if (gameStarted && !gameOver) {
       questionTimer = setInterval(() => {
@@ -140,7 +147,6 @@ export default function QuizTest() {
       };
     }
   }, [gameStarted, gameOver]);
-
   //#endregion
 
   //#region handleUserSelection
@@ -174,7 +180,7 @@ export default function QuizTest() {
   //#endregion
 
   //#region restartGame
-  // Function to restart the game, resetting relevant states
+  // Function to restart the game, resetting relevant states (Separation of Concerns)
   const restartGame = () => {
     clearInterval(questionTimer);
     setTabOpened(false); // Resetting open tabs state to false
@@ -190,11 +196,14 @@ export default function QuizTest() {
     setGameStarted(true); // Set gameStarted to true to restart the timer
   };
   //#endregion
+
+  // (debouncing design pattern)
   const handleReadRulesButton = () => {
     setButtonState(true);
   };
+
   //#region asynchronous get new Question after component mounts
-  // Effect to get a random question when the rendered and inserted into the DOM for first time.
+  // Effect to get a random question when the rendered and inserted into the DOM for first time. (lifecycle events)
   useEffect(() => {
     console.log("Component mounted");
     getRandomQuestion();
@@ -208,15 +217,16 @@ export default function QuizTest() {
   //#endregion
 
   //#region asynchronous Post the data to the API end point
-  // Effect to Post user data after each time a gameOver is triggered
+  // Effect to Post user data after each time a gameOver is triggered (lifecycle events)
   useEffect(() => {
     if (gameOver) {
       storeUserData();
       storeUserDataInURL(displayName, score, idTest);
     }
   }, [gameStarted, gameOver]);
+  //#endregion
 
-  //#region send http Post to store teh data
+  //#region send http Post to store teh data (Singleton Pattern)
   const storeUserData = async () => {
     try {
       const currentTime = new Date().toLocaleString();
@@ -245,7 +255,7 @@ export default function QuizTest() {
   };
   //#endregion
 
-  // Encrypt function
+  //#region  Encrypt function (Singleton Pattern)
   const encryptData = (data) => {
     const encrypted = CryptoJS.AES.encrypt(
       data,
@@ -253,8 +263,9 @@ export default function QuizTest() {
     );
     return encrypted.toString();
   };
+  //#endregion
 
-  // Function to store user data in URL parameters to be accessed as share score on gameOver events
+  //#region Function to store user data in URL parameters to be accessed as share score on gameOver events (Singleton Pattern)
   const storeUserDataInURL = (displayName, score, idTest) => {
     console.log(" this is inside the game quiz:idTest", idTest.toString());
     // Encrypt data before constructing the URL
@@ -273,10 +284,15 @@ export default function QuizTest() {
     setUrlSpan(url);
     console.log(url);
   };
-  const [showContainer, setShowContainer] = useState(false);
+  //#endregion
+
+  //#region Event Handling for sharing Ui container
   const handleShareContainer = () => {
     setShowContainer(!showContainer);
   };
+  //#endregion
+
+  //#region Event Handling copping the URL from UI 
   const handleCopyText = () => {
     try {
       navigator.clipboard.writeText(urlSpan);
@@ -285,8 +301,7 @@ export default function QuizTest() {
       console.error("Unable to copy text to clipboard", err);
     }
   };
-
-
+  //#endregion
 
   if (gameOver) {
     return (
@@ -337,18 +352,18 @@ export default function QuizTest() {
                         <i class="fas fa-arrow-circle-left"></i> Back
                       </Button>
                     </Link>
-                    {(isCorrect === false   || timeUp) &&
+                    {(isCorrect === false || timeUp) && (
                       <Button
-                      onClick={handleShareContainer}
-                      className="btn-form-submit-second"
-                      style={{ flex: "0.5" }}
-                    >
-                      <i class="fas fa-share-alt-square"></i>
-                    </Button>
-                    }
+                        onClick={handleShareContainer}
+                        className="btn-form-submit-second"
+                        style={{ flex: "0.5" }}
+                      >
+                        <i class="fas fa-share-alt-square"></i>
+                      </Button>
+                    )}
                   </div>
                 </Card.Body>
-                {(isCorrect === false   || timeUp) && (
+                {(isCorrect === false || timeUp) && (
                   <>
                     <hr />
                     <Card.Body className="card-body-question-gameOver">
@@ -418,11 +433,31 @@ export default function QuizTest() {
                   />
                   <div className="social-card-container">
                     <div className="social-card-wrapper">
-                      <ShareButton platform="facebook" url={urlSpan} iconPath="/images/image-social-share-facebook.svg"  />
-                      <ShareButton platform="twitter" url={urlSpan} iconPath="/images/image-social-share-twitter.svg"  />
-                      <ShareButton platform="linkedIn" url={urlSpan} iconPath="/images/image-social-share-linkedIn.svg"  />
-                      <ShareButton platform="vk" url={urlSpan} iconPath="/images/image-social-share-vk.svg"  />
-                      <ShareButton platform="reddit" url={urlSpan} iconPath="/images/image-social-share-reddit.svg"  />
+                      <ShareButton
+                        platform="facebook"
+                        url={urlSpan}
+                        iconPath="/images/image-social-share-facebook.svg"
+                      />
+                      <ShareButton
+                        platform="twitter"
+                        url={urlSpan}
+                        iconPath="/images/image-social-share-twitter.svg"
+                      />
+                      <ShareButton
+                        platform="linkedIn"
+                        url={urlSpan}
+                        iconPath="/images/image-social-share-linkedIn.svg"
+                      />
+                      <ShareButton
+                        platform="vk"
+                        url={urlSpan}
+                        iconPath="/images/image-social-share-vk.svg"
+                      />
+                      <ShareButton
+                        platform="reddit"
+                        url={urlSpan}
+                        iconPath="/images/image-social-share-reddit.svg"
+                      />
                     </div>
                   </div>
                   <div className="share-url-holder">

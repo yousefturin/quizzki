@@ -3,6 +3,7 @@ import { useLocation, useNavigate } from "react-router-dom";
 import CryptoJS from "crypto-js";
 import { useRedirect } from "../../contexts/RedirectContext";
 import { generateIdHash } from "../utils/idHashGenerator"
+
 // Decrypt function
 const decryptData = (encryptedData) => {
     const bytes = CryptoJS.AES.decrypt(
